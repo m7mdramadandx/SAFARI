@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_no_logo_copy">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="29dp"
+            android:text="Select lcation"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#EB3C3F41" />
+
+        <Spinner
+            android:id="@+id/location_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="14dp"
+            android:dropDownWidth="wrap_content"
+            android:minHeight="40dp"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_spinner"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="29dp"
+            android:foregroundGravity="clip_horizontal|center"
+            android:text="Select hotel name"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#EB3C3F41" />
+
+        <Spinner
+            android:id="@+id/hotel_name_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="14dp"
+            android:minHeight="40dp"
+            android:popupBackground="#00E676"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hotel_name_spinner"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_marginTop="40dp"
+            android:foregroundGravity="clip_horizontal|center"
+            android:text="Select duration"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#EB3C3F41" />
+
+        <Spinner
+            android:id="@+id/duration_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:minHeight="40dp"
+            android:popupBackground="#00E676"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duration_spinner"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_marginTop="40dp"
+            android:foregroundGravity="clip_horizontal|center"
+            android:text="Select transportation"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#EB3C3F41" />
+
+        <Spinner
+            android:id="@+id/transportation_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:minHeight="40dp"
+            android:popupBackground="#00E676"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transportation_spinner"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_marginTop="40dp"
+            android:foregroundGravity="clip_horizontal|center"
+            android:text="Select rate"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#EB3C3F41" />
+
+        <Spinner
+            android:id="@+id/rate_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:dropDownWidth="wrap_content"
+            android:minHeight="40dp"
+            android:popupBackground="#00E676"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rate_spinner"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_marginTop="40dp"
+            android:text="Select the number of tickets"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#EB3C3F41" />
+
+        <Spinner
+            android:id="@+id/tickets_num_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_centerHorizontal="true"
+            android:dropDownWidth="wrap_content"
+            android:foregroundGravity="clip_horizontal|center"
+            android:minHeight="40dp"
+            android:popupBackground="#00E676"
+            android:spinnerMode="dialog" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tickets_num_spinner"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="submit"
+            android:text="Submit" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

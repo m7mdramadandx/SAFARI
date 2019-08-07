@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_no_logo_copy"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/three_days_offer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/duration3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="THREE  DAYS  OFFER"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/availability3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/duration3"
+                android:layout_centerInParent="true"
+                android:text="COMMING SOON.."
+                android:textColor="#ffffff"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/layout_visibility3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/availability3"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/hotel_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="hotel_name"
+                    android:textColor="#00E69B"
+                    android:textSize="46sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/hotel_rate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_name3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:clickable="false"
+                    android:longClickable="false"
+                    android:numStars="8"
+                    android:stepSize="1" />
+
+                <LinearLayout
+                    android:id="@+id/transportation_layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_rate3"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/transportation_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transportation type:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/transportation3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="type"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp" />
+
+                    <Button
+                        android:id="@+id/show_imgs3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/roundedbutton_white"
+                        android:onClick="show_imgs3"
+                        android:text="show images"
+                        android:textColor="#979494"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/images_layout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/transportation_layout3"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/images_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Some images from the hotel"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/img_31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/images_text3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_31"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_32"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_33"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/cost_layout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/images_layout3"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/cost3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/cost3"
+                        android:text="EG for each ticket"
+                        android:textSize="26sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cost_layout3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundedbutton"
+                    android:onClick="reserve3"
+                    android:text="reserve"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/three_days_offer"
+            android:background="#FFFFFF" />
+
+        <RelativeLayout
+            android:id="@+id/four_days_offer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:background="#0AFFFFFF">
+
+            <TextView
+                android:id="@+id/duration4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="FOUR  DAYS  OFFER"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/availability4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/duration4"
+                android:layout_centerInParent="true"
+                android:text="COMMING SOON.."
+                android:textColor="#ffffff"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/layout_visibility4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/availability4"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/hotel_name4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="hotel_name"
+                    android:textColor="#00E69B"
+                    android:textSize="46sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/hotel_rate4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_name4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:clickable="false"
+                    android:longClickable="false"
+                    android:numStars="8"
+                    android:stepSize="1" />
+
+                <LinearLayout
+                    android:id="@+id/transportation_layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_rate4"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/transportation_text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transportation type:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/transportation4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="type"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp" />
+
+                    <Button
+                        android:id="@+id/show_imgs4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/roundedbutton_white"
+                        android:onClick="show_imgs4"
+                        android:text="show images"
+                        android:textColor="#979494"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/images_layout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/transportation_layout4"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/images_text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Some images from the hotel"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/img_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/images_text4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_41"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_42"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_43"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/cost_layout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/images_layout4"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/cost4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/cost4"
+                        android:text="EG for each ticket"
+                        android:textSize="26sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cost_layout4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundedbutton"
+                    android:onClick="reserve4"
+                    android:text="reserve"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/four_days_offer"
+            android:background="#FFFFFF" />
+
+        <RelativeLayout
+            android:id="@+id/five_days_offer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider1"
+            android:background="#0AFFFFFF">
+
+            <TextView
+                android:id="@+id/duration5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="FIVE  DAYS  OFFER"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/availability5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/duration5"
+                android:layout_centerInParent="true"
+                android:text="COMMING SOON.."
+                android:textColor="#ffffff"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/layout_visibility5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/availability5"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/hotel_name5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="hotel_name"
+                    android:textColor="#00E69B"
+                    android:textSize="46sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/hotel_rate5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_name5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:clickable="false"
+                    android:longClickable="false"
+                    android:numStars="8"
+                    android:stepSize="1" />
+
+                <LinearLayout
+                    android:id="@+id/transportation_layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_rate5"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/transportation_text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transportation type:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/transportation5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="type"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp" />
+
+                    <Button
+                        android:id="@+id/show_imgs5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/roundedbutton_white"
+                        android:onClick="show_imgs5"
+                        android:text="show images"
+                        android:textColor="#979494"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/images_layout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/transportation_layout5"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/images_text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Some images from the hotel"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/img_51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/images_text5"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_51"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_52"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_54"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_53"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/cost_layout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/images_layout5"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/cost5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/cost5"
+                        android:text="EG for each ticket"
+                        android:textSize="26sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cost_layout5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundedbutton"
+                    android:onClick="reserve5"
+                    android:text="reserve"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/five_days_offer"
+            android:background="#FFFFFF" />
+
+        <RelativeLayout
+            android:id="@+id/six_days_offer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider2">
+
+            <TextView
+                android:id="@+id/duration6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="SIX  DAYS  OFFER"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/availability6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/duration6"
+                android:layout_centerInParent="true"
+                android:text="COMMING SOON.."
+                android:textColor="#ffffff"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/layout_visibility6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/availability6"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/hotel_name6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="hotel_name"
+                    android:textColor="#00E69B"
+                    android:textSize="46sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/hotel_rate6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_name6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:clickable="false"
+                    android:longClickable="false"
+                    android:numStars="8"
+                    android:stepSize="1" />
+
+                <LinearLayout
+                    android:id="@+id/transportation_layout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_rate6"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/transportation_text6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transportation type:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/transportation6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="type"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp" />
+
+                    <Button
+                        android:id="@+id/show_imgs6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/roundedbutton_white"
+                        android:onClick="show_imgs6"
+                        android:text="show images"
+                        android:textColor="#979494"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/images_layout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/transportation_layout6"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/images_text6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Some images from the hotel"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/img_61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/images_text6"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_61"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_63"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_62"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_64"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_63"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/cost_layout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/images_layout6"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/cost6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/cost6"
+                        android:text="EG for each ticket"
+                        android:textSize="26sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cost_layout6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundedbutton"
+                    android:onClick="reserve6"
+                    android:text="reserve"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
+
+

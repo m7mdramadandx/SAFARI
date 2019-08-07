@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_logo"
+    tools:context=".main">
+
+    <!-- Login progress -->
+
+    <RelativeLayout
+        android:id="@+id/sign_up_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+
+        <ImageView
+            android:id="@id/imageView1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/avatar" />
+
+
+        <EditText
+            android:id="@+id/phone_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/imageView1"
+            android:ems="14"
+            android:hint="phone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#FFFFFF" />
+
+
+        <ImageView
+            android:id="@id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/imageView1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/lock" />
+
+        <EditText
+            android:id="@+id/password_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_field"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toRightOf="@id/imageView2"
+            android:ems="14"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sign_up_form"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/login"
+            style="?android:textAppearanceSmall"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="login"
+            android:text="login"
+            android:textColor="#ffffff"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/sign_up"
+            style="?android:textAppearanceSmall"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="sign_up"
+            android:text="create an account"
+            android:textColor="#ffffff"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+</RelativeLayout>
