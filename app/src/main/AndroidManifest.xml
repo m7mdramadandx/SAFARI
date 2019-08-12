@@ -10,23 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".profile"
-            android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".home_page" />
+            android:name=".home"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".staff_home" />
         <activity android:name=".sign_up" />
         <activity android:name=".offers_controller" />
         <activity android:name=".specific_offer" />
-        <activity android:name=".special_offer" />
-        <activity android:name=".offer" />
-        <activity android:name=".alexandria" />
+        <activity
+            android:name=".make_an_order"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".offer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".alexandria"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".aswan_offers" />
         <activity android:name=".cairo_offers" />
         <activity android:name=".sharm_alsheikh_offers" />
@@ -35,17 +33,12 @@
         <activity android:name=".minibus" />
         <activity android:name=".bus" />
         <activity android:name=".superjet" />
+
         <activity android:name=".main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>

@@ -2,6 +2,7 @@ package com.example.safari;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import java.util.ArrayList;
 
@@ -139,5 +143,10 @@ public class offers_controller extends Activity {
                 adb.show();
         }
     }
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this,staff_home.class);
+        startActivity(intent);
+        finish();
+    }
 }

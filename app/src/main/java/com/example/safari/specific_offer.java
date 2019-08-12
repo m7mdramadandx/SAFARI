@@ -1,6 +1,7 @@
 package com.example.safari;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -16,5 +17,12 @@ public class specific_offer extends Activity {
     }
 
     public void insert_img(View view) {
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this,staff_home.class);
+        startActivity(intent);
+        finish();
     }
 }

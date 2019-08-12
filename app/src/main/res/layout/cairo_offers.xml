@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_screen_no_logo_copy">
+    android:background="@drawable/screen_frame">
     <RelativeLayout
         android:id="@+id/lay1"
         android:layout_width="match_parent"

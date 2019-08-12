@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_screen_no_logo_copy">
+    android:background="@drawable/screen_frame">
 
 
     <RelativeLayout
@@ -19,6 +19,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:text="m  i  n  i  b  u  s"
+            android:textColor="#fff"
             android:textSize="46sp" />
 
         <ImageView

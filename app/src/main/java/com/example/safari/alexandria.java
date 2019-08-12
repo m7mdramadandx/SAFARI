@@ -1,20 +1,30 @@
 package com.example.safari;
 
-import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.material.navigation.NavigationView;
 
-public class alexandria extends Activity {
+public class alexandria extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
     database_handler db;
+    Dialog myDialog;
     RelativeLayout layoutvisibility3, layoutvisibility4, layoutvisibility5, layoutvisibility6;
-
     ///////////////////////////-----3 DAYS OFFER-----//////////////////////////
     TextView hotel_name3, transportation3, cost3, availability3;
     ImageView img_31, img_32, img_33, img_34;
@@ -42,7 +52,15 @@ public class alexandria extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alexandria);
         db = new database_handler(this);
-
+        myDialog = new Dialog(this);
+        //////////////////////------NAV BAR------//////////////////
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
         ///////////////////////////-----3 DAYS OFFER-----//////////////////////////
         hotel_name3 = findViewById(R.id.hotel_name3);
         transportation3 = findViewById(R.id.transportation3);
@@ -100,6 +118,7 @@ public class alexandria extends Activity {
             transportation_type3 = transportation3.getText().toString();
             ratingBar3.setRating(Float.parseFloat(cursor3.getString(cursor3.getColumnIndex("rate"))));
             cost3.setText(cursor3.getString(cursor3.getColumnIndex("cost")));
+
         } else {
             layoutvisibility3.setVisibility(View.GONE);
             availability3.setVisibility(View.VISIBLE);
@@ -139,13 +158,6 @@ public class alexandria extends Activity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        setContentView(R.layout.offers);
-        System.out.println("-*-*-*-*-");
-    }
-
     ///////////////////////////-----3 DAYS OFFER-----//////////////////////////
     public void show_imgs3(View view) {
         switch (transportation_type3) {
@@ -175,6 +187,20 @@ public class alexandria extends Activity {
     }
 
     public void reserve3(View view) {
+        TextView txtclose;
+        Button confirm;
+        myDialog.setContentView(R.layout.visa);
+        txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
+        txtclose.setText("M");
+        confirm = (Button) myDialog.findViewById(R.id.confirm);
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
     ///////////////////////////-----4 DAYS OFFER-----//////////////////////////
     public void show_imgs4(View view) {
@@ -204,6 +230,20 @@ public class alexandria extends Activity {
         }
     }
     public void reserve4(View view) {
+        TextView txtclose;
+        Button confirm;
+        myDialog.setContentView(R.layout.visa);
+        txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
+        txtclose.setText("M");
+        confirm = (Button) myDialog.findViewById(R.id.confirm);
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
 
     ///////////////////////////-----5 DAYS OFFER-----//////////////////////////
@@ -234,6 +274,20 @@ public class alexandria extends Activity {
         }
     }
     public void reserve5(View view) {
+        TextView txtclose;
+        Button confirm;
+        myDialog.setContentView(R.layout.visa);
+        txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
+        txtclose.setText("M");
+        confirm = (Button) myDialog.findViewById(R.id.confirm);
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
 
     ///////////////////////////-----6 DAYS OFFER-----//////////////////////////
@@ -265,6 +319,64 @@ public class alexandria extends Activity {
     }
 
     public void reserve6(View view) {
+        TextView txtclose;
+        Button confirm;
+        myDialog.setContentView(R.layout.visa);
+        txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
+        txtclose.setText("M");
+        confirm = (Button) myDialog.findViewById(R.id.confirm);
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
+
+    //////////////////////------NAV BAR------//////////////////
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.nav_home) {
+            Intent intent = new Intent(this, home.class);
+            startActivities(new Intent[]{intent});
+            finish();
+
+        } else if (id == R.id.nav_profile) {
+            Intent intent = new Intent(this, offer.class);
+            startActivities(new Intent[]{intent});
+            finish();
+        } else if (id == R.id.nav_offers) {
+            Intent intent = new Intent(this, offer.class);
+            startActivities(new Intent[]{intent});
+            finish();
+        } else if (id == R.id.nav_make_an_order) {
+            Intent intent = new Intent(this, make_an_order.class);
+            startActivities(new Intent[]{intent});
+            finish();
+        } else if (id == R.id.nav_setting) {
+            Intent intent = new Intent(this, offer.class);
+            startActivities(new Intent[]{intent});
+            finish();
+        } else if (id == R.id.nav_about) {
+            Intent intent = new Intent(this, offer.class);
+            startActivities(new Intent[]{intent});
+            finish();
+        }
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
-

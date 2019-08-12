@@ -11,15 +11,13 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class database_handler extends SQLiteOpenHelper {
-    protected static final String safari_database = "safari.sql";
+    protected static final String safari_database = "safari.db";
     protected static final int version = 2;
     private Context context;
     protected static final String user_table = "user";
     protected static final String create_user_table = "create table user (phone int(11) primary key, full_name text, age int(2), password text)";
     protected static final String drop_user_table = "drop table if exists user";
-
     ////////////////////////////////////////////////////////////////////////////////////////////
-
     protected static final String offer_table = "offer";
     protected static final String create_offer_table = "create table offer (offer_id text primary key, hotel_name text, location text, duration text, transportation text, rate float, cost int)";
     protected static final String drop_offer_table = "drop table if exists offer ";

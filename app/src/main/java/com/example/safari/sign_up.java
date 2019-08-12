@@ -39,7 +39,7 @@ public class sign_up extends Activity {
                 int phone__ = Integer.parseInt(phone_);
                 db.insert_user(phone__, full_name_, age__, password_);
                 Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, home_page.class);
+                Intent intent = new Intent(this, home.class);
                 startActivities(new Intent[]{intent});
                 finish();
 

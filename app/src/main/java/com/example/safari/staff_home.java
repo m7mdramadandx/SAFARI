@@ -25,4 +25,10 @@ public class staff_home extends Activity {
         startActivity(intent);
         finish();
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this,main.class);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -6,23 +6,18 @@
     android:background="@drawable/main_screen_logo"
     tools:context=".main">
 
-    <!-- Login progress -->
-
     <RelativeLayout
         android:id="@+id/sign_up_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
-
         <ImageView
             android:id="@id/imageView1"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/avatar" />
-
+            android:src="@drawable/ic_account_circle_black_24dp" />
 
         <EditText
             android:id="@+id/phone_field"
@@ -36,21 +31,17 @@
             android:layout_toRightOf="@id/imageView1"
             android:ems="14"
             android:hint="phone"
-            android:maxLines="1"
-            android:singleLine="true"
             android:textColor="#FFFFFF" />
-
 
         <ImageView
             android:id="@id/imageView2"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_below="@id/imageView1"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="25dp"
             android:layout_marginBottom="10dp"
-            android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/lock" />
+            android:src="@drawable/ic_lock_outline_black_24dp" />
 
         <EditText
             android:id="@+id/password_field"
@@ -66,8 +57,6 @@
             android:layout_toRightOf="@id/imageView2"
             android:ems="14"
             android:hint="password"
-            android:inputType="textPassword"
-            android:maxLines="1"
             android:textColor="#FFFFFF" />
     </RelativeLayout>
 
@@ -84,29 +73,28 @@
             android:id="@+id/login"
             style="?android:textAppearanceSmall"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_weight="1"
             android:background="@drawable/roundedbutton"
             android:onClick="login"
             android:text="login"
             android:textColor="#ffffff"
-            android:textStyle="normal" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/sign_up"
             style="?android:textAppearanceSmall"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_weight="2"
             android:background="@drawable/roundedbutton"
             android:onClick="sign_up"
             android:text="create an account"
             android:textColor="#ffffff"
-            android:textStyle="normal" />
+            android:textStyle="bold" />
     </LinearLayout>
-
 
 </RelativeLayout>

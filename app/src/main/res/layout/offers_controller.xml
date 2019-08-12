@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3D3D3"
+    android:background="@drawable/screen_light"
     android:orientation="vertical"
     android:padding="15dp">
 
@@ -207,10 +207,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@drawable/roundedbutton_white"
+            android:background="@drawable/roundedbutton_orange"
             android:onClick="insert_offer"
             android:text="insert"
-            android:textColor="#2D2F31" />
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/update_data_button"
@@ -218,10 +220,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@drawable/roundedbutton_white"
+            android:background="@drawable/roundedbutton_orange"
             android:onClick="update_offer"
             android:text="Update"
-            android:textColor="#2D2F31" />
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/delete_data_button"
@@ -232,7 +236,9 @@
             android:background="@drawable/roundedbutton_warning"
             android:onClick="delete_offer"
             android:text="Delete"
-            android:textColor="#2D2F31" />
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/search_data_button"
@@ -240,10 +246,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@drawable/roundedbutton_white"
+            android:background="@drawable/roundedbutton_orange"
             android:onClick="search_offer"
             android:text="Search"
-            android:textColor="#2D2F31" />
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <View
@@ -251,7 +259,7 @@
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:layout_below="@id/actions"
-        android:background="#FF6D00" />
+        android:background="#FFED7F09" />
 
     <LinearLayout
         android:layout_width="wrap_content"

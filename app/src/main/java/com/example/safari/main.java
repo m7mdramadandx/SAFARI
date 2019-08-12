@@ -44,7 +44,7 @@ public class main extends Activity {
                     finish();
                     Toast.makeText(this, "welcome offers_controller!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(this, home_page.class);
+                    Intent intent = new Intent(this, home.class);
                     startActivity(intent);
                     finish();
                     Toast.makeText(this, "welcome!", Toast.LENGTH_SHORT).show();

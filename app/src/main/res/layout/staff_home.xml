@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3D3D3"
+    android:background="@drawable/screen_light"
     android:padding="30dp">
 
     <LinearLayout
@@ -26,10 +26,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/roundedbutton_holo_blue"
+            android:background="@drawable/roundedbutton_orange"
             android:onClick="offers_controller"
             android:text="offers controller"
-            android:textColor="#ffffff"
+            android:textColor="#ffff"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/roundedbutton_holo_blue"
+            android:background="@drawable/roundedbutton_orange"
             android:baselineAligned="false"
             android:onClick="specific_offer"
             android:text="specific offer"

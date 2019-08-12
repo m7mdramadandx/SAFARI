@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_screen_no_logo_copy">
+    android:background="@drawable/screen_frame">
 
 
     <RelativeLayout
@@ -24,8 +24,9 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="420dp"
+            android:layout_height="260dp"
+            android:layout_below="@id/textView1"
             android:src="@drawable/superjet1" />
 
         <ImageView

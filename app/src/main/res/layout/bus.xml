@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_screen_no_logo_copy"
+    android:background="@drawable/screen_frame"
     tools:ignore="MissingDefaultResource">
 
 
@@ -21,6 +21,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:text="b  u  s"
+            android:textColor="#fff"
             android:textSize="46sp" />
 
         <ImageView

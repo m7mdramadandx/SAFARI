@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_screen_no_logo_copy">
+    android:background="@drawable/screen_frame">
     <RelativeLayout
         android:id="@+id/lay1"
         android:layout_width="match_parent"
@@ -109,8 +118,18 @@
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
-            android:background="#FFFFFF" />
+            android:background="#ffff" />
     </RelativeLayout>
 
 </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_profile"
+        app:menu="@menu/profile_drawer"
+        android:background="@drawable/nav_screen"/>
 
+</androidx.drawerlayout.widget.DrawerLayout>
