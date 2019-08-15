@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.safari">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo_transperant"
@@ -10,35 +13,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".home"
+            android:name=".activities.home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".staff_home" />
-        <activity android:name=".sign_up" />
-        <activity android:name=".offers_controller" />
-        <activity android:name=".specific_offer" />
+        <activity android:name=".activities.staff_home" />
+        <activity android:name=".activities.sign_up" />
+        <activity android:name=".activities.offers_controller" />
+        <activity android:name=".activities.specific_offer" />
         <activity
-            android:name=".make_an_order"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".offer"
+            android:name=".activities.make_an_order"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".alexandria"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".aswan_offers" />
-        <activity android:name=".cairo_offers" />
-        <activity android:name=".sharm_alsheikh_offers" />
-        <activity android:name=".car" />
-        <activity android:name=".train" />
-        <activity android:name=".minibus" />
-        <activity android:name=".bus" />
-        <activity android:name=".superjet" />
-
-        <activity android:name=".main">
+            android:name=".activities.alex2"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.alexandria"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.car" />
+        <activity android:name=".activities.train" />
+        <activity android:name=".activities.bus" />
+        <activity android:name=".activities.main" />
     </application>
 </manifest>
