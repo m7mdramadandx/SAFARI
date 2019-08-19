@@ -1,4 +1,4 @@
-package com.example.safari.activities;
+package com.ramadan.safari.activities;
 
 import android.os.Bundle;
 
@@ -11,9 +11,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.safari.R;
-import com.example.safari.adapter.RvAdapter2;
-import com.example.safari.model.offer;
+import com.ramadan.safari.R;
+import com.ramadan.safari.adapter.RvAdapter2;
+import com.ramadan.safari.model.offer;
 
 import org.json.JSONArray;
 import org.json.JSONException;

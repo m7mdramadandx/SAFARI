@@ -4,20 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_screen_logo"
-    tools:context=".main">
+    tools:context=".activities.main">
 
     <RelativeLayout
         android:id="@+id/sign_up_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
-
-        <ImageView
-            android:id="@id/imageView1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_account_circle_black_24dp" />
 
         <EditText
             android:id="@+id/phone_field"
@@ -28,20 +21,12 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_toRightOf="@id/imageView1"
+            android:drawableLeft="@drawable/ic_account_circle_black_24dp"
             android:ems="14"
             android:hint="phone"
+            android:drawablePadding="5dp"
+            android:inputType="phone"
             android:textColor="#FFFFFF" />
-
-        <ImageView
-            android:id="@id/imageView2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_below="@id/imageView1"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="10dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_lock_outline_black_24dp" />
 
         <EditText
             android:id="@+id/password_field"
@@ -54,9 +39,11 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="15dp"
-            android:layout_toRightOf="@id/imageView2"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:drawablePadding="5dp"
             android:ems="14"
             android:hint="password"
+            android:password="true"
             android:textColor="#FFFFFF" />
     </RelativeLayout>
 
@@ -80,6 +67,7 @@
             android:onClick="login"
             android:text="login"
             android:textColor="#ffffff"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
@@ -89,11 +77,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:background="@drawable/roundedbutton"
             android:onClick="sign_up"
             android:text="create an account"
             android:textColor="#ffffff"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.example.safari.adapter;
+package com.ramadan.safari.adapter;
 
 
 import android.content.Context;
@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.safari.R;
-import com.example.safari.model.offer;
+import com.ramadan.safari.R;
+import com.ramadan.safari.model.offer;
 
 import java.util.List;
 

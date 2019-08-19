@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "275621152739",
+    "firebase_url": "https://myapp-95fe1.firebaseio.com",
+    "project_id": "myapp-95fe1",
+    "storage_bucket": "myapp-95fe1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275621152739:android:040a27da3d9debd2",
+        "android_client_info": {
+          "package_name": "com.ramadan.safari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275621152739-r7qp0k8im0glnn5cpsk524r1rbhpl2cs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3TbRgAydqETPpnLFiMGImVN5kghB-8Us"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275621152739-r7qp0k8im0glnn5cpsk524r1rbhpl2cs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

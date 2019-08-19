@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.safari">
+    package="com.ramadan.safari">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activities.test"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
             android:name=".activities.home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.staff_home" />
@@ -24,12 +29,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.alex2"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.alexandria"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -37,5 +37,16 @@
         <activity android:name=".activities.train" />
         <activity android:name=".activities.bus" />
         <activity android:name=".activities.main" />
+        <activity
+            android:name=".activities.splash_screen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.offer" />
     </application>
+
 </manifest>

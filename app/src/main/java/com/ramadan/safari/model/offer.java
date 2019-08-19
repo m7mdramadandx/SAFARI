@@ -1,4 +1,4 @@
-package com.example.safari.model;
+package com.ramadan.safari.model;
 
 public class offer {
     private String duration;
