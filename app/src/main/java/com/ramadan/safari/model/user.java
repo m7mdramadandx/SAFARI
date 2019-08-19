@@ -17,10 +17,14 @@ public class user {
     public user() {
     }
 
-    public user(String first_name, String last_name) {
+    public user(String first_name, String last_name, String email, int phone, int age, String password) {
         user_id++;
         this.first_name = first_name;
         this.last_name = last_name;
+        this.email = email;
+        this.phone = phone;
+        this.age = age;
+        this.password = password;
     }
 
     public long getUser_id() {
