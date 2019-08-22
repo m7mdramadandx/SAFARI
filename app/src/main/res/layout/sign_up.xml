@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/screen_frame"
+    android:padding="30dp"
     tools:context=".activities.sign_up">
 
     <RelativeLayout
@@ -11,6 +12,24 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressBar"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="submit"
+            android:text="submit"
+            android:textColor="#ffff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/first_name"
@@ -46,23 +65,6 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/age"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/phone"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:ems="12"
-            android:hint="Age"
-            android:inputType="phone"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
-
-        <EditText
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,14 +92,31 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:ems="12"
+            android:ems="11"
             android:hint="Phone"
             android:inputType="phone"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:ems="2"
+            android:hint="Age"
+            android:inputType="phone"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/age"
@@ -107,7 +126,23 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:editable="true"
+            android:ems="12"
+            android:hint="Location"
+            android:inputType="text"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:ems="12"
             android:hint="Password"
             android:inputType="text|textPassword"
@@ -131,24 +166,16 @@
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/submit"
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/password2"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/roundedbutton"
-            android:onClick="submit"
-            android:text="submit"
-            android:textColor="#ffff"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:progressDrawable="@color/colorAccent"
+            android:visibility="gone" />
 
     </RelativeLayout>
 

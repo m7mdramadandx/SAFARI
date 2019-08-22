@@ -2,44 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ramadan.safari">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo_transperant"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".activities.test"
-            android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar">
 
-        </activity>
-        <activity
-            android:name=".activities.home"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.test"></activity>
+        <activity android:name=".activities.home" />
         <activity android:name=".activities.staff_home" />
         <activity android:name=".activities.sign_up" />
         <activity android:name=".activities.offers_controller" />
         <activity android:name=".activities.specific_offer" />
-        <activity
-            android:name=".activities.make_an_order"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.alex2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.alexandria"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.make_an_order" />
+        <activity android:name=".activities.alex2" />
+        <activity android:name=".activities.alexandria" />
         <activity android:name=".activities.car" />
         <activity android:name=".activities.train" />
         <activity android:name=".activities.bus" />
         <activity android:name=".activities.main" />
-        <activity
-            android:name=".activities.splash_screen"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".activities.splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,5 +32,10 @@
         </activity>
         <activity android:name=".activities.offer" />
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>
