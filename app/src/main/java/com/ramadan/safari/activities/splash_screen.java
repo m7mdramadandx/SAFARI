@@ -28,8 +28,16 @@ public class splash_screen extends AppCompatActivity {
         l2.setAnimation(downtoup);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
     public void main_page(View view) {
-        Intent intent = new Intent(this, test.class);
+        Intent intent = new Intent(this, home.class);
+        intent.putExtra("status", "hey");
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivities(new Intent[]{intent});
         finish();
     }

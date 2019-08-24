@@ -1,5 +1,6 @@
 package com.ramadan.safari.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -78,6 +79,12 @@ public class alex2 extends AppCompatActivity {
         RvAdapter2 myAdapter = new RvAdapter2(this, lstOffer);
         myrv.setLayoutManager(new LinearLayoutManager(this));
         myrv.setAdapter(myAdapter);
+    }
+
+    //////////////////////------NAV BAR------//////////////////
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, com.ramadan.safari.activities.offer.class));
     }
 }
 

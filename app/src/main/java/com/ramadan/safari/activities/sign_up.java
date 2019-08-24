@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ramadan.safari.R;
@@ -29,6 +30,7 @@ public class sign_up extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
         mDatabase = FirebaseDatabase.getInstance().getReference("users");
+        mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
         first_name = findViewById(R.id.first_name);
         last_name = findViewById(R.id.last_name);
@@ -40,45 +42,52 @@ public class sign_up extends AppCompatActivity {
         password2 = findViewById(R.id.password2);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, main.class));
+    }
+
     public void submit(View view) {
         final String first_name_ = first_name.getText().toString();
         final String last_name_ = last_name.getText().toString();
         String age_ = age.getText().toString();
-        String email_ = email.getText().toString();
+        final String email_ = email.getText().toString();
         final String location_ = location.getText().toString();
         String phone_ = phone.getText().toString();
         String password_ = password.getText().toString();
         String password2_ = password2.getText().toString();
+        progressBar.setVisibility(View.VISIBLE);
 
         if (first_name_.isEmpty() || last_name_.isEmpty() || location_.isEmpty() || age_.isEmpty() || email_.isEmpty() || phone_.isEmpty() || password_.isEmpty() || password2_.isEmpty()) {
+            progressBar.setVisibility(View.GONE);
             Toast.makeText(this, "all fields are required!", Toast.LENGTH_SHORT).show();
         } else {
             if (password_.equals(password2_)) {
                 final int age__ = Integer.parseInt(age_);
                 final int phone__ = Integer.parseInt(phone_);
-
                 mAuth.createUserWithEmailAndPassword(email_, password_).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             String user_id = mAuth.getCurrentUser().getUid();
+                            FirebaseUser user = mAuth.getCurrentUser();
                             DatabaseReference current_user_db = mDatabase.child(user_id);
+                            current_user_db.child("user_id").setValue(user_id);
                             current_user_db.child("first_name").setValue(first_name_);
                             current_user_db.child("last_name").setValue(last_name_);
+                            current_user_db.child("email").setValue(email_);
                             current_user_db.child("phone").setValue(phone__);
                             current_user_db.child("age").setValue(age__);
                             current_user_db.child("location").setValue(location_);
-                            Toast.makeText(sign_up.this, "Welcoome", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
-
                             Intent intent = new Intent(sign_up.this, home.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivities(new Intent[]{intent});
                             finish();
-
                         } else {
-                            Toast.makeText(sign_up.this, "sign up failed", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
+                            Toast.makeText(sign_up.this, "sign up failed", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -89,6 +98,7 @@ public class sign_up extends AppCompatActivity {
                 //FirebaseDatabase.getInstance().getReference("user").updateChildren(child_updates);
 
             } else {
+                progressBar.setVisibility(View.GONE);
                 Toast.makeText(this, "passwords are not matched", Toast.LENGTH_SHORT).show();
             }
         }
