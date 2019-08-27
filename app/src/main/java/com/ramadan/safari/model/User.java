@@ -5,7 +5,7 @@ import com.google.firebase.firestore.Exclude;
 import java.util.HashMap;
 import java.util.Map;
 
-public class user {
+public class User {
     private long user_id = 0;
     private String first_name;
     private String last_name;
@@ -14,10 +14,10 @@ public class user {
     private int age;
     private String password;
 
-    public user() {
+    public User() {
     }
 
-    public user(String first_name, String last_name, String email, int phone, int age, String password) {
+    public User(String first_name, String last_name, String email, int phone, int age, String password) {
         user_id++;
         this.first_name = first_name;
         this.last_name = last_name;

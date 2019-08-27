@@ -74,7 +74,7 @@ public class offers_controller extends Activity {
             rate.setText(null);
             cost.setText(null);
             show_offer();
-            Toast.makeText(this, "an offer is inserted!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "an Hotel_blog is inserted!", Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -18,7 +18,7 @@
         <activity android:name=".activities.specific_offer" />
         <activity android:name=".activities.make_an_order" />
         <activity android:name=".activities.alex2" />
-        <activity android:name=".activities.alexandria" />
+        <activity android:name=".activities.youmna" />
         <activity android:name=".activities.car" />
         <activity android:name=".activities.train" />
         <activity android:name=".activities.bus" />
@@ -30,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.offer" />
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

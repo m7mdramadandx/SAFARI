@@ -91,11 +91,11 @@ public class sign_up extends AppCompatActivity {
                         }
                     }
                 });
-                //user_ = new user(first_name_, last_name_, email_, phone__, age__, password_);
+                //user_ = new User(first_name_, last_name_, email_, phone__, age__, password_);
                 //Map<String, Object> user_values = user_.toMap();
                 //Map<String, Object> child_updates = new HashMap<>();
                 //child_updates.put(user_id, user_values);
-                //FirebaseDatabase.getInstance().getReference("user").updateChildren(child_updates);
+                //FirebaseDatabase.getInstance().getReference("User").updateChildren(child_updates);
 
             } else {
                 progressBar.setVisibility(View.GONE);

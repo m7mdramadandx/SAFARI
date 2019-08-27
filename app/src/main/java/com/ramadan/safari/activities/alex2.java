@@ -1,4 +1,4 @@
-package com.ramadan.safari.activities;
+package com.ramadan.safari.activities;/*package com.ramadan.safari.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.ramadan.safari.R;
 import com.ramadan.safari.adapter.RvAdapter2;
-import com.ramadan.safari.model.offer;
+import com.ramadan.safari.model.Hotel_blog;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,19 +22,21 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+*/
 
-public class alex2 extends AppCompatActivity {
-    private String URL_JSON = "https://api.myjson.com/bins/17ar2v";
+public class alex2 {
+    /*extends AppCompatActivity
+    private String URL_JSON = "https://api.myjson.com/bins/ab4oj";
     private JsonArrayRequest ArrayRequest;
     private RequestQueue requestQueue;
-    private List<offer> lstOffer = new ArrayList<>();
+    private List<Hotel_blog> lstHotelBlog = new ArrayList<>();
     private RecyclerView myrv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alex);
-        myrv = findViewById(R.id.rv);
+        myrv = findViewById(R.id.recyclerview);
         jsoncall();
     }
 
@@ -47,23 +49,21 @@ public class alex2 extends AppCompatActivity {
                     //  Toast.makeText(getApplicationContext(), String.valueOf(i), Toast.LENGTH_SHORT).show();
                     try {
                         jsonObject = response.getJSONObject(i);
-                        offer offer = new offer();
-                        offer.setHotel_name(jsonObject.getString("hotel_name"));
-                        offer.setDate(jsonObject.getString("date"));
-                        offer.setRate(jsonObject.getString("rate"));
-                        offer.setDuration(jsonObject.getString("duration"));
-                        offer.setTransportation_type(jsonObject.getString("transportation_type"));
-                        offer.setCost(jsonObject.getString("cost"));
-                        offer.setImg_url(jsonObject.getString("img"));
-                        lstOffer.add(offer);
+                        Hotel_blog Hotel_blog = new Hotel_blog();
+                        Hotel_blog.setHotel_name(jsonObject.getString("hotel_name"));
+                        Hotel_blog.setRate(jsonObject.getString("rate"));
+                        Hotel_blog.setLocation(jsonObject.getString("location"));
+                        Hotel_blog.setBeachfront(jsonObject.getString("beachfront"));
+                        Hotel_blog.setImg_url(jsonObject.getString("img"));
+                        lstHotelBlog.add(Hotel_blog);
                     } catch (JSONException e) {
                         System.out.println(e + "  ****");
                     }
                 }
-                // Toast.makeText(alex2.this, "Size of Liste " + String.valueOf(lstOffer.size()), Toast.LENGTH_SHORT).show();
-                // Toast.makeText(alex2.this, lstOffer.get(1).toString(), Toast.LENGTH_SHORT).show();
+                // Toast.makeText(alex2.this, "Size of Liste " + String.valueOf(lstHotelBlog.size()), Toast.LENGTH_SHORT).show();
+                // Toast.makeText(alex2.this, lstHotelBlog.get(1).toString(), Toast.LENGTH_SHORT).show();
 
-                setRvadapter(lstOffer);
+                setRvadapter(lstHotelBlog);
             }
         }, new Response.ErrorListener() {
             @Override
@@ -75,8 +75,8 @@ public class alex2 extends AppCompatActivity {
         requestQueue.add(ArrayRequest);
     }
 
-    public void setRvadapter(List<offer> lstOffer) {
-        RvAdapter2 myAdapter = new RvAdapter2(this, lstOffer);
+    public void setRvadapter(List<Hotel_blog> lstHotelBlog) {
+        RvAdapter2 myAdapter = new RvAdapter2(this, lstHotelBlog);
         myrv.setLayoutManager(new LinearLayoutManager(this));
         myrv.setAdapter(myAdapter);
     }
@@ -85,6 +85,25 @@ public class alex2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, com.ramadan.safari.activities.offer.class));
-    }
+    }*/
 }
+
+
+/*
+ JSONArray arr = new JSONArray(str);
+for(int i = 0; i < arr.length(); i++){
+
+    JSONObject jsonObj = (JSONObject)arr.get(i); // get the josn object
+    if(jsonObj.getString("name").equals("Rose")){ // compare for the key-value
+        ((JSONObject)arr.get(i)).put("id", 22); // put the new value for the key
+    }
+    textview.setText(arr.toString());// display and verify your Json with updated value
+}
+///////////////////////////////////////
+private JSONObject setJSONVal(JSONObject jsonObject, String index, String value) throws JSONException{
+   String jsonString = jsonObject.toString().trim();
+   jsonString = jsonString.replace("\"" + index + "\":\"" + jsonObject.getString(index) + "\"", "\"" + index + "\":\"" + value + "\"");
+   return new JSONObject(jsonString);
+}
+ */
 

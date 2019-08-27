@@ -38,7 +38,7 @@ public class offer extends AppCompatActivity
     }
 
     public void Alexandria(View view) {
-        Intent intent = new Intent(this, alex2.class);
+        Intent intent = new Intent(this, youmna.class);
         startActivities(new Intent[]{intent});
         finish();
     }

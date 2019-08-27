@@ -92,7 +92,7 @@ public class home extends AppCompatActivity
     }
 
     public void offers(View view) {
-        Intent intent1 = new Intent(this, offer.class);
+        Intent intent1 = new Intent(this, youmna.class);
         startActivity(intent1);
         finish();
     }

@@ -54,7 +54,7 @@
             android:background="@drawable/roundedbutton_orange"
             android:baselineAligned="false"
             android:onClick="specific_offer"
-            android:text="specific offer"
+            android:text="specific hotel_blog"
             android:textColor="#ffffff"
             android:textSize="22sp"
             android:textStyle="bold" />
