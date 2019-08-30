@@ -26,7 +26,7 @@
                 android:src="@drawable/alexandriaa" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview"
+                android:id="@+id/alex_landmark_rcv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"

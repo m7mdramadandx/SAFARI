@@ -17,7 +17,7 @@ public class car extends Activity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, offer.class);
+        Intent intent = new Intent(this, domestic_trips.class);
         startActivity(intent);
         finish();
     }

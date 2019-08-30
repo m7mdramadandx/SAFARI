@@ -37,22 +37,8 @@
                 android:text="Wednesday" />
         </com.google.android.material.tabs.TabLayout>-->
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="#FF726233"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-        </com.google.android.material.appbar.AppBarLayout>
-
-
         <Button
-            android:id="@+id/offers"
+            android:id="@+id/domestic_trips"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -62,18 +48,20 @@
             android:layout_marginEnd="60dp"
             android:layout_marginRight="60dp"
             android:background="@drawable/roundedbutton"
-            android:onClick="offers"
-            android:text="offers"
+            android:onClick="domestic_trips"
+            android:text="@string/domestic_trips"
             android:textColor="#ffffff"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:textAllCaps="false"
             tools:ignore="NotSibling" />
 
+
         <Button
-            android:id="@+id/make_an_order"
+            android:id="@+id/abroad_trips"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/offers"
+            android:layout_below="@id/domestic_trips"
             android:layout_marginStart="60dp"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="60dp"
@@ -81,12 +69,29 @@
             android:layout_marginRight="60dp"
             android:layout_marginBottom="60dp"
             android:background="@drawable/roundedbutton"
-            android:onClick="make_and_order"
-            android:text="make an order"
+            android:onClick="abroad_trips"
+            android:text="@string/abroad_trips"
+            android:textAllCaps="false"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme.PopupOverlay"
+                app:subtitleTextColor="#00FFFFFF"
+                app:titleMargin="0dp"
+                app:titleTextColor="#00FFFFFF" />
+        </com.google.android.material.appbar.AppBarLayout>
 
 
     </RelativeLayout>

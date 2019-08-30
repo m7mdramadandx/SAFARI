@@ -5,8 +5,8 @@ package com.ramadan.safari.activities;
 public class youmna2 {/*
     private FirebaseDatabase mDatabase ;
 
-    public static ArrayList<Hotel_blog> getCities(final Cafes cafes, final Context context) {
-        final ArrayList<Hotel_blog> mhotel_blog = new ArrayList<>();
+    public static ArrayList<Hotel_Blog> getCities(final Cafes cafes, final Context context) {
+        final ArrayList<Hotel_Blog> mhotel_blog = new ArrayList<>();
 
         final DatabaseReference myRef = FirebaseDatabase.getInstance().getReference().child("Hotel");
 //        cafes.progressbar.setVisibility(View.VISIBLE);
@@ -19,7 +19,7 @@ public class youmna2 {/*
                 try {
                     for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
 
-                        final Hotel_blog alarm = postSnapshot.getValue(Hotel_blog.class);
+                        final Hotel_Blog alarm = postSnapshot.getValue(Hotel_Blog.class);
 
                         mhotel_blog.add(alarm);
 

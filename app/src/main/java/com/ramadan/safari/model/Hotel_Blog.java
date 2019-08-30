@@ -1,6 +1,6 @@
 package com.ramadan.safari.model;
 
-public class Hotel_blog {
+public class Hotel_Blog {
     private String hotel_name;
     private String hotel_rate;
     private String hotel_location;
@@ -8,10 +8,10 @@ public class Hotel_blog {
     private String hotel_img_url;
     //private String hotel_cost;
 
-    public Hotel_blog() {
+    public Hotel_Blog() {
     }
 
-    public Hotel_blog(String hotel_name, String hotel_rate, String hotel_location, String hotel_beach, String hotel_img_url) {
+    public Hotel_Blog(String hotel_name, String hotel_rate, String hotel_location, String hotel_beach, String hotel_img_url) {
         this.hotel_name = hotel_name;
         this.hotel_rate = hotel_rate;
         this.hotel_location = hotel_location;

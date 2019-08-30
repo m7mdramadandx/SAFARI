@@ -1,0 +1,42 @@
+[
+  {
+    "landmark_name": "Alexandria National Museum",
+    "landmark_location": "131 El-Shaheed Galal El-Desouky, Bab Sharqi WA Wabour Al Meyah, Qism Bab Sharqi, Alexandria Governorate",
+    "landmark_rate": "",
+    "landmark_cost": "0",
+    "landmark_desc": "The Alexandria National Museum is a museum in Alexandria, Egypt. It was inaugurated the 31 December 2003 by Hosni Mubarak and it is located in a renovated Italian style palace in Tariq Al-Horreya Street. The building used to be home to the United States consulate.",
+    "landmark_img_url": "https://www.sharm-club.com/assets/images/cities/alexandria/national-museum/alexandria-national-museum.jpg"
+  },
+  {
+    "landmark_name": "Citadel of Qaitbay",
+    "landmark_location": "As Sayalah Sharq, Qesm Al Gomrok, Alexandria Governorate",
+    "landmark_rate": "4.4",
+    "landmark_cost": "0",
+    "landmark_desc": "The Citadel of Qaitbay is a 15th-century defensive fortress located on the Mediterranean sea coast, in Alexandria, Egypt. It was established in 1477 AD by Sultan Al-Ashraf Sayf al-Din Qa'it Bay. The Citadel is situated on the eastern side of the northern tip of Pharos Island at the mouth of the Eastern Harbour.",
+    "landmark_img_url": "https://dneegypt.nyc3.digitaloceanspaces.com/2018/09/8-2-3-4-768x430.jpg"
+  },
+  {
+    "landmark_name": "Bibliotheca Alexandrina",
+    "landmark_location": "Al Azaritah WA Ash Shatebi, Qism Bab Sharqi, Alexandria Governorate 21526",
+    "landmark_rate": "4.7",
+    "landmark_cost": "0",
+    "landmark_desc": "The Great Library of Alexandria in Alexandria, Egypt, was one of the largest and most significant libraries of the ancient world. The Library was part of a larger research institution called the Mouseion, which was dedicated to the Muses, the nine goddesses of the arts.",
+    "landmark_img_url": "0"
+  },
+  {
+    "landmark_name": "Pompey's Pillar",
+    "landmark_location": "Pompey's Pillar, Al Karah WA at Toubageyah WA Kafr Al Ghates, Karmouz, Alexandria Governorate",
+    "landmark_rate": "4.2",
+    "landmark_cost": "0",
+    "landmark_desc": "Pompey's Pillar is a Roman triumphal column in Alexandria, Egypt, the largest of its type constructed outside the imperial capitals of Rome and Constantinople, located at the Serapeum of Alexandria.",
+    "landmark_img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ9POh4MyrbXqYoaVhwm13YISlrxIhwQo298FLHqBn_DU7tlyv"
+  },
+  {
+    "landmark_name": "Graeco-Roman Museum",
+    "landmark_location": "Al Mesallah Sharq, Ataren, Alexandria Governorate",
+    "landmark_rate": "3.7",
+    "landmark_cost": "0",
+    "landmark_desc": "The Graeco-Roman Museum is an archaeological museum located in Alexandria, Egypt. Erected in 1892, it was first built in a five-room apartment, inside one small building on Rosetta Street. In 1895, it was transferred to another, larger building near Gamal Abdul Nasser Street.",
+    "landmark_img_url": "0"
+  }
+]

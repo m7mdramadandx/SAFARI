@@ -9,8 +9,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-
-        <activity android:name=".activities.test"></activity>
+        <activity android:name=".activities.submition" />
+        <activity android:name=".activities.test" />
         <activity android:name=".activities.home" />
         <activity android:name=".activities.staff_home" />
         <activity android:name=".activities.sign_up" />
@@ -18,7 +18,7 @@
         <activity android:name=".activities.specific_offer" />
         <activity android:name=".activities.make_an_order" />
         <activity android:name=".activities.alex2" />
-        <activity android:name=".activities.youmna" />
+        <activity android:name=".activities.alex_hotel" />
         <activity android:name=".activities.car" />
         <activity android:name=".activities.train" />
         <activity android:name=".activities.bus" />
@@ -30,11 +30,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.domestic_trips" />
+        <activity android:name=".activities.abroad_trips" />
+        <activity android:name=".activities.sharm_alsheikh" />
+        <activity android:name=".activities.alex_landmark" />
     </application>
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

@@ -18,42 +18,41 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.ramadan.safari.R;
-import com.ramadan.safari.adapter.RvAdapter2;
-import com.ramadan.safari.model.Hotel_blog;
+import com.ramadan.safari.adapter.alex_landmark_rcv_adp;
+import com.ramadan.safari.model.Landmark_Blog;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class youmna extends AppCompatActivity {
+public class alex_landmark extends AppCompatActivity {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
-    private ArrayList<Hotel_blog> mHotelBlog = new ArrayList<>();
-    private RecyclerView myrv;
+    private ArrayList<Landmark_Blog> mLandmarkBlog = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.alex);
+        setContentView(R.layout.alex_landmark);
         method();
 
     }
 
 
     private void method() {
-        Query query = mDatabase.getReference().child("Hotel");
+        Query query = mDatabase.getReference().child("domestic_trips").child("alexandria").child("alex_landmark");
         query.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
-                //Hotel_blog Hotel_blog = SharedPrefManager.getInstance(context).getUser();
-                // Hotel_blog mhotel_blog = new Hotel_blog();
-                Hotel_blog mhotel_blog = dataSnapshot.getValue(Hotel_blog.class);
-                /*mhotel_blog.setHotel_name((String) dataSnapshot.child("hotel_name").getValue());
-                mhotel_blog.setHotel_location((String) dataSnapshot.child("hotel_location").getValue());
-                mhotel_blog.setHotel_rate((String) dataSnapshot.child("hotel_rate").getValue());
-                mhotel_blog.setHotel_beachfront((String) dataSnapshot.child("hotel_beach").getValue());
-                String shotel_blog = (String) dataSnapshot.child("hotel_location").getValue();
-                mhotel_blog.setHotel_img_url((String) dataSnapshot.child("hotel_img_url").getValue());*/
-                mHotelBlog.add(mhotel_blog);
-                setRvadapter(mHotelBlog);
+                //Landmark_Blog Landmark_Blog = SharedPrefManager.getInstance(context).getUser();
+                // Landmark_Blog mlandmark_blog = new Landmark_Blog();
+                Landmark_Blog mlandmark_blog = dataSnapshot.getValue(Landmark_Blog.class);
+                /*mlandmark_blog.setLandmark_name((String) dataSnapshot.child("landmark_name").getValue());
+                mlandmark_blog.setLandmark_location((String) dataSnapshot.child("landmark_location").getValue());
+                mlandmark_blog.setLandmark_rate((String) dataSnapshot.child("landmark_rate").getValue());
+                mlandmark_blog.setLandmark_beachfront((String) dataSnapshot.child("landmark_beach").getValue());
+                String slandmark_blog = (String) dataSnapshot.child("landmark_location").getValue();
+                mlandmark_blog.setLandmark_img_url((String) dataSnapshot.child("landmark_img_url").getValue());*/
+                mLandmarkBlog.add(mlandmark_blog);
+                setRvadapter(mLandmarkBlog);
 //                String firebase_key = dataSnapshot.getKey();
                 //User.setAdmin(isadmin);
                 //SharedPrefManager.getInstance(context).userLogin(user);
@@ -95,13 +94,13 @@ public class youmna extends AppCompatActivity {
     }
 
 
-    private void setRvadapter(List<Hotel_blog> mHotelBlog) {
-        myrv = findViewById(R.id.recyclerview);
+    private void setRvadapter(List<Landmark_Blog> mLandmarkBlog) {
+        RecyclerView myrv = findViewById(R.id.alex_landmark_rcv);
         GridLayoutManager mGrid = new GridLayoutManager(this, 1);
         myrv.setLayoutManager(mGrid);
         myrv.setHasFixedSize(true);
         myrv.setNestedScrollingEnabled(false);
-        RvAdapter2 myAdapter = new RvAdapter2(this, (ArrayList) mHotelBlog);
+        alex_landmark_rcv_adp myAdapter = new alex_landmark_rcv_adp(this, (ArrayList) mLandmarkBlog);
         myrv.setAdapter(myAdapter);
         //myrv.setLayoutManager(new LinearLayoutManager(this));
     }

@@ -13,13 +13,13 @@
             android:icon="@drawable/ic_account_circle_black_24dp"
             android:title="@string/Profile" />
         <item
-            android:id="@+id/nav_offers"
-            android:icon="@drawable/ic_whatshot_black_24dp"
-            android:title="@string/Offers" />
-        <item
-            android:id="@+id/nav_make_an_order"
+            android:id="@+id/nav_domestic_trip"
             android:icon="@drawable/ic_assignment_black_24dp"
-            android:title="Make an order" />
+            android:title="@string/domestic_trips" />
+        <item
+            android:id="@+id/nav_abroad_trip"
+            android:icon="@drawable/ic_whatshot_black_24dp"
+            android:title="@string/abroad_trips" />
         <item
             android:id="@+id/nav_setting"
             android:icon="@drawable/ic_settings_black_24dp"

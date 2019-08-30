@@ -148,23 +148,23 @@ public class make_an_order extends AppCompatActivity
             finish();
 
         } else if (id == R.id.nav_profile) {
-            Intent intent = new Intent(this, offer.class);
+            Intent intent = new Intent(this, domestic_trips.class);
             startActivities(new Intent[]{intent});
             finish();
-        } else if (id == R.id.nav_offers) {
-            Intent intent = new Intent(this, offer.class);
+        } else if (id == R.id.nav_domestic_trip) {
+            Intent intent = new Intent(this, domestic_trips.class);
             startActivities(new Intent[]{intent});
             finish();
-        } else if (id == R.id.nav_make_an_order) {
-            Intent intent = new Intent(this, make_an_order.class);
+        } else if (id == R.id.nav_abroad_trip) {
+            Intent intent = new Intent(this, abroad_trips.class);
             startActivities(new Intent[]{intent});
             finish();
         } else if (id == R.id.nav_setting) {
-            Intent intent = new Intent(this, offer.class);
+            Intent intent = new Intent(this, domestic_trips.class);
             startActivities(new Intent[]{intent});
             finish();
         } else if (id == R.id.nav_about) {
-            Intent intent = new Intent(this, offer.class);
+            Intent intent = new Intent(this, domestic_trips.class);
             startActivities(new Intent[]{intent});
             finish();
         }

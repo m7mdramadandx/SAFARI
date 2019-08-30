@@ -8,7 +8,7 @@ public class alex {/*
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.alex);
+        //setContentView(R.layout.alex_hotel);
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Hotel_2");
         mDatabase.keepSynced(true);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
@@ -19,10 +19,10 @@ public class alex {/*
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseRecyclerAdapter<Hotel_blog, view_holder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Hotel_blog, view_holder>
-                (Hotel_blog.class, R.layout.blog_raw, view_holder.class, mDatabase) {
+        FirebaseRecyclerAdapter<Hotel_Blog, view_holder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Hotel_Blog, view_holder>
+                (Hotel_Blog.class, R.layout.alex_hotel_blog_raw, view_holder.class, mDatabase) {
             @Override
-            protected void populateViewHolder(view_holder view_holder, Hotel_blog hotel_blog, int i) {
+            protected void populateViewHolder(view_holder view_holder, Hotel_Blog hotel_blog, int i) {
                 view_holder.setHotel_beachfront(hotel_blog.getHotel_beach());
                 view_holder.setHotel_img(getApplicationContext(), hotel_blog.getHotel_img_url());
                 view_holder.setHotel_location(hotel_blog.getHotel_location());

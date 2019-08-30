@@ -16,9 +16,9 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/hotel_img"
+            android:id="@+id/landmark_img"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="260dp"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
@@ -28,11 +28,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
-
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/hotel_rate"
+                android:id="@+id/landmark_rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_stars_black_24dp"
@@ -43,26 +42,18 @@
 
 
             <TextView
-                android:id="@+id/hotel_location"
+                android:id="@+id/landmark_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_location_on_black_24dp"
                 android:paddingRight="5dp"
                 android:text="00 km from center"
                 android:textColor="#00C853"
-                android:textSize="17sp" />
+                android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/hotel_beach"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_beach_access_black_24dp"
-                android:text="beach"
-                android:textColor="#00C853"
-                android:textSize="17sp" />
 
             <!--  <TextView
-                  android:id="@+id/hotel_cost"
+                  android:id="@+id/landmark_cost"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_gravity="end"
@@ -72,16 +63,17 @@
                   android:text="0000"
                   android:textSize="19sp"
                   android:textStyle="bold" />
+
+
              -->
         </LinearLayout>
 
-
         <TextView
-            android:id="@+id/hotel_name"
+            android:id="@+id/landmark_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="hotel_name"
-            android:textColor="@color/colorPrimaryDark"
+            android:text="landmark_name"
+            android:textColor="#FF304FFE"
             android:textSize="32dp"
             android:textStyle="bold" />
 

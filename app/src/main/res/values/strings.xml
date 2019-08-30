@@ -15,7 +15,9 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="profile">profile</string>
-    <string name="Offers">Offers</string>
+    <string name="Hotels">Hotels</string>
+    <string name="abroad_trips">Abroad Trips</string>
+    <string name="domestic_trips">Domestic Trips</string>
     <string name="Profile">Profile</string>
     <string name="About">About</string>
     <string name="setting">Setting</string>

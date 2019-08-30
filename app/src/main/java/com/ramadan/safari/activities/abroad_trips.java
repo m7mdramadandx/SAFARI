@@ -1,12 +1,11 @@
 package com.ramadan.safari.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,50 +14,21 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.ramadan.safari.R;
 
 
-public class home extends AppCompatActivity
+public class abroad_trips extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    FirebaseAuth mAuth;
-    FirebaseAuth.AuthStateListener mAuthListener;
-    String status = "hey";
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.abroad_trip);
         mAuth = FirebaseAuth.getInstance();
-        mAuth.removeAuthStateListener(mAuthListener);
-        status = getIntent().getExtras().getString("status");
-        if (status.equals("old_user")) {
-            Toast.makeText(this, "welcome", Toast.LENGTH_SHORT).show();
-        } else {
-            mAuthListener = new FirebaseAuth.AuthStateListener() {
-                @Override
-                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                    FirebaseUser user = firebaseAuth.getCurrentUser();
-                    if (user == null) {
-                        Intent intent = new Intent(home.this, main.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
-                        finish();
-                    }
-                }
-            };
-        }
-        /*        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-  */
         //////////////////////------NAV BAR------//////////////////
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setBackgroundColor(Color.TRANSPARENT);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -69,33 +39,6 @@ public class home extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-/*
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
-
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
-        }
-    }*/
-
-    public void domestic_trips(View view) {
-        Intent intent = new Intent(this, domestic_trips.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void abroad_trips(View view) {
-        Intent intent1 = new Intent(this, abroad_trips.class);
-        startActivity(intent1);
-        finish();
-    }
 
     //////////////////////------NAV BAR------//////////////////
     @Override
@@ -104,8 +47,16 @@ public class home extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            finish();
+            Intent intent = new Intent(this, home.class);
+            intent.putExtra("status", "hey");
+            startActivity(intent);
         }
+    }
+
+    public void moscow(View view) {
+    }
+
+    public void istanbul(View view) {
     }
 
     @Override
@@ -147,4 +98,6 @@ public class home extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

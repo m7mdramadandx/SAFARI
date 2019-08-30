@@ -1,6 +1,7 @@
 package com.ramadan.safari.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,17 +17,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.ramadan.safari.R;
 
 
-public class offer extends AppCompatActivity
+public class domestic_trips extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.offers);
+        setContentView(R.layout.domestic_trip);
         mAuth = FirebaseAuth.getInstance();
         //////////////////////------NAV BAR------//////////////////
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setBackgroundColor(Color.TRANSPARENT);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -38,7 +40,7 @@ public class offer extends AppCompatActivity
     }
 
     public void Alexandria(View view) {
-        Intent intent = new Intent(this, youmna.class);
+        Intent intent = new Intent(this, alex_landmark.class);
         startActivities(new Intent[]{intent});
         finish();
     }
@@ -67,23 +69,23 @@ public class offer extends AppCompatActivity
             finish();
 
         } else if (id == R.id.nav_profile) {
-            Intent intent = new Intent(this, offer.class);
+            Intent intent = new Intent(this, domestic_trips.class);
             startActivities(new Intent[]{intent});
             finish();
-        } else if (id == R.id.nav_offers) {
-            Intent intent = new Intent(this, offer.class);
+        } else if (id == R.id.nav_domestic_trip) {
+            Intent intent = new Intent(this, domestic_trips.class);
             startActivities(new Intent[]{intent});
             finish();
-        } else if (id == R.id.nav_make_an_order) {
+        } else if (id == R.id.nav_abroad_trip) {
             Intent intent = new Intent(this, make_an_order.class);
             startActivities(new Intent[]{intent});
             finish();
         } else if (id == R.id.nav_setting) {
-            Intent intent = new Intent(this, offer.class);
+            Intent intent = new Intent(this, domestic_trips.class);
             startActivities(new Intent[]{intent});
             finish();
         } else if (id == R.id.nav_about) {
-            Intent intent = new Intent(this, offer.class);
+            Intent intent = new Intent(this, domestic_trips.class);
             startActivities(new Intent[]{intent});
             finish();
         } else if (id == R.id.nav_logout) {
