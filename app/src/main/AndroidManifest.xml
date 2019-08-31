@@ -32,8 +32,8 @@
         </activity>
         <activity android:name=".activities.domestic_trips" />
         <activity android:name=".activities.abroad_trips" />
-        <activity android:name=".activities.sharm_alsheikh" />
         <activity android:name=".activities.alex_landmark" />
+        <activity android:name=".activities.sharm_hotel" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 

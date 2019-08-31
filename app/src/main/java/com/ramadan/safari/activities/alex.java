@@ -20,7 +20,7 @@ public class alex {/*
     protected void onStart() {
         super.onStart();
         FirebaseRecyclerAdapter<Hotel_Blog, view_holder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Hotel_Blog, view_holder>
-                (Hotel_Blog.class, R.layout.alex_hotel_blog_raw, view_holder.class, mDatabase) {
+                (Hotel_Blog.class, R.layout.hotel_blog_raw, view_holder.class, mDatabase) {
             @Override
             protected void populateViewHolder(view_holder view_holder, Hotel_Blog hotel_blog, int i) {
                 view_holder.setHotel_beachfront(hotel_blog.getHotel_beach());

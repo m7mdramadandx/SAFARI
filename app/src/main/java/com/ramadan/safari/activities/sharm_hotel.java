@@ -9,6 +9,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -17,47 +18,40 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.ramadan.safari.R;
-import com.ramadan.safari.adapter.alex_hotel_rcv_adp;
+import com.ramadan.safari.adapter.sharm_hotel_rcv_adp;
 import com.ramadan.safari.model.Hotel_Blog;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class sharm_alsheikh extends AppCompatActivity {
+public class sharm_hotel extends AppCompatActivity {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     private ArrayList<Hotel_Blog> mHotelBlog = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.alex_hotel);
+        setContentView(R.layout.sharm_hotel);
         method();
 
     }
 
-
     private void method() {
-        Query query = mDatabase.getReference().child("Hotel");
+        Query query = mDatabase.getReference().child("domestic_trips").child("sharm_alsheikh").child("sharm_hotels");
         query.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
-                //Hotel_Blog Hotel_Blog = SharedPrefManager.getInstance(context).getUser();
-                // Hotel_Blog mhotel_blog = new Hotel_Blog();
                 Hotel_Blog mhotel_blog = dataSnapshot.getValue(Hotel_Blog.class);
-                /*mhotel_blog.setHotel_name((String) dataSnapshot.child("hotel_name").getValue());
-                mhotel_blog.setHotel_location((String) dataSnapshot.child("hotel_location").getValue());
+//                String x = (String) dataSnapshot.child("hotel_name").getValue();
+//                System.out.println(x + "ssssssssss");
+                /*mhotel_blog.setHotel_location((String) dataSnapshot.child("hotel_location").getValue());
                 mhotel_blog.setHotel_rate((String) dataSnapshot.child("hotel_rate").getValue());
                 mhotel_blog.setHotel_beachfront((String) dataSnapshot.child("hotel_beach").getValue());
                 String shotel_blog = (String) dataSnapshot.child("hotel_location").getValue();
                 mhotel_blog.setHotel_img_url((String) dataSnapshot.child("hotel_img_url").getValue());*/
                 mHotelBlog.add(mhotel_blog);
                 setRvadapter(mHotelBlog);
-//                String firebase_key = dataSnapshot.getKey();
-                //User.setAdmin(isadmin);
-                //SharedPrefManager.getInstance(context).userLogin(user);
-
             }
-
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, String s) {
@@ -93,12 +87,12 @@ public class sharm_alsheikh extends AppCompatActivity {
 
 
     private void setRvadapter(List<Hotel_Blog> mHotelBlog) {
-        RecyclerView myrv = findViewById(R.id.alex_hotel_rcv);
-//        GridLayoutManager mGrid = new GridLayoutManager(this, 1);
-//        myrv.setLayoutManager(mGrid);
+        RecyclerView myrv = findViewById(R.id.sharm_hotel_rcv);
+        GridLayoutManager mGrid = new GridLayoutManager(this, 1);
+        myrv.setLayoutManager(mGrid);
         myrv.setHasFixedSize(true);
         myrv.setNestedScrollingEnabled(false);
-        alex_hotel_rcv_adp myAdapter = new alex_hotel_rcv_adp(this, (ArrayList) mHotelBlog);
+        sharm_hotel_rcv_adp myAdapter = new sharm_hotel_rcv_adp(this, (ArrayList) mHotelBlog);
         myrv.setAdapter(myAdapter);
         //myrv.setLayoutManager(new LinearLayoutManager(this));
     }

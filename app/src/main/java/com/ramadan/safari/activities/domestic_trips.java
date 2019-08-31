@@ -46,6 +46,13 @@ public class domestic_trips extends AppCompatActivity
     }
 
 
+    public void Sharm_Alsheikh(View view) {
+        Intent intent = new Intent(this, sharm_hotel.class);
+        startActivities(new Intent[]{intent});
+        finish();
+    }
+
+
     //////////////////////------NAV BAR------//////////////////
     @Override
     public void onBackPressed() {
@@ -98,4 +105,5 @@ public class domestic_trips extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

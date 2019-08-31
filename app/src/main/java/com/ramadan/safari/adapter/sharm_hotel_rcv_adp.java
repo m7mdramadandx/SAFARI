@@ -2,7 +2,6 @@ package com.ramadan.safari.adapter;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,19 +16,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.ramadan.safari.R;
-import com.ramadan.safari.activities.alex_landmark;
 import com.ramadan.safari.model.Hotel_Blog;
 
 import java.util.ArrayList;
 
-public class alex_hotel_rcv_adp extends RecyclerView.Adapter<alex_hotel_rcv_adp.HotelViewHolder> {
+public class sharm_hotel_rcv_adp extends RecyclerView.Adapter<sharm_hotel_rcv_adp.HotelViewHolder> {
     RequestOptions options;
     private Context mContext;
     private ArrayList<Hotel_Blog> hotel;
     private AdapterView.OnItemClickListener mListener;
 
 
-    public alex_hotel_rcv_adp(Context mContext, ArrayList hotel) {
+    public sharm_hotel_rcv_adp(Context mContext, ArrayList hotel) {
         this.mContext = mContext;
         this.hotel = hotel;
         options = new RequestOptions()
@@ -45,7 +43,7 @@ public class alex_hotel_rcv_adp extends RecyclerView.Adapter<alex_hotel_rcv_adp.
     @NonNull
     @Override
     public HotelViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(mContext).inflate(R.layout.hotel_blog_raw, parent, false);
+        View v = LayoutInflater.from(mContext).inflate(R.layout.sharm_hotel_blog_raw, parent, false);
         return new HotelViewHolder(v);
     }
 
@@ -97,7 +95,6 @@ public class alex_hotel_rcv_adp extends RecyclerView.Adapter<alex_hotel_rcv_adp.
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(mContext, alex_landmark.class);
                     Toast.makeText(mContext, "dede", Toast.LENGTH_SHORT).show();
 
                 }

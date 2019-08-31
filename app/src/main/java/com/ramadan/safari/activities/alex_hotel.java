@@ -42,8 +42,8 @@ public class alex_hotel extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
                 Hotel_Blog mhotel_blog = dataSnapshot.getValue(Hotel_Blog.class);
-                String x = (String) dataSnapshot.child("hotel_name").getValue();
-                System.out.println(x + "ssssssssss");
+//                String x = (String) dataSnapshot.child("hotel_name").getValue();
+//                System.out.println(x + "ssssssssss");
                 /*mhotel_blog.setHotel_location((String) dataSnapshot.child("hotel_location").getValue());
                 mhotel_blog.setHotel_rate((String) dataSnapshot.child("hotel_rate").getValue());
                 mhotel_blog.setHotel_beachfront((String) dataSnapshot.child("hotel_beach").getValue());
