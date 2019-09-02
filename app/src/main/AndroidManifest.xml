@@ -9,6 +9,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".activities.selected_hotel"></activity>
         <activity android:name=".activities.submition" />
         <activity android:name=".activities.test" />
         <activity android:name=".activities.home" />
@@ -35,8 +36,8 @@
         <activity android:name=".activities.alex_landmark" />
         <activity android:name=".activities.sharm_hotel" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

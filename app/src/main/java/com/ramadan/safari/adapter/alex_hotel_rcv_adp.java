@@ -3,13 +3,13 @@ package com.ramadan.safari.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,25 +17,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.ramadan.safari.R;
-import com.ramadan.safari.activities.alex_landmark;
+import com.ramadan.safari.activities.selected_hotel;
 import com.ramadan.safari.model.Hotel_Blog;
 
 import java.util.ArrayList;
 
 public class alex_hotel_rcv_adp extends RecyclerView.Adapter<alex_hotel_rcv_adp.HotelViewHolder> {
-    RequestOptions options;
+    RequestOptions option;
     private Context mContext;
     private ArrayList<Hotel_Blog> hotel;
+    private Hotel_Blog mhotel;
     private AdapterView.OnItemClickListener mListener;
 
 
     public alex_hotel_rcv_adp(Context mContext, ArrayList hotel) {
         this.mContext = mContext;
         this.hotel = hotel;
-        options = new RequestOptions()
-                .centerCrop()
-                .placeholder(R.drawable.loading_shape)
-                .error(R.drawable.loading_shape);
+        option = new RequestOptions().centerCrop().placeholder(R.drawable.loading_shape).error(R.drawable.loading_shape);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -97,8 +95,12 @@ public class alex_hotel_rcv_adp extends RecyclerView.Adapter<alex_hotel_rcv_adp.
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(mContext, alex_landmark.class);
-                    Toast.makeText(mContext, "dede", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(mContext, selected_hotel.class);
+                    Bundle bundle = new Bundle();
+                    //bundle.putSerializable("Data", mhotel);
+                    bundle.putString("hotel_name", hotel_name.getText().toString());
+                    intent.putExtras(bundle);
+                    mContext.startActivity(intent);
 
                 }
             });

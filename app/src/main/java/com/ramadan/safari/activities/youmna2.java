@@ -3,52 +3,43 @@ package com.ramadan.safari.activities;
 //import com.google.api.Context;
 
 public class youmna2 {/*
-    private FirebaseDatabase mDatabase ;
 
-    public static ArrayList<Hotel_Blog> getCities(final Cafes cafes, final Context context) {
-        final ArrayList<Hotel_Blog> mhotel_blog = new ArrayList<>();
+public MyViewHolder(View itemView) {
+                super(itemView);
+                view = itemView;
 
-        final DatabaseReference myRef = FirebaseDatabase.getInstance().getReference().child("Hotel");
-//        cafes.progressbar.setVisibility(View.VISIBLE);
+                dish_name = (TextView) view.findViewById(R.id.dish_name);
+                dish_details= (TextView) view.findViewById(R.id.dish_details);
+                more1= (TextView) view.findViewById(R.id.more1);
 
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                try {
-                    for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                dish_image= (ImageView) view.findViewById(R.id.dish_image);
+                love= (ImageView) view.findViewById(R.id.love);
+                more= (ImageView) view.findViewById(R.id.more);
 
-                        final Hotel_Blog alarm = postSnapshot.getValue(Hotel_Blog.class);
-
-                        mhotel_blog.add(alarm);
-
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        final AppCompatActivity activity = (AppCompatActivity) mContext;
+                        FragmentManager fragmentManager=activity.getSupportFragmentManager();
+                        if(SharedPrefManager.getInstance(mContext).get_type()==1) {
+                            Fragment fragment = Dish_Fragments.newInstance(dishes.get(getLayoutPosition()), parent_name);
+                            fragmentManager.beginTransaction().replace(R.id.container, fragment).addToBackStack("xyz")
+                                    .commit();
+                        }else{
+                            if(dishes.get(getLayoutPosition()).getType().equals("1")) {
+                                Fragment fragment = Sub_cat2.newInstance(dishes.get(getLayoutPosition()), parent_name);
+                                fragmentManager.beginTransaction().replace(R.id.container, fragment).addToBackStack("xyz")
+                                        .commit();
+                            }else{
+                                Fragment fragment = Other_Quantity.newInstance(dishes.get(getLayoutPosition()), parent_name);
+                                fragmentManager.beginTransaction().replace(R.id.container, fragment).addToBackStack("xyz")
+                                        .commit();
+                            }
+                        }
                     }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                Cities_Adapter mAdapter = new Cities_Adapter(context, mhotel_blog);
-                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
-                cafes.recyclerView_cityies.setLayoutManager(mLayoutManager);
-                cafes.recyclerView_cityies.setItemAnimator(new DefaultItemAnimator());
-                cafes.recyclerView_cityies.setAdapter(mAdapter);
-                DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(cafes.recyclerView_cityies.getContext(),
-                        DividerItemDecoration.VERTICAL);
-                cafes.recyclerView_cityies.addItemDecoration(dividerItemDecoration);
-                cafes.progressbar.setVisibility(View.INVISIBLE);
-
+                });
 
             }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.d("kkk", "Failed to read value.", error.toException());
-            }
-        });
-
-        return mhotel_blog;
-    }*/
+        }
+    */
 }

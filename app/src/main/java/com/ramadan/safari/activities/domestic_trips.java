@@ -40,7 +40,7 @@ public class domestic_trips extends AppCompatActivity
     }
 
     public void Alexandria(View view) {
-        Intent intent = new Intent(this, alex_landmark.class);
+        Intent intent = new Intent(this, alex_hotel.class);
         startActivities(new Intent[]{intent});
         finish();
     }
