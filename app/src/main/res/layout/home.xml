@@ -48,7 +48,7 @@
             android:onClick="domestic_trips"
             android:text="@string/domestic_trips"
             android:textColor="#ffffff"
-            android:textSize="32sp"
+            android:textSize="28sp"
             android:textStyle="bold"
             android:textAllCaps="false"
             tools:ignore="NotSibling" />
@@ -68,7 +68,7 @@
             android:textAllCaps="false"
             android:textAlignment="center"
             android:textColor="#ffffff"
-            android:textSize="32sp"
+            android:textSize="28sp"
             android:textStyle="bold" />
 
         <com.google.android.material.appbar.AppBarLayout
@@ -99,7 +99,6 @@
         android:background="@drawable/nav_screen"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_profile"
-        android:alpha="0"
         app:menu="@menu/navigate_drawer" />
 
 

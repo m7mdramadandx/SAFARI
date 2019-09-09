@@ -8,17 +8,12 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <RelativeLayout
-        android:id="@+id/main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/screen_frame">
-
         <RelativeLayout
             android:id="@+id/lay1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:background="@drawable/screen_frame">
 
 
             <Button
@@ -28,14 +23,14 @@
                 android:layout_centerInParent="true"
                 android:layout_marginStart="60dp"
                 android:layout_marginEnd="60dp"
-                android:layout_marginBottom="60dp"
                 android:background="@drawable/roundedbutton"
                 android:onClick="Sharm_Alsheikh"
                 android:text="Sharm Alsheikh"
                 android:textAllCaps="false"
                 android:textColor="#ffffff"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:ignore="NotSibling" />
 
 
             <Button
@@ -52,8 +47,9 @@
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="#ffffff"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:ignore="NotSibling" />
 
 
         </RelativeLayout>
@@ -71,7 +67,6 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
         </com.google.android.material.appbar.AppBarLayout>
 
-    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -81,7 +76,6 @@
         android:background="@drawable/nav_screen"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_profile"
-        android:alpha="0"
         app:menu="@menu/navigate_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
