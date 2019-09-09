@@ -26,23 +26,27 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.ramadan.safari.R;
-import com.ramadan.safari.adapter.sharm_hotel_rcv_adp;
+import com.ramadan.safari.adapter.sharm_landmark_rcv_adp;
 import com.ramadan.safari.model.Hotel_Blog;
+import com.ramadan.safari.model.Landmark_Blog;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class sharm_hotel extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class sharm_landmark extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
-    private ArrayList<Hotel_Blog> mHotelBlog = new ArrayList<>();
+    Hotel_Blog mhotel;
+    private ArrayList<Landmark_Blog> mLandmarkBlog = new ArrayList<>();
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sharm_hotel);
+        setContentView(R.layout.sharm_landmark);
         method();
+
+
         //////////////////////------NAV BAR------//////////////////
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -55,33 +59,26 @@ public class sharm_hotel extends AppCompatActivity implements NavigationView.OnN
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+
     private void method() {
-        Query query = mDatabase.getReference().child("domestic_trips").child("sharm_alsheikh").child("sharm_hotels");
+        Query query = mDatabase.getReference().child("domestic_trips").child("sharm_alsheikh").child("sharm_landmark");
         query.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
-                Hotel_Blog mhotel_blog = dataSnapshot.getValue(Hotel_Blog.class);
-                mHotelBlog.add(mhotel_blog);
-                setRvadapter(mHotelBlog);
+                Landmark_Blog mlandmark_blog = dataSnapshot.getValue(Landmark_Blog.class);
+                mLandmarkBlog.add(mlandmark_blog);
+                setRvadapter(mLandmarkBlog);
+
             }
+
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, String s) {
-//                User User=dataSnapshot.getValue(User.class);
-//                Boolean isadmin = (Boolean) dataSnapshot.child("isAdmin").getValue();
-//                User.setAdmin(isadmin);
-//                SharedPrefManager.getInstance(context).userLogin(User);
             }
 
             @Override
             public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-/*
-                SharedPrefManager.getInstance(context).logout();
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                context.startActivity(intent);*/
+
             }
 
             @Override
@@ -95,18 +92,18 @@ public class sharm_hotel extends AppCompatActivity implements NavigationView.OnN
             }
         });
 
+
     }
 
 
-    private void setRvadapter(List<Hotel_Blog> mHotelBlog) {
-        RecyclerView myrv = findViewById(R.id.sharm_hotel_rcv);
+    private void setRvadapter(List<Landmark_Blog> mLandmarkBlog) {
+        RecyclerView myrv = findViewById(R.id.sharm_landmark_rcv);
         GridLayoutManager mGrid = new GridLayoutManager(this, 1);
         myrv.setLayoutManager(mGrid);
         myrv.setHasFixedSize(true);
         myrv.setNestedScrollingEnabled(false);
-        sharm_hotel_rcv_adp myAdapter = new sharm_hotel_rcv_adp(this, (ArrayList) mHotelBlog);
+        sharm_landmark_rcv_adp myAdapter = new sharm_landmark_rcv_adp(this, (ArrayList) mLandmarkBlog);
         myrv.setAdapter(myAdapter);
-        //myrv.setLayoutManager(new LinearLayoutManager(this));
     }
 
     //////////////////////------NAV BAR------//////////////////
@@ -116,7 +113,7 @@ public class sharm_hotel extends AppCompatActivity implements NavigationView.OnN
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            Intent intent = new Intent(this, domestic_trips.class);
+            Intent intent = new Intent(this, home.class);
             intent.putExtra("status", "hey");
             startActivity(intent);
         }
@@ -161,7 +158,6 @@ public class sharm_hotel extends AppCompatActivity implements NavigationView.OnN
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 
 }

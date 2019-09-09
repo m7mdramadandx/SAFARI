@@ -41,5 +41,79 @@ public MyViewHolder(View itemView) {
 
             }
         }
+
+        ////////////////////
+        <com.ramotion.circlemenu.CircleMenuView
+                android:id="@+id/reserve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tooltipText="reserve"
+                app:button_colors="@array/colors"
+                app:button_icons="@array/icons"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.ramotion.circlemenu.CircleMenuView>
+
+            //////////////////////////////////
+                        <com.szugyi.circlemenu.view.CircleLayout
+                android:id="@+id/main_circle_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:firstChildPosition="North"
+                circle:firstChildPosition="South"
+                circle:isRotating="true">
+
+                <!-- circle:circleBackground="@drawable/green"   -->
+
+                <com.szugyi.circlemenu.view.CircleImageView
+                    android:id="@+id/main_facebook_image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/googleg_standard_color_18"
+                    circle:name="onee" />
+
+                <com.szugyi.circlemenu.view.CircleImageView
+                    android:id="@+id/main_myspace_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/googleg_standard_color_18"
+                    circle:name="eee" />
+
+                <com.szugyi.circlemenu.view.CircleImageView
+                    android:id="@+id/main_google_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/googleg_standard_color_18"
+                    circle:name="eee" />
+
+                <com.szugyi.circlemenu.view.CircleImageView
+                    android:id="@+id/main_linkedin_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/googleg_standard_color_18"
+                    circle:name="eee" />
+
+                <com.szugyi.circlemenu.view.CircleImageView
+                    android:id="@+id/main_twitter_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/googleg_standard_color_18"
+                    circle:name="eee" />
+
+                <com.szugyi.circlemenu.view.CircleImageView
+                    android:id="@+id/main_wordpress_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/googleg_standard_color_18"
+                    circle:name="eee" />
+            </com.szugyi.circlemenu.view.CircleLayout>
+
+
     */
 }

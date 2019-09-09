@@ -99,7 +99,7 @@
           "hotel_king": "3605",
           "parking": "Parking",
           "hotel_quadruple": "4260",
-          "hotel_queen": "34100",
+          "hotel_queen": "3100",
           "hotel_single": "2016",
           "hotel_spa": "Spa and wellness centre",
           "hotel_swimming_pool": "Swimming pool",
@@ -132,14 +132,14 @@
           "hotel_desc": "Radisson Blu Hotel offers 2 swimming pools and a rooftop spa offering holistic treatments. Located in Alex West district, the hotel offers rooms with a private balcony and free Wi-Fi.\n\nAll rooms are spacious and features glass sliding doors opening onto a balcony, some of which overlook Lake Mariout. Each one has a well-lit work desk, minihotel_bar and a TV.\n\nFilini boasts a chic Italian décor and serves Italian dishes alongside soothing music. At El Khan oriental restaurant, guests can enjoy oriental dishes.\n\nHotel Radisson Blu is a 35-minute drive from Alexandria’s historical sites, City Centre and Al Nozha Airport. Beaches and Borj Al Arab airport is a 20-minute drive away. Private parking is possible on site.\n\nThis property is also rated for the best value in Borg El Arab! Guests are getting more for their money when compared to other properties in this city.",
           "hotel_double": "4980",
           "hotel_double_double": "7800",
-          "hotel_gym": " ",
-          "hotel_beach": " ",
+          "hotel_gym": "Unavailable",
+          "hotel_beach": "Unavailable",
           "hotel_img_url": "https://media.radissonhotels.net/image/Radisson-Blu-Hotel-Alexandria/Exteriorview/16256-116695-f63816318_3XL.jpg?impolicy=CustomCrop&cwidth=1770&cheight=1350",
           "hotel_location": "24 km from centre",
           "hotel_name": "Radisson Blu Hotel",
           "hotel_rate": "5",
           "hotel_king": "5850",
-          "parking": " ",
+          "parking": "Unavailable",
           "hotel_quadruple": "7080",
           "hotel_queen": "5006",
           "hotel_single": "4005",
@@ -148,7 +148,7 @@
           "hotel_triple": "5616"
         },
         "Steigenberger Cecil Hotel": {
-          "hotel_airport": "",
+          "hotel_airport": "Unavailable",
           "hotel_bar": "Bar",
           "hotel_desc": "Conveniently located in Alexandria’s business district and overlooking the bay and yacht club, this hotel features an elegant setting influenced by the architecture and interior design of early modernism. Free WiFi is available throughout the property.\n\nSteigenberger Cecil Hotel Alexandria has spacious rooms with French beds, chandeliers and carpeted floors and furnishing that match in patterns and colours to create an artistically refreshing setting.\n\nAs can be expected, the hotel’s restaurants have a historical reputation to keep up to. You can also enjoy a drink at the Monty Bar, named after the famous Marshall Montogomery.\n\nSteigenberger Cecil Hotel Alexandria is a hotel for connoisseurs who can appreciate the impeccable service & attention to detail.\n\nThe hotel is situated in a convenient location in the heart of Alexandria.\n\nThis property also has one of the best-rated locations in Alexandria! Guests are happier about it compared to other properties in the area.\n\nCouples particularly like the location — they rated it 9.0 for a two-person trip.\n\nThis property is also rated for the best value in Alexandria! Guests are getting more for their money when compared to other properties in this city.",
           "hotel_double": "2504",
@@ -158,14 +158,14 @@
           "hotel_location": "1.9 km from centre",
           "hotel_name": "Steigenberger Cecil Hotel",
           "hotel_rate": "4",
-          "hotel_gym": " ",
+          "hotel_gym": "Unavailable",
           "hotel_king": "2031",
-          "parking": "",
+          "parking": "Unavailable",
           "hotel_quadruple": "4040",
           "hotel_queen": "2060",
           "hotel_single": "1807",
-          "hotel_spa": "",
-          "hotel_swimming_pool": "",
+          "hotel_spa": "Unavailable",
+          "hotel_swimming_pool": "Unavailable",
           "hotel_triple": "3101"
         }
       },
@@ -208,13 +208,13 @@
           "landmark_img_url": "https://www.novalandtours.com/images/Egypt/Alexandria/Graeco%20Roman%20Museum",
           "landmark_location": "Al Mesallah Sharq, Ataren.",
           "landmark_name": "Graeco-Roman Museum",
-          "landmark_rate": "3.7"
+          "landmark_rate": "4.3"
         }
       }
     },
     "sharm_alsheikh": {
-      "sharm_hotels": [
-        {
+      "sharm_hotels": {
+        "Rixos Premium Seagate": {
           "hotel_airport": "Airport shuttle",
           "hotel_bar": "Bar",
           "hotel_desc": "This luxurious 5-star resort in Sharm El Sheikh is located on the seafront among palm trees. Featuring a private beach and aqua park, Rixos Seagate Sharm offers an Ultra All Inclusive Concept. It offers 8 swimming pools including 1 indoor pool, 6 à-la-carte restaurants and 9 hotel_bars. It includes free WiFi in the entire property.\n\nAll rooms feature balcony or a terrace with a pool or a garden view. Each one offers a flat-screen TV, a safety box and a minihotel_bar, refilled daily for free. The bathroom includes a bath, a shower and slippers.\n\nIt offers 6 a la carte restaurants, 1 buffet restaurant, VIP executive lounge, beach food courts and 9 hotel_bars serving imported alcohols. Rixos’ spa offers a range of relaxation options, including full-body massages, facials, Turkish bath, steam room, therapy saloon, a beauty centre and a Ladies Spa. There is also a modern gym equipped with state-of-the-art cardiovascular equipment.\n\nAt Rixos Seagate Sharm-Ultra All Inclusive you will find tennis court. Other facilities offered at the property include a nightclub, luggage storage and shops (on site). An array of activities can be enjoyed on site or in the surroundings, including diving, snorkeling and beach football. Unique kids concept of Rixy Club with a spacious area, game rooms , special kids restaurant and 2 kids swimming pools and Teenage Club from the age of 13.\n\nSharm El Sheikh International Airport is 9 km away from Rixos Seagate Sharm. Guests can do shopping at Naa’ma Bay Shopping Centre which is 18 km away. An airport shuttle is available upon request.\n\nThis property also has one of the best-rated locations in Sharm El Sheikh! Guests are happier about it compared to other properties in the area.\n\nCouples particularly like the location — they rated it 9.1 for a two-person trip.\n\nThis property is also rated for the best value in Sharm El Sheikh! Guests are getting more for their money when compared to other properties in this city.",
@@ -235,7 +235,7 @@
           "hotel_swimming_pool": "Swimming pool",
           "hotel_triple": "3250"
         },
-        {
+        "Albatros Aqua Park": {
           "hotel_airport": "Airport shuttle",
           "hotel_bar": "Bar",
           "hotel_desc": "Offering its own water park with many slides, the 5 star Albatros Aqua Park Sharm El Sheikh is set in the heart of Sharm El Sheikh.The resort has a children's playground and hot spring bath, and guests can enjoy a meal at the restaurant or a drink at the hotel_bar.\n\nEvery one of the 236 room at this resort are air conditioned and feature a flat-screen TV with satellite channels. A terrace or balcony are featured in certain rooms. Each room has a private bathroom. Extras include slippers, free toiletries and a hairdryer.\n\nThere is a 24-hour front desk, a cash machine, concierge service and hairdresser's at the property.\n\nAlbatros is very popular for its water slides, varied swimming pools, and diverse range of sports and different activities for people of all ages. You can play tennis and table tennis at the resort. There is also a spa for guests who would like some pampering.\n\nThe resort also offers car hire. Theatre dive site is 1.2 km from Albatros Aqua Park Sharm El Sheikh, while Temple Reef is 1.3 km from the property. Sharm el-Sheikh International Airport is 15 km away.\n\nCouples particularly like the location — they rated it 8.9 for a two-person trip.\n\nThis property is also rated for the best value in Sharm El Sheikh! Guests are getting more for their money when compared to other properties in this city. ",
@@ -255,7 +255,7 @@
           "hotel_swimming_pool": "Swimming pool",
           "hotel_triple": "7107"
         },
-        {
+        "Stella Di Mare Beach Hotel": {
           "hotel_airport": "Airport shuttle",
           "hotel_bar": "Bar",
           "hotel_desc": "This luxurious 5-star resort is situated on a private beach at scenic Na'ama Bay’s entrance. The resort offers 3 gourmet restaurants, state-of-the-art dive training and a 600 m2 spa.\n\nStella Di Mare’s modern, spacious rooms have large windows and plenty of natural light. Each features a private outdoor terrace or balcony, some with sweeping views of the Red Sea. In-room amenities include satellite LCD TV and all-day room service.\n\nStella Di Mare’s lagoon-style outdoor swimming pool is surrounded by a waterfall and tropical gardens. Guests can snorkel in coral reefs located directly off of the resort’s beach. Evening entertainment is offered nightly.\n\nLa Terrazza serves candlelit dinners at its outdoor, sea-facing terrace. Fresh Mediterranean cuisine is available at Stella Di Mare’s Corallo Rosso restaurant. Italian cuisine is on offer at La Scogliera.\n\nThe islands of Ras Mohammed National Park are 16 km from the hotel. Stella Di Mare Beach Hotel & Spa is located a 20-minute drive away from Sharm el-Sheikh International Airport. A free shuttle service to Naama Bay is offered.\n\nThis is our guests' favourite part of Sharm El Sheikh, according to independent reviews.\n\nCouples particularly like the location — they rated it 8.6 for a two-person trip.\n\nThis property is also rated for the best value in Sharm El Sheikh! Guests are getting more for their money when compared to other properties in this city.",
@@ -275,7 +275,7 @@
           "hotel_swimming_pool": "Swimming pool",
           "hotel_triple": "7107"
         },
-        {
+        "Savoy Sharm El Sheikh": {
           "hotel_airport": "Airport shuttle",
           "hotel_bar": "Bar",
           "hotel_desc": "Situated directly on the beach and in the center of SOHO Square, this 5-star resort offers lush tropical surroundings and luxurious rooms with satellite TVs. Facilities include 5 swimming pools and water sports activities that include diving and snorkeling. Tennis and squash courts are also available.\n\nThe bright rooms of Savoy Sharm El Sheikh Hotel enjoy a modern and stylish interior. All rooms have a private balcony or terrace featuring panoramic views of the landscaped gardens, the pools, or the Red Sea.\n\nSavoy Sharm El Sheikh Hotel’s 6 restaurants serve dishes from all over the world, including Asian, Italian, and Mediterranean cuisine. Guests can enjoy a wide variety of drinks, live music, and water pipes at any of the 5 hotel_bars. SOHO Square Sharm El Sheikh provides entertainment for all tastes with a variety of restaurants, cafes and hotel_bars.\n\nThe Aqua Spa & Wellness Centre offers a range of health and beauty treatments, including Ayurvedic massages and body exfoliations. There is also a kids' club, games room with table football, and darts.\n\nSharm El Sheikh International Airport is 8 km away. Pick up service available by hotel bus for an additional charge and must be arranged minimum 48 hours in advance by providing flight details to a property.\n\nThis property also has one of the best-rated locations in Sharm El Sheikh! Guests are happier about it compared to other properties in the area.\n\nCouples particularly like the location — they rated it 9.1 for a two-person trip.\n\nThis property is also rated for the best value in Sharm El Sheikh! Guests are getting more for their money when compared to other properties in this city.",
@@ -285,7 +285,7 @@
           "hotel_beach": "beachfront-private beach",
           "hotel_img_url": "https://media-cdn.holidaycheck.com/w_1280,h_720,c_fill,q_80/ugc/images/ddd68f51-a12f-3414-a004-2764ced77543",
           "hotel_location": "8 km from centre",
-          "hotel_name": "Savoy Sharm El Sheikh\"",
+          "hotel_name": "Savoy Sharm El Sheikh\"Unavailable",
           "hotel_rate": "5",
           "hotel_king": "6758",
           "hotel_quadruple": "11260",
@@ -295,7 +295,7 @@
           "hotel_swimming_pool": "Swimming pool",
           "hotel_triple": "7107"
         },
-        {
+        "Four Seasons Resort&Spa": {
           "hotel_airport": "Airport shuttle",
           "hotel_bar": "Bar",
           "hotel_desc": "Four Seasons Resort is a hillside Red Sea diving resort set in Sharm El Sheikh. It boasts 4 pools, 5 restaurants, 3 lounges and a spa. Guests can also benefit from the snorkeling and diving activities available on site.\n\nAll accommodation at Four Seasons feature a balcony or terrace with views of the Red Sea, the garden and the resort. Each room offers a seating area with a flat-screen TV and a minihotel_bar. The villa includes a private pool with a sun-lounger terrace.\n\nFour Seasons offers an eclectic fine dining experience ranging from Mediterranean to Italian Cuisine. Guests can savour European specialties at Al Waha Pool Bar that overlooks the pool. Drinks are enjoyed at the various lounges with spectacular views.\n\nThe Four Seasons's spa offers a range of relaxation options, including full-body massages and facials. There is also a modern gym equipped with state-of-the-art cardiovascular equipment. For beauty purposes, a salon is also available.\n\nFour Seasons Resort Sharm El Sheikh is a 25-minute drive from Naama Bay. Old Sharm with its traditional markets, is 40 minutes by car. Sharm Al Sheikh Airport is 15 minutes by car.\n\nThis property also has one of the best-rated locations in Sharm El Sheikh! Guests are happier about it compared to other properties in the area.\n\nCouples particularly like the location — they rated it 9.4 for a two-person trip.\n\nThis property is also rated for the best value in Sharm El Sheikh! Guests are getting more for their money when compared to other properties in this city.",
@@ -305,7 +305,7 @@
           "hotel_beach": "beachfront-private beach",
           "hotel_img_url": "https://static.tripexpert.com/images/venue_photos/profile/866513.jpg?1432159143",
           "hotel_location": "7 km from centre",
-          "hotel_name": "Four Seasons Resort&Spa\"",
+          "hotel_name": "Four Seasons Resort&Spa",
           "hotel_rate": "5",
           "hotel_king": "6758",
           "hotel_quadruple": "11260",
@@ -315,7 +315,7 @@
           "hotel_swimming_pool": "Swimming pool",
           "hotel_triple": "7107"
         },
-        {
+        "Xperience Kiroseiz Parkland": {
           "hotel_airport": "Airport shuttle",
           "hotel_bar": "Bar",
           "hotel_desc": "Located 1 km from scenic Naama Bay, this all-inclusive resort offers an aquapark with 6 swimming pools, including 2 heated ones. It operates a free shuttle to a private beach on the Red Sea.\n\nAll air-conditioned rooms at Xperience Kiroseiz Parkland are fitted with contemporary furnishings. They come with a private balcony or terrace with a pool or garden view. Free refill of the in-room minihotel_bar is provided once per stay..\n\nGuests can relax on sun loungers around the pool or dip in to cool off. The separate children’s section has slides. At the spa, relaxing massages are provided, along with a hot tub and sauna.\n\nActive leisure facilities include a tennis court and well-equipped gym. There is also a games room offering table tennis, darts and billiards. Premium 24 hours all inclusive concept.\n\nThe hotel features 2 buffet and 1 à-la-carte restaurant, and 4 hotel_bars serving alcoholic beverages and snacks. For night-time entertainment it offers a night club.\n\nNaama Bay, with its promenade, is 1 km away from Xperience Kiroseiz Parkland. Sharm El Sheikh International Airport is 6 km drive away. A complimentary shuttle bus is available to Naama Bay promenade.\n\nCouples particularly like the location — they rated it 8.6 for a two-person trip.\n\nThis property is also rated for the best value in Sharm El Sheikh! Guests are getting more for their money when compared to other properties in this city.",
@@ -335,7 +335,7 @@
           "hotel_swimming_pool": "Swimming pool",
           "hotel_triple": "7107"
         },
-        {
+        "Tropitel Waves Naama Bay Hotel": {
           "hotel_airport": "Airport shuttle",
           "hotel_bar": "Bar",
           "hotel_desc": "Situated in Sharm El Sheikh, 2.7 km from Naama Bay, Tropitel Waves Naama Bay Hotel has a number of amenities including a fitness centre, a hotel_bar and a private beach area. Boasting a 24-hour front desk, this property also welcomes guests with a restaurant, a water park and a year-round outdoor pool. The resort has family rooms.\n\nAll rooms at the resort are fitted with a seating area, a flat-screen TV with satellite channels and a private bathroom with a hairdryer and a shower. The units at Tropitel Waves Naama Bay Hotel have air conditioning and a desk.\n\nA buffet breakfast is available each morning at the accommodation.\n\nTropitel Waves Naama Bay Hotel offers a terrace.\n\nSOHO Square Sharm El Sheikh is 13 km from the resort, while Ras Mohammed National Park is 22 km from the property. The nearest airport is Sharm el-Sheikh International, 18 km from Tropitel Waves Naama Bay Hotel, and the property offers a paid airport shuttle service.\n\nThis is our guests' favourite part of Sharm El Sheikh, according to independent reviews.",
@@ -355,7 +355,7 @@
           "hotel_swimming_pool": "Swimming pool",
           "hotel_triple": "7107"
         },
-        {
+        "Reef Oasis Blue Bay Resort&Spa": {
           "hotel_airport": "Airport shuttle",
           "hotel_bar": "Bar",
           "hotel_desc": "The elegant ultra all inclusive Reef Oasis Blue Bay is a 5-star resort located in Sharm El Sheikh, 2 km from the famous Naama Bay and 5 km from the hotel_airport. The property includes a private beach area, a water park and an outdoor pool. Free WiFi access is available in public areas.\n\nAll rooms at the Reef Oasis are air-conditioned and include a private bathroom. The registration will be in the main lobby with the look and sound of luxury fountain, music and aroma thereby. There is a welcome area with welcome drinks served to you with our gracious hospitality upon your arrival.\n\nThe Food and Beverage outlets will include the breakfast snacks and light lunches in both Leisure pool hotel_bar and beach hotel_bar. The fisherman hotel_bar will be serving you drinks at the infinity pool until sunset. The main dining room “Bay View” will be available with great varieties and food offering on its Breakfast, Lunch and dinner buffets. The Italian Restaurant will be open via our reservation program. The Gallery area along with the Pub hotel_bar will be operating 24 hours with sandwiches and beverage menu.\n\nWe will have the Leisure pool with its Jacuzzi area and water slides, Baby Pool and infinity pools with the Jacuzzi area operating for your convenience along with the beach with the three Jacuzzis®.\n\nRoom service will be operated 24 hours “on additional charge basis”. The property includes animation and entertainment, a sport zone, a diving center, a gym and a Spa. Reservations are required.\n\nFor the convenience of our guests, the hotel provides a free “Tuftuf” every 5 min and golf carts for special service like luggage delivery.\n\nThis property also has one of the best-rated locations in Sharm El Sheikh! Guests are happier about it compared to other properties in the area.\n\nCouples particularly like the location — they rated it 8.6 for a two-person trip.\n\nThis property is also rated for the best value in Sharm El Sheikh! Guests are getting more for their money when compared to other properties in this city.",
@@ -375,8 +375,109 @@
           "hotel_swimming_pool": "Swimming pool",
           "hotel_triple": "7107"
         }
-      ],
-      "sharn_landmark": " "
+      },
+      "sharm_landmark": {
+        "Naama Bay": {
+          "landmark_cost": "250",
+          "landmark_desc": "Fringed by a white-sand beach and swaying palm trees, Naama Bay is the epicenter of Sharm el-Sheikh's resort life. There are plentiful restaurants, cafés, and souvenir stores if you get bored of the sand, but Naama Bay is really all about the beach. A pedestrian-only promenade rims the entire beach area, backed by a cluster of luxury resorts. For those looking for a holiday full of sloth-like sunbathing, Naama Bay is one of Egypt's top choices. The entire beach area has excellent facilities, including ample sun-shades and loungers, and the beachside cafés mean you don't even have to move from your patch of sandy bliss all day.",
+          "landmark_img_url": "https://i.pinimg.com/originals/e8/d1/32/e8d132bc92ed9b74dfa4fbb438e22c39.jpg",
+          "landmark_location": "16 kilometers south of Sharm el-Sheikh",
+          "landmark_name": "Naama Bay",
+          "landmark_rate": "4.4"
+        },
+        "Ras Muhammad National Park": {
+          "landmark_cost": "300",
+          "landmark_desc": "Ras Mohammed National Park is what put Sharm el-Sheikh on the tourist map. Surrounded by some of the world's most incredible dive sites, this peninsula is home to glorious beaches with excellent snorkeling just offshore, the world's second most northerly mangrove forest, and a saltwater lake. A trip here is a must-do for anyone staying in Sharm el-Sheikh. The best beaches are Old Quay Beach (with its top-notch coral reef easily reached from the shore) and Aqaba Beach.\n\nTravelers seeking a good view should head to the Shark Observatory cliff top right on the southern edge of Ras Mohammed, where views stretch across both sides of the Red Sea.",
+          "landmark_img_url": "https://previews.123rf.com/images/efesenko84/efesenko841802/efesenko84180200040/94784653-alexandria-egypt-december-17-2017-panorama-of-qaitbay-citadel-s-courtyard-with-garden-castle-and-par.jpg",
+          "landmark_location": "38 kilometers south of Sharm el-Sheikh",
+          "landmark_name": "Ras Muhammad National Park",
+          "landmark_rate": "4.7"
+        },
+        "Nabq Protectorate": {
+          "landmark_cost": "0",
+          "landmark_desc": "North of Sharm el-Sheikh, Nabq Protectorate is a coastal desert landscape of arid beauty and home to the world's most northerly mangrove forest. The landscape here is a vista of sand dunes, lonely beaches, and arak bushes, and it's one of Egypt's most important protected wilderness sites, with a huge amount of birdlife as well as endemic gazelles and ibexes. There are also excellent snorkeling opportunities just offshore from the beaches here.",
+          "landmark_img_url": "https://www.planetware.com/photos-large/EGY/egypt-sharm-el-sheikh-nabq-protectorate.jpg",
+          "landmark_location": "20 kilometers north of Sharm el-Sheikh",
+          "landmark_name": "Nabq Protectorate",
+          "landmark_rate": "4.5"
+        },
+        "Mount Sinai": {
+          "landmark_cost": "800",
+          "landmark_desc": "nland from the sun-drenched beaches of the coast, the Sinai's rugged, mountainous heart is rawly beautiful. For a taster of this craggy landscape, hike up to the summit of Mt. Sinai to see an expanse of orange-hued peaks rippling out before you. Revered by all three of the monotheistic faiths as the place where Moses received the 10 Commandments, the summit hike is a pilgrimage for many people (and usually combined with a visit to St. Catherine's Monastery which sits at the trailhead for the hike).\n\nThere are two main trails up to the top. The Camel Trail is a well-worn switchback path, while the Steps of Repentance is a more difficult, but much more scenic, set of stone-cut staircases that was carved out by one of the monastery's monks.\n\nFrom Sharm el-Sheikh, most tours travel overnight to reach the trailhead in the wee hours of the morning so that the hike up the Camel Trail is completed in the cool, dark hours, and the summit is reached in time to watch sunrise over the surrounding peaks.",
+          "landmark_img_url": "https://www.planetware.com/wpimages/2018/12/egypt-sharm-el-sheikh-day-trip-mt-sinai.jpg",
+          "landmark_location": "209 kilometers northwest from Sharm el-Sheikh",
+          "landmark_name": "Mount Sinai",
+          "landmark_rate": "4.5"
+        },
+        "Shark's Bay": {
+          "landmark_cost": "200",
+          "landmark_desc": "Farther north from Naama Bay is slightly more exclusive Shark's Bay, which has some of Sharm el-Sheikh's most luxurious five-star resorts and hotels clustered across its sweep of sand. This is where you head if you want total tranquility on your holiday. The dining hub of Soho Square Center, which includes some of Sharm el-Sheikh's top restaurant and cafe choices, as well as shops, means you don't have to miss out on the buzz if you choose to stay here either.",
+          "landmark_img_url": "https://www.novalandtours.com/images/Egypt/Alexandria/Graeco%20Roman%20Museum",
+          "landmark_location": "7 kilometers north of Sharm el-Sheikh",
+          "landmark_name": "Shark's Bay",
+          "landmark_rate": "4.3"
+        },
+        "Sharm Old Market": {
+          "landmark_cost": "0",
+          "landmark_desc": "harm Old Market (also known as Sharm al-Maya) is the town's souq (bazaar) area, where twinkling Arabic lamps, traditional shisha pipes, and finely engraved woodwork can be found in abundance. It's best to come at sunset or later, when the worst heat of the day has dissipated, and you can shop and browse in comfort. The area is full of cheap and cheerful restaurants and cafés as well, so it's a good place to spend the entire evening. There's a distinctly different feel here than the rest of Sharm el-Sheikh — the market is imbued with a much more higgledy-piggledy local atmosphere than the rest of the city.\n\nOn the edge of the market area is the new Al-Sahaba Mosque with an imposing facade that cherry-picks influences from Fatimid, Mamluk, and Ottoman mosque styles.",
+          "landmark_img_url": "https://www.planetware.com/photos-large/EGY/egypt-sharm-el-sheikh-spices-for-sale-in-sharm-old-market.jpg",
+          "landmark_location": "Sharm al-Maya Road",
+          "landmark_name": "Sharm Old Market",
+          "landmark_rate": "4.6"
+        },
+        "Thistlegorm Dive Site": {
+          "landmark_cost": "0",
+          "landmark_desc": "For many advanced divers, a trip to Sharm el-Sheikh means only one thing: diving the Thistlegorm. One of the top wreck dives in the world, this ship packed full of cargo to resupply British troops was sunk during World War II by German bombers. Fish now flit through its rooms and cargo holds filled with jeeps, motorbikes, and armaments that never made it to the front. The wreck is situated in the Straits of Gubal, off the western coast of the Sinai Peninsula, so it is offered as either a long one-day boat trip from Sharm el-Sheikh or an overnight trip. All boat tours here offer at least two dives of the wreck plus a stop at one of Ras Mohammed's dive sites. The overnight trips have the added bonus of a night dive of the wreck",
+          "landmark_img_url": "https://www.planetware.com/wpimages/2018/12/egypt-sharm-el-sheikh-attractions-thistlegorm-dive-site.jpg",
+          "landmark_location": "Al Mesallah Sharq, Ataren.",
+          "landmark_name": "Thistlegorm Dive Site",
+          "landmark_rate": "4.0"
+        },
+        "Blue Hole": {
+          "landmark_cost": "450",
+          "landmark_desc": "Sinai's most notorious dive site is the Blue Hole, and people come from far and wide just to dive here. This sinkhole claims the lives of a few divers every year, mostly through people diving way beyond their limits and experience. Despite the site's reputation for danger, divers who stick within sensible limits are perfectly safe here, and the fish life and incredible vistas of ethereal blue below make this an incredibly beautiful dive. It's also a popular snorkeling spot, with plenty of fish life to see near the surface if you don't fancy heading into the depths.",
+          "landmark_img_url": "https://www.planetware.com/photos-large/EGY/egypt-sharm-el-sheikh-blue-hole-dive-site.jpg",
+          "landmark_location": "100 kilometers north of Sharm el-Sheikh",
+          "landmark_name": "Blue Hole",
+          "landmark_rate": "4.4"
+        },
+        "Dunraven Dive Site": {
+          "landmark_cost": "350",
+          "landmark_desc": "The SS Dunraven had been traveling to Mumbai (then Bombay) when it hit the reef and sunk just off the tip of the Sinai Peninsula in 1876. Today, this 80-meter steam ship, torn in two pieces on the sea floor, is home to a rich variety of fish, which have made their home within the barnacle-encrusted hull. Divers here spot big schools of cardinal fish and goat fish, as well as moray eels and scorpion fish. It's roughly a two-hour boat trip from Sharm el-Sheikh, and a dive here is often combined with Ras Mohammed National Park dives or with a Thistlegorm dive trip.",
+          "landmark_img_url": "https://www.planetware.com/wpimages/2018/12/egypt-sharm-el-sheikh-dunraven-dive-site.jpg",
+          "landmark_location": "40 kilometers north of Sharm el-Sheikh",
+          "landmark_name": "Dunraven Dive Site",
+          "landmark_rate": "4.1"
+        },
+        "Saint Catherine's Monastery": {
+          "landmark_cost": "750",
+          "landmark_desc": "The Sinai Peninsula's top historical destination, St. Catherine's Monastery sits at the foot of Mt. Sinai, where Moses is said to have received the Ten Commandments. One of the oldest working monasteries in the world, this Greek Orthodox hermitage is home to the famous \"burning bush\" of the Old Testament, as well as a museum showcasing some of the monastery's glittering collection of religious icons and ancient manuscripts that is revered as one of the finest in the world. A day trip here is one of the top things to do for any history-lover staying in Sharm el-Sheikh and can also include a hike up to the summit of Mt. Sinai.",
+          "landmark_img_url": "https://www.planetware.com/photos-large/EGY/egypt-sharm-el-sheikh-st-catherines-monastery.jpg",
+          "landmark_location": "209 kilometers northwest from Sharm el-Sheikh",
+          "landmark_name": "Saint Catherine's Monastery",
+          "landmark_rate": "4.6"
+        },
+        "Gardens Dive Site": {
+          "landmark_cost": "250",
+          "landmark_desc": "At the northern end of Naama Bay, the Gardens Reefs stretch out just offshore from the coast. This reef system is actually three different snorkeling and diving sites called Near Garden, Middle Garden, and Far Garden that can be accessed by both the shore and by boat. If you just want to snorkel, Near Garden is the best (and easiest) site to access and is home to some amazing coral pinnacles with plenty of flitting clownfish and butterfly fish in residence.",
+          "landmark_img_url": "https://www.planetware.com/photos-large/EGY/egypt-sharm-el-sheikh-st-catherines-monastery.jpg",
+          "landmark_location": "9 kilometers northwest from Sharm el-Sheikh",
+          "landmark_name": " Gardens Dive Site",
+          "landmark_rate": "4.6"
+        },
+        "Colored Canyon": {
+          "landmark_cost": "0",
+          "landmark_desc": "The swirling mineral-rich layered rock formations of this canyon are one of the Sinai's top out-of-the-water natural attractions. It's a showcase of the natural beauty of the desert, with plenty of opportunities for scrambling around the rock faces and hiking fun. For nature lovers, this is one of Sharm el-Sheikh's top days out, and exploring the bizarrely shaped pinnacles and boulders, which have been brushed with shimmering red and orange hues makes for some fantastic photography.",
+          "landmark_img_url": "https://www.planetware.com/photos-large/EGY/egypt-sharm-el-sheikh-coloured-canyon.jpg",
+          "landmark_location": "177 kilometers north of Sharm el-Sheikh",
+          "landmark_name": "Colored Canyon",
+          "landmark_rate": "4.5"
+        }
+      }
     }
+  },
+  "abroad_trips": {
+    "city_one": {},
+    "city_two": {}
   }
 }

@@ -22,14 +22,14 @@
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
-            android:src="@drawable/car1" />
+            android:src="#ffffff" />
 
         <TextView
             android:id="@+id/landmark_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="landmark_name"
-            android:textColor="#FF304FFE"
+            android:textColor="#00B8D4"
             android:textSize="32dp"
             android:textStyle="bold" />
 

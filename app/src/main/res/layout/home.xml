@@ -43,15 +43,12 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="60dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="60dp"
             android:layout_marginEnd="60dp"
-            android:layout_marginRight="60dp"
             android:background="@drawable/roundedbutton"
             android:onClick="domestic_trips"
             android:text="@string/domestic_trips"
             android:textColor="#ffffff"
-            android:textSize="18sp"
+            android:textSize="32sp"
             android:textStyle="bold"
             android:textAllCaps="false"
             tools:ignore="NotSibling" />
@@ -63,18 +60,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/domestic_trips"
             android:layout_marginStart="60dp"
-            android:layout_marginLeft="60dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="60dp"
-            android:layout_marginRight="60dp"
-            android:layout_marginBottom="60dp"
             android:background="@drawable/roundedbutton"
             android:onClick="abroad_trips"
             android:text="@string/abroad_trips"
             android:textAllCaps="false"
             android:textAlignment="center"
             android:textColor="#ffffff"
-            android:textSize="18sp"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
         <com.google.android.material.appbar.AppBarLayout
@@ -105,6 +99,7 @@
         android:background="@drawable/nav_screen"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_profile"
+        android:alpha="0"
         app:menu="@menu/navigate_drawer" />
 
 

@@ -128,7 +128,7 @@ public class alex_hotel extends AppCompatActivity implements NavigationView.OnNa
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            Intent intent = new Intent(this, home.class);
+            Intent intent = new Intent(this, domestic_trips.class);
             intent.putExtra("status", "hey");
             startActivity(intent);
         }

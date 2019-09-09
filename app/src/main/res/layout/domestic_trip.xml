@@ -18,54 +18,42 @@
             android:id="@+id/lay1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:paddingLeft="60dp"
-            android:paddingRight="60dp">
-
-            <Button
-                android:id="@+id/Alexandria"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/roundedbutton"
-                android:onClick="Alexandria"
-                android:text="Alexandria"
-                android:textColor="#ffffff"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+            android:layout_centerInParent="true">
 
 
             <Button
                 android:id="@+id/Sharm_Alsheikh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/divider1"
-                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="60dp"
                 android:background="@drawable/roundedbutton"
                 android:onClick="Sharm_Alsheikh"
                 android:text="Sharm Alsheikh"
+                android:textAllCaps="false"
                 android:textColor="#ffffff"
-                android:textSize="22sp"
+                android:textSize="32sp"
                 android:textStyle="bold" />
 
-            <View
-                android:id="@+id/divider1"
+
+            <Button
+                android:id="@+id/Alexandria"
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:layout_below="@id/Alexandria"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="20dp"
-                android:background="#FFFFFF" />
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Sharm_Alsheikh"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/roundedbutton"
+                android:onClick="Alexandria"
+                android:text="Alexandria"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="32sp"
+                android:textStyle="bold" />
 
 
         </RelativeLayout>
@@ -93,6 +81,7 @@
         android:background="@drawable/nav_screen"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_profile"
+        android:alpha="0"
         app:menu="@menu/navigate_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

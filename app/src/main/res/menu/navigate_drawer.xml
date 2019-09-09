@@ -14,11 +14,11 @@
             android:title="@string/Profile" />
         <item
             android:id="@+id/nav_domestic_trip"
-            android:icon="@drawable/ic_assignment_black_24dp"
+            android:icon="@drawable/ic_domestic_black_24dp"
             android:title="@string/domestic_trips" />
         <item
             android:id="@+id/nav_abroad_trip"
-            android:icon="@drawable/ic_whatshot_black_24dp"
+            android:icon="@drawable/ic_flight_black_24dp"
             android:title="@string/abroad_trips" />
         <item
             android:id="@+id/nav_setting"

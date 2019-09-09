@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/password_field"
             android:layout_centerHorizontal="true"
-            android:progressDrawable="@color/colorAccent"
+            android:progressDrawable="@color/green"
             android:visibility="gone" />
     </RelativeLayout>
 

@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.ramadan.safari.R;
-import com.ramadan.safari.activities.selected_hotel;
+import com.ramadan.safari.activities.selected_alex_hotel;
 import com.ramadan.safari.model.Hotel_Blog;
 
 import java.util.ArrayList;
@@ -95,7 +95,7 @@ public class alex_hotel_rcv_adp extends RecyclerView.Adapter<alex_hotel_rcv_adp.
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(mContext, selected_hotel.class);
+                    Intent intent = new Intent(mContext, selected_alex_hotel.class);
                     Bundle bundle = new Bundle();
                     //bundle.putSerializable("Data", mhotel);
                     bundle.putString("hotel_name", hotel_name.getText().toString());

@@ -30,12 +30,13 @@
     <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
 
     <array name="icons">
-        <item>@drawable/ic_home_black_24dp</item>
         <item>@drawable/ic_account_circle_white_24dp</item>
-        <item>@drawable/ic_home_black_24dp</item>
         <item>@drawable/ic_account_circle_white_24dp</item>
-        <item>@drawable/ic_home_black_24dp</item>
-
+        <item>@drawable/ic_account_circle_white_24dp</item>
+        <item>@drawable/ic_account_circle_white_24dp</item>
+        <item>@drawable/ic_account_circle_white_24dp</item>
+        <item>@drawable/ic_account_circle_white_24dp</item>
+        <item>@drawable/ic_account_circle_white_24dp</item>
 
     </array>
     <array name="colors">
@@ -44,5 +45,7 @@
         <item>@android:color/holo_red_light</item>
         <item>@android:color/holo_purple</item>
         <item>@android:color/holo_orange_light</item>
+        <item>@android:color/holo_red_dark</item>
+        <item>@android:color/white</item>
     </array>
 </resources>

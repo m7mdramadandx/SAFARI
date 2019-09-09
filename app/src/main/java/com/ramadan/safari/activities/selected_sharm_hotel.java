@@ -1,6 +1,8 @@
 package com.ramadan.safari.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +20,7 @@ import com.ramadan.safari.R;
 import com.ramadan.safari.model.Hotel_Blog;
 
 
-public class selected_hotel extends AppCompatActivity {
+public class selected_sharm_hotel extends AppCompatActivity {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     String key, xx, ww;
     //mDatabase.getReference("your_node").keepSynced(true);
@@ -27,10 +29,13 @@ public class selected_hotel extends AppCompatActivity {
     ImageView hotel_img_url;
     private FirebaseAuth mAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selected_hotel);
+
+
         hotel_name = findViewById(R.id.hotel_name);
         hotel_location = findViewById(R.id.hotel_location);
         hotel_desc = findViewById(R.id.hotel_desc);
@@ -42,7 +47,13 @@ public class selected_hotel extends AppCompatActivity {
         hotel_spa = findViewById(R.id.hotel_spa);
         hotel_swimming_pool = findViewById(R.id.hotel_swimming_pool);
         hotel_img_url = findViewById(R.id.hotel_img);
-
+        hotel_single = findViewById(R.id.single_room);
+        hotel_double = findViewById(R.id.double_room);
+        hotel_triple = findViewById(R.id.triple_room);
+        hotel_quadruple = findViewById(R.id.quadruple_room);
+        hotel_double_double = findViewById(R.id.double_double_room);
+        hotel_queen = findViewById(R.id.queen_room);
+        hotel_king = findViewById(R.id.king_room);
 
         ///////
         Bundle bundle = getIntent().getExtras();
@@ -53,14 +64,16 @@ public class selected_hotel extends AppCompatActivity {
     }
 
     private void method() {
-        Query query = mDatabase.getReference().child("domestic_trips").child("alexandria").child("alex_hotels").orderByChild("hotel_name").equalTo(key);
+        Query query = mDatabase.getReference().child("domestic_trips").child("sharm_alsheikh").child("sharm_hotels").orderByChild("hotel_name").equalTo(key);
         mDatabase.getReference().keepSynced(true);
         query.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
                 Hotel_Blog mhotel_blog = dataSnapshot.getValue(Hotel_Blog.class);
-                hotel_desc.setText(mhotel_blog.getHotel_desc());
+                assert mhotel_blog != null;
+                Glide.with(selected_sharm_hotel.this).asBitmap().load(mhotel_blog.getHotel_img_url()).into(hotel_img_url);
                 hotel_name.setText(mhotel_blog.getHotel_name());
+                hotel_desc.setText(mhotel_blog.getHotel_desc());
                 hotel_location.setText(mhotel_blog.getHotel_location());
                 hotel_rate.setText(mhotel_blog.getHotel_rate());
                 hotel_beach.setText(mhotel_blog.getHotel_beach());
@@ -68,8 +81,13 @@ public class selected_hotel extends AppCompatActivity {
                 hotel_airport.setText(mhotel_blog.getHotel_airport());
                 hotel_spa.setText(mhotel_blog.getHotel_spa());
                 hotel_swimming_pool.setText(mhotel_blog.getHotel_swimming_pool());
-                Glide.with(selected_hotel.this).asBitmap().load(mhotel_blog.getHotel_img_url()).into(hotel_img_url);
-
+                hotel_single.setText(mhotel_blog.getHotel_single());
+                hotel_double.setText(mhotel_blog.getHotel_double());
+                hotel_triple.setText(mhotel_blog.getHotel_triple());
+                hotel_quadruple.setText(mhotel_blog.getHotel_quadruple());
+                hotel_double_double.setText(mhotel_blog.getHotel_double_double());
+                hotel_queen.setText(mhotel_blog.getHotel_queen());
+                hotel_king.setText(mhotel_blog.getHotel_king());
 
             }
 
@@ -107,6 +125,29 @@ public class selected_hotel extends AppCompatActivity {
     }
 
 
+    public void single_room(View view) {
+        Intent intent = new Intent(this, sharm_landmark.class);
+        startActivity(intent);
+
+    }
+
+    public void double_room(View view) {
+    }
+
+    public void triple_room(View view) {
+    }
+
+    public void quadruple_room(View view) {
+    }
+
+    public void double_double_room(View view) {
+    }
+
+    public void queen_room(View view) {
+    }
+
+    public void king_room(View view) {
+    }
 }
 
 
