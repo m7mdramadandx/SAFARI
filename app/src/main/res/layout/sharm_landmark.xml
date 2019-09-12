@@ -1,57 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/graylight"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:context="com.ramadan.safari.activities.sharm_hotel">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <androidx.core.widget.NestedScrollView
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="none">
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <LinearLayout
+            <ImageView
+                android:id="@+id/app_bar_image"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusableInTouchMode="true"
-                android:orientation="vertical">
+                android:layout_height="210dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sharm_elsheikh_landmarks"
+                app:layout_collapseMode="parallax" />
 
-                <ImageView
-                    android:id="@+id/top_seller"
-                    android:layout_width="match_parent"
-                    android:layout_height="310dp"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/app_name"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/alexandriaa" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/sharm_landmark_rcv"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:scrollbars="none" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-    </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@drawable/nav_screen"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_profile"
-        app:menu="@menu/navigate_drawer" />
+    <include layout="@layout/hotel_content" />
 
-</androidx.drawerlayout.widget.DrawerLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

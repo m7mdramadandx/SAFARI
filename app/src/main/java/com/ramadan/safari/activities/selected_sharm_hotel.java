@@ -22,7 +22,7 @@ import com.ramadan.safari.model.Hotel_Blog;
 
 public class selected_sharm_hotel extends AppCompatActivity {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
-    String key, xx, ww;
+    String key;
     //mDatabase.getReference("your_node").keepSynced(true);
     TextView hotel_desc, hotel_name, hotel_location, hotel_rate, hotel_beach, hotel_bar, hotel_airport, hotel_spa, hotel_swimming_pool,
             hotel_double, hotel_double_double, hotel_gym, hotel_king, hotel_quadruple, hotel_queen, hotel_single, hotel_triple;
@@ -33,9 +33,7 @@ public class selected_sharm_hotel extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.selected_hotel);
-
-
+        setContentView(R.layout.selected_alex_hotel);
         hotel_name = findViewById(R.id.hotel_name);
         hotel_location = findViewById(R.id.hotel_location);
         hotel_desc = findViewById(R.id.hotel_desc);
@@ -54,14 +52,13 @@ public class selected_sharm_hotel extends AppCompatActivity {
         hotel_double_double = findViewById(R.id.double_double_room);
         hotel_queen = findViewById(R.id.queen_room);
         hotel_king = findViewById(R.id.king_room);
-
         ///////
         Bundle bundle = getIntent().getExtras();
         key = bundle.getString("hotel_name");
         method();
 
-
     }
+
 
     private void method() {
         Query query = mDatabase.getReference().child("domestic_trips").child("sharm_alsheikh").child("sharm_hotels").orderByChild("hotel_name").equalTo(key);
@@ -120,34 +117,50 @@ public class selected_sharm_hotel extends AppCompatActivity {
 
             }
         });
-
-
     }
-
 
     public void single_room(View view) {
         Intent intent = new Intent(this, sharm_landmark.class);
+        intent.putExtra("hotel_cost", hotel_single.getText().toString());
         startActivity(intent);
-
     }
 
     public void double_room(View view) {
+        Intent intent = new Intent(this, sharm_landmark.class);
+        intent.putExtra("hotel_cost", hotel_double.getText().toString());
+        startActivity(intent);
     }
 
     public void triple_room(View view) {
+        Intent intent = new Intent(this, sharm_landmark.class);
+        intent.putExtra("hotel_cost", hotel_triple.getText().toString());
+        startActivity(intent);
     }
 
     public void quadruple_room(View view) {
+        Intent intent = new Intent(this, sharm_landmark.class);
+        intent.putExtra("hotel_cost", hotel_quadruple.getText().toString());
+        startActivity(intent);
     }
 
     public void double_double_room(View view) {
+        Intent intent = new Intent(this, sharm_landmark.class);
+        intent.putExtra("hotel_cost", hotel_double_double.getText().toString());
+        startActivity(intent);
     }
 
     public void queen_room(View view) {
+        Intent intent = new Intent(this, sharm_landmark.class);
+        intent.putExtra("hotel_cost", hotel_queen.getText().toString());
+        startActivity(intent);
     }
 
     public void king_room(View view) {
+        Intent intent = new Intent(this, sharm_landmark.class);
+        intent.putExtra("hotel_cost", hotel_king.getText().toString());
+        startActivity(intent);
     }
+
 }
 
 

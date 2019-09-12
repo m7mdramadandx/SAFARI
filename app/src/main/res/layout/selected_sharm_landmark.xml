@@ -1,144 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.selected_sharm_landmark"
-    tools:openDrawer="start">
+    tools:context="com.ramadan.safari.activities.selected_sharm_landmark">
 
-    <ScrollView
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <LinearLayout
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="top"
-            android:orientation="vertical">
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <LinearLayout
+            <ImageView
+                android:id="@+id/landmark_img"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:orientation="vertical">
+                android:layout_height="320dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/alex_hotels"
+                app:layout_collapseMode="parallax" />
 
-                <ImageView
-                    android:id="@+id/landmark_img"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/app_name"
-                    android:scaleType="fitXY"
-                    android:src="#ffffff" />
-
-                <TextView
-                    android:id="@+id/landmark_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="landmark_name"
-                    android:textColor="@color/red"
-                    android:textSize="32dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/landmark_desc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription"
-                    android:textSize="19sp" />
-
-                <View
-                    android:id="@+id/divider"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginRight="30dp"
-                    android:background="@color/golden" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-                <TextView
-                    android:id="@+id/landmark_rate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_star_red_24dp"
-                    android:text="0.0"
-                    android:textColor="@color/red"
-                    android:textSize="17sp" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-                <TextView
-                    android:id="@+id/landmark_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_location_on_red_24dp"
-                    android:text="00 km from center"
-                    android:textColor="@color/red"
-                    android:textSize="17sp" />
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@color/golden" />
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:onClick="single_ticket"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="4dp"
-                    android:drawableLeft="@drawable/ic_person_red_24dp"
-                    android:text="Single Ticket"
-                    android:textColor="@color/red"
-                    android:textSize="17sp" />
-
-                <TextView
-                    android:id="@+id/landmark_cost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_attach_money_red_24dp"
-                    android:text="0000"
-                    android:textColor="@color/red"
-                    android:textSize="17sp" />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-    </ScrollView>
-
-
-</androidx.drawerlayout.widget.DrawerLayout>
+    <include layout="@layout/selected_landmark_content" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -20,10 +20,6 @@
             android:id="@+id/nav_abroad_trip"
             android:icon="@drawable/ic_flight_black_24dp"
             android:title="@string/abroad_trips" />
-        <item
-            android:id="@+id/nav_setting"
-            android:icon="@drawable/ic_settings_black_24dp"
-            android:title="@string/Setting" />
     </group>
 
     <item android:title="About us">

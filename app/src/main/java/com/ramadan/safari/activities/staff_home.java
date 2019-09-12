@@ -1,14 +1,6 @@
 package com.ramadan.safari.activities;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-
-import com.ramadan.safari.R;
-
-public class staff_home extends Activity {
+public class staff_home { /*extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -33,5 +25,5 @@ public class staff_home extends Activity {
         Intent intent = new Intent(this, main.class);
         startActivity(intent);
         finish();
-    }
+    }*/
 }

@@ -3,10 +3,10 @@ package com.ramadan.safari.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.ramadan.safari.R;
-import com.ramadan.safari.activities.sharm_landmark;
+import com.ramadan.safari.activities.selected_alex_landmark;
 import com.ramadan.safari.model.Landmark_Blog;
 
 import java.util.ArrayList;
@@ -25,7 +25,6 @@ public class alex_landmark_rcv_adp extends RecyclerView.Adapter<alex_landmark_rc
     RequestOptions options;
     private Context mContext;
     private ArrayList<Landmark_Blog> landmark;
-    private AdapterView.OnItemClickListener mListener;
 
 
     public alex_landmark_rcv_adp(Context mContext, ArrayList landmark) {
@@ -35,10 +34,6 @@ public class alex_landmark_rcv_adp extends RecyclerView.Adapter<alex_landmark_rc
                 .centerCrop()
                 .placeholder(R.drawable.loading_shape)
                 .error(R.drawable.loading_shape);
-    }
-
-    public void setOnItemClickListener(OnItemClickListener listener) {
-        mListener = (AdapterView.OnItemClickListener) listener;
     }
 
     @NonNull
@@ -56,12 +51,10 @@ public class alex_landmark_rcv_adp extends RecyclerView.Adapter<alex_landmark_rc
         String location = Landmark_blog.getLandmark_location();
         String rate = Landmark_blog.getLandmark_rate();
         String landmark_name = Landmark_blog.getLandmark_name();
-//        String cost = Landmark_blog.getLandmark_cost();
 
         holder.landmark_name.setText(landmark_name);
         holder.landmark_rate.setText(rate);
         holder.landmark_location.setText(location);
-//        holder.landmark_cost.setText(cost);
         Glide.with(mContext).asBitmap().load(imageUrl).into(holder.landmark_img);
     }
 
@@ -70,10 +63,6 @@ public class alex_landmark_rcv_adp extends RecyclerView.Adapter<alex_landmark_rc
         return landmark.size();
     }
 
-    public interface OnItemClickListener {
-
-        void onItemClick(int position);
-    }
 
     public class LandmarkViewHolder extends RecyclerView.ViewHolder {
         TextView landmark_name, landmark_rate, landmark_location, landmark_cost;
@@ -85,18 +74,17 @@ public class alex_landmark_rcv_adp extends RecyclerView.Adapter<alex_landmark_rc
             landmark_name = itemView.findViewById(R.id.landmark_name);
             landmark_rate = itemView.findViewById(R.id.landmark_rate);
             landmark_location = itemView.findViewById(R.id.landmark_location);
-            landmark_cost = itemView.findViewById(R.id.landmark_cost);
+            landmark_cost = itemView.findViewById(R.id.one_ticket);
             landmark_img = itemView.findViewById(R.id.landmark_img);
 
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(mContext, sharm_landmark.class);
-                    //Bundle bundle = new Bundle();
-                    //bundle.putSerializable("Data", mhotel);
-                    //bundle.putString("hotel_name", hotel_name.getText().toString());
-                    //intent.putExtras(bundle);
+                    Intent intent = new Intent(mContext, selected_alex_landmark.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("landmark_name", landmark_name.getText().toString());
+                    intent.putExtras(bundle);
                     mContext.startActivity(intent);
 
 

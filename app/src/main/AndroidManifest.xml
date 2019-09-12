@@ -20,9 +20,6 @@
         <activity android:name=".activities.make_an_order" />
         <activity android:name=".activities.alex2" />
         <activity android:name=".activities.alex_hotel" />
-        <activity android:name=".activities.car" />
-        <activity android:name=".activities.train" />
-        <activity android:name=".activities.bus" />
         <activity android:name=".activities.main" />
         <activity android:name=".activities.splash_screen">
             <intent-filter>
@@ -38,6 +35,10 @@
         <activity android:name=".activities.sharm_landmark" />
         <activity android:name=".activities.selected_sharm_landmark" />
         <activity android:name=".activities.selected_sharm_hotel" />
+        <activity android:name=".activities.selected_alex_landmark" />
+        <activity android:name=".activities.profile" />
+        <activity android:name=".activities.about" />
+        <activity android:name=".activities.payment" />
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 

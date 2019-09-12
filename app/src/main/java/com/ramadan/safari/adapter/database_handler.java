@@ -1,16 +1,6 @@
 package com.ramadan.safari.adapter;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-
-public class database_handler extends SQLiteOpenHelper {
+public class database_handler {/*extends SQLiteOpenHelper {
     protected static final String safari_database = "safari.db";
     protected static final int version = 2;
     protected static final String user_table = "User";
@@ -143,5 +133,5 @@ public class database_handler extends SQLiteOpenHelper {
         return arrayList;
     }
 
-
+*/
 }

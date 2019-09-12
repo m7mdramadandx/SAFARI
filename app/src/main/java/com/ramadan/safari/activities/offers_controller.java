@@ -1,22 +1,6 @@
 package com.ramadan.safari.activities;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Toast;
-
-import com.ramadan.safari.R;
-import com.ramadan.safari.adapter.database_handler;
-
-import java.util.ArrayList;
-
-public class offers_controller extends Activity {
+public class offers_controller { /*extends Activity {
     EditText offer_id, hotel_name, location, duration, transportation, rate, cost;
     ListView data_list;
     database_handler db;
@@ -148,5 +132,5 @@ public class offers_controller extends Activity {
         Intent intent = new Intent(this, staff_home.class);
         startActivity(intent);
         finish();
-    }
+    }*/
 }

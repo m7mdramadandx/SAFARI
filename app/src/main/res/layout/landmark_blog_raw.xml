@@ -18,19 +18,19 @@
         <ImageView
             android:id="@+id/landmark_img"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
+            android:layout_height="240dp"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
-            android:src="#ffffff" />
+            android:src="@color/graylight" />
 
         <TextView
             android:id="@+id/landmark_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="landmark_name"
-            android:textColor="#00B8D4"
-            android:textSize="32dp"
+            android:textColor="#0091EA"
+            android:textSize="23sp"
             android:textStyle="bold" />
 
 
@@ -41,7 +41,7 @@
             android:drawableLeft="@drawable/ic_star_black_24dp"
             android:paddingRight="5dp"
             android:text="0"
-            android:textColor="#00C853"
+            android:textColor="@color/green"
             android:textSize="17sp" />
 
 
@@ -52,24 +52,8 @@
             android:drawableLeft="@drawable/ic_location_on_black_24dp"
             android:paddingRight="5dp"
             android:text="00 km from center"
-            android:textColor="#00C853"
+            android:textColor="@color/green"
             android:textSize="14sp" />
-
-
-        <!--  <TextView
-              android:id="@+id/landmark_cost"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_gravity="end"
-              android:layout_marginTop="5dp"
-              android:drawableLeft="@drawable/ic_monetization_on_black_24dp"
-              android:paddingRight="5dp"
-              android:text="0000"
-              android:textSize="19sp"
-              android:textStyle="bold" />
-
-
-         -->
 
     </LinearLayout>
 

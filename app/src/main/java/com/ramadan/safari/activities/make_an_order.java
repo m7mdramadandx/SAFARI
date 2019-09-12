@@ -1,23 +1,6 @@
 package com.ramadan.safari.activities;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
-
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import com.google.android.material.navigation.NavigationView;
-import com.ramadan.safari.R;
-
-public class make_an_order extends AppCompatActivity
+public class make_an_order {/*extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     String[] location_array, duration_array, transportation_array, rate_array, tickets_num_array;
@@ -172,5 +155,5 @@ public class make_an_order extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
+*/
 }

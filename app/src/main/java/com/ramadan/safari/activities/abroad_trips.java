@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,51 +54,41 @@ public class abroad_trips extends AppCompatActivity
         }
     }
 
-    public void moscow(View view) {
+    public void Paris(View view) {
+        Toast.makeText(this, "COMING SOON!", Toast.LENGTH_SHORT).show();
     }
 
-    public void istanbul(View view) {
+    public void Venice(View view) {
+        Toast.makeText(this, "COMING SOON!", Toast.LENGTH_SHORT).show();
     }
+
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-
-        if (id == R.id.nav_home) {
-            Intent intent = new Intent(this, home.class);
-            startActivities(new Intent[]{intent});
-            finish();
-
-        } else if (id == R.id.nav_profile) {
-            Intent intent = new Intent(this, domestic_trips.class);
-            startActivities(new Intent[]{intent});
-            finish();
-        } else if (id == R.id.nav_domestic_trip) {
-            Intent intent = new Intent(this, domestic_trips.class);
-            startActivities(new Intent[]{intent});
-            finish();
-        } else if (id == R.id.nav_abroad_trip) {
-            Intent intent = new Intent(this, abroad_trips.class);
-            startActivities(new Intent[]{intent});
-            finish();
-        } else if (id == R.id.nav_setting) {
-            Intent intent = new Intent(this, domestic_trips.class);
-            startActivities(new Intent[]{intent});
-            finish();
-        } else if (id == R.id.nav_about) {
-            Intent intent = new Intent(this, domestic_trips.class);
-            startActivities(new Intent[]{intent});
-            finish();
-        } else if (id == R.id.nav_logout) {
-            mAuth.signOut();
-            Intent intent = new Intent(this, main.class);
-            startActivities(new Intent[]{intent});
-            finish();
+        switch (id) {
+            case R.id.nav_home:
+                startActivity(new Intent(this, home.class));
+                break;
+            case R.id.nav_profile:
+                startActivity(new Intent(this, profile.class));
+                break;
+            case R.id.nav_domestic_trip:
+                startActivity(new Intent(this, domestic_trips.class));
+                break;
+            case R.id.nav_abroad_trip:
+                startActivity(new Intent(this, abroad_trips.class));
+                break;
+            case R.id.nav_about:
+                startActivity(new Intent(this, about.class));
+                break;
+            case R.id.nav_logout:
+                startActivity(new Intent(this, main.class));
+                break;
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }
+

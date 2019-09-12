@@ -5,67 +5,69 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_screen_no_logo"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-        <RelativeLayout
-            android:id="@+id/lay1"
+    <RelativeLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+
+        <Button
+            android:id="@+id/Sharm_Alsheikh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:background="@drawable/screen_frame">
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="Sharm_Alsheikh"
+            android:text="Sharm Alsheikh"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="NotSibling" />
 
 
-            <Button
-                android:id="@+id/Sharm_Alsheikh"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="60dp"
-                android:layout_marginEnd="60dp"
-                android:background="@drawable/roundedbutton"
-                android:onClick="Sharm_Alsheikh"
-                android:text="Sharm Alsheikh"
-                android:textAllCaps="false"
-                android:textColor="#ffffff"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                tools:ignore="NotSibling" />
-
-
-            <Button
-                android:id="@+id/Alexandria"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Sharm_Alsheikh"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="60dp"
-                android:background="@drawable/roundedbutton"
-                android:onClick="Alexandria"
-                android:text="Alexandria"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#ffffff"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                tools:ignore="NotSibling" />
-
-
-        </RelativeLayout>
-
-        <com.google.android.material.appbar.AppBarLayout
+        <Button
+            android:id="@+id/Alexandria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:layout_below="@id/Sharm_Alsheikh"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="Alexandria"
+            android:text="Alexandria"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="NotSibling" />
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-        </com.google.android.material.appbar.AppBarLayout>
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title=" " />
+    </com.google.android.material.appbar.AppBarLayout>
 
 
     <com.google.android.material.navigation.NavigationView

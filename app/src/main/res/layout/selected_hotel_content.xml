@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="hotel_name"
+                android:textColor="@color/golden"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hotel_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/golden" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/hotel_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_star_black_24dp"
+                android:paddingRight="5dp"
+                android:text="0"
+                android:textColor="@color/green"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/hotel_beach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_beach_access_black_24dp"
+                android:text="beach"
+                android:textColor="@color/green"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hotel_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:paddingRight="5dp"
+                android:text="00 km from center"
+                android:textColor="@color/green"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hotel_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_local_bar_black_24dp"
+                android:paddingRight="5dp"
+                android:text="bar"
+                android:textColor="@color/green"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:id="@+id/hotel_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_local_parking_black_24dp"
+                android:paddingRight="5dp"
+                android:text="Parking"
+                android:textColor="@color/green"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/hotel_gym"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_fitness_center_black_24dp"
+                android:paddingRight="5dp"
+                android:text="Fabulous fitness centre"
+                android:textColor="@color/green"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/hotel_spa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_spa_black_24dp"
+                android:paddingRight="5dp"
+                android:text="Spa and wellness centre"
+                android:textColor="@color/green"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hotel_swimming_pool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_pool_black_24dp"
+                android:paddingRight="5dp"
+                android:text="Swimming pool Indoor and Outdoor"
+                android:textColor="@color/green"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:id="@+id/hotel_aiport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_airport_shuttle_black_24dp"
+                android:paddingRight="5dp"
+                android:text="Airport shuttle"
+                android:textColor="@color/green"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/golden" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@color/green">
+
+            <TableRow
+                android:id="@+id/single"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:onClick="single_room"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Single Room" />
+
+                <TextView
+                    android:id="@+id/single_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                    android:text="0000"
+                    android:textColor="@color/green"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:onClick="double_room"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_group_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Double Room" />
+
+                <TextView
+                    android:id="@+id/double_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                    android:text="0000"
+                    android:textColor="@color/green"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:onClick="triple_room"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_group_add_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Triple Room" />
+
+                <TextView
+                    android:id="@+id/triple_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                    android:text="0000"
+                    android:textColor="@color/green"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:onClick="quadruple_room"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_group_add_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Quadruple Room" />
+
+                <TextView
+                    android:id="@+id/quadruple_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                    android:text="0000"
+                    android:textColor="@color/green"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:onClick="double_double_room"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_group_add_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Double-Double Room" />
+
+                <TextView
+                    android:id="@+id/double_double_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                    android:text="0000"
+                    android:textColor="@color/green"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:onClick="queen_room"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/queen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Queen Room" />
+
+                <TextView
+                    android:id="@+id/queen_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                    android:text="0000"
+                    android:textColor="@color/green"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:onClick="king_room"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/king_vector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="King Room" />
+
+                <TextView
+                    android:id="@+id/king_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                    android:text="0000"
+                    android:textColor="@color/green"
+                    android:textSize="17sp" />
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

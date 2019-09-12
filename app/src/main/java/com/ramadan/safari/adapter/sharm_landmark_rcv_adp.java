@@ -84,7 +84,7 @@ public class sharm_landmark_rcv_adp extends RecyclerView.Adapter<sharm_landmark_
             landmark_name = itemView.findViewById(R.id.landmark_name);
             landmark_rate = itemView.findViewById(R.id.landmark_rate);
             landmark_location = itemView.findViewById(R.id.landmark_location);
-            landmark_cost = itemView.findViewById(R.id.landmark_cost);
+            landmark_cost = itemView.findViewById(R.id.one_ticket);
             landmark_img = itemView.findViewById(R.id.landmark_img);
 
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/screen_frame"
+    android:background="@drawable/main_screen_no_logo"
     android:padding="30dp"
     tools:context=".activities.sign_up">
 
@@ -24,10 +24,10 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/roundedbutton"
+            android:background="@drawable/roundedbutton_white"
             android:onClick="submit"
             android:text="submit"
-            android:textColor="#ffff"
+            android:textColor="@color/green"
             android:textSize="18dp"
             android:textStyle="bold" />
 

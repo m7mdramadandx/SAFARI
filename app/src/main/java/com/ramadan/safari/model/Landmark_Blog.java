@@ -7,17 +7,28 @@ public class Landmark_Blog {
     private String landmark_cost;
     private String landmark_desc;
     private String landmark_img_url;
+    private String selected_hotel_cost;
+
 
     public Landmark_Blog() {
     }
 
-    public Landmark_Blog(String landmark_name, String landmark_rate, String landmark_location, String landmark_cost, String landmark_desc, String landmark_img_url) {
+    public Landmark_Blog(String selected_hotel_cost, String landmark_name, String landmark_rate, String landmark_location, String landmark_cost, String landmark_desc, String landmark_img_url) {
         this.landmark_name = landmark_name;
         this.landmark_rate = landmark_rate;
         this.landmark_location = landmark_location;
         this.landmark_cost = landmark_cost;
         this.landmark_desc = landmark_desc;
         this.landmark_img_url = landmark_img_url;
+        this.selected_hotel_cost = selected_hotel_cost;
+    }
+
+    public String getSelected_hotel_cost() {
+        return selected_hotel_cost;
+    }
+
+    public void setSelected_hotel_cost(String selected_hotel_cost) {
+        this.selected_hotel_cost = selected_hotel_cost;
     }
 
     public String getLandmark_location() {

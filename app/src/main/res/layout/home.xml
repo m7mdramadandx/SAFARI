@@ -16,27 +16,6 @@
         android:layout_centerInParent="true"
         android:background="@drawable/main_screen_logo">
 
-        <!--<com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#1245ff">
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Monday" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tuesday" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wednesday" />
-        </com.google.android.material.tabs.TabLayout>-->
-
         <Button
             android:id="@+id/domestic_trips"
             android:layout_width="match_parent"
@@ -47,10 +26,10 @@
             android:background="@drawable/roundedbutton"
             android:onClick="domestic_trips"
             android:text="@string/domestic_trips"
-            android:textColor="#ffffff"
-            android:textSize="28sp"
-            android:textStyle="bold"
             android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold"
             tools:ignore="NotSibling" />
 
 
@@ -65,30 +44,27 @@
             android:background="@drawable/roundedbutton"
             android:onClick="abroad_trips"
             android:text="@string/abroad_trips"
-            android:textAllCaps="false"
             android:textAlignment="center"
+            android:textAllCaps="false"
             android:textColor="#ffffff"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:theme="@style/AppTheme.PopupOverlay"
-                app:subtitleTextColor="#00FFFFFF"
-                app:titleMargin="0dp"
-                app:titleTextColor="#00FFFFFF" />
-        </com.google.android.material.appbar.AppBarLayout>
-
-
     </RelativeLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:subtitleTextColor="@color/transparent"
+            app:title=" "/>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
     <com.google.android.material.navigation.NavigationView
