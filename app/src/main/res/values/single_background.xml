@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="single_background" tools:ignore="MissingDefaultResource">#4B4B4B</color>
-</resources>
+<resources></resources>

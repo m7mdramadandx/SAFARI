@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -23,7 +22,6 @@ public class home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
-    String status = "hey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +29,6 @@ public class home extends AppCompatActivity
         setContentView(R.layout.home);
         mAuth = FirebaseAuth.getInstance();
         mAuth.removeAuthStateListener(mAuthListener);
-        status = getIntent().getExtras().getString("status");
-        if (status.equals("old_user")) {
-            Toast.makeText(this, "welcome", Toast.LENGTH_SHORT).show();
-        } else {
             mAuthListener = new FirebaseAuth.AuthStateListener() {
                 @Override
                 public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -44,10 +38,10 @@ public class home extends AppCompatActivity
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         finish();
+//                    }
                     }
                 }
             };
-        }
 
         //////////////////////------NAV BAR------//////////////////
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -61,21 +55,6 @@ public class home extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-/*
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
-
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
-        }
-    }*/
 
     public void domestic_trips(View view) {
         Intent intent = new Intent(this, domestic_trips.class);
@@ -120,6 +99,7 @@ public class home extends AppCompatActivity
                 startActivity(new Intent(this, about.class));
                 break;
             case R.id.nav_logout:
+                mAuth.signOut();
                 startActivity(new Intent(this, main.class));
                 break;
         }

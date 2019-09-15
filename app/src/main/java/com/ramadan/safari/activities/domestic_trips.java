@@ -84,6 +84,7 @@ public class domestic_trips extends AppCompatActivity
                 startActivity(new Intent(this, about.class));
                 break;
             case R.id.nav_logout:
+                mAuth.signOut();
                 startActivity(new Intent(this, main.class));
                 break;
         }

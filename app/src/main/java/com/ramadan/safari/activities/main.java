@@ -12,36 +12,42 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.SignInMethodQueryResult;
+import com.google.firebase.auth.FirebaseUser;
 import com.ramadan.safari.R;
 
+import es.dmoral.toasty.Toasty;
+
 public class main extends AppCompatActivity {
-    //database_handler db;
     EditText password, email;
     ProgressBar progressBar;
     private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        if (mUser != null) {
+            Intent intent = new Intent(this, home.class);
+            startActivity(intent);
+            finish();
+            Toasty.normal(this, "welcome back buddy", getResources().getDrawable(R.drawable.ic_smile)).show();
+        }
         setContentView(R.layout.main);
-        //  db = new database_handler(this);
         email = findViewById(R.id.email_field);
         password = findViewById(R.id.password_field);
         progressBar = findViewById(R.id.progressBar);
         mAuth = FirebaseAuth.getInstance();
+
+
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
-    }
 
     public void sign_up(View view) {
         startActivity(new Intent(this, sign_up.class));
-        finish();
     }
 
     public void login(View view) {
@@ -50,24 +56,22 @@ public class main extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         if (email_.isEmpty() || password_.isEmpty()) {
             progressBar.setVisibility(View.GONE);
-            Toast.makeText(this, "all fields are required!", Toast.LENGTH_SHORT).show();
+            Toasty.error(this, "all fields are required!", Toast.LENGTH_SHORT).show();
         } else {
-            mAuth.fetchSignInMethodsForEmail(email_).addOnCompleteListener(new OnCompleteListener<SignInMethodQueryResult>() {
+            mAuth.signInWithEmailAndPassword(email_, password_).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
-                public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
-                    boolean exist = task.getResult().getSignInMethods().isEmpty();
-                    if (exist) {
-                        progressBar.setVisibility(View.GONE);
-                        Toast.makeText(main.this, "you need to create an account at first!", Toast.LENGTH_LONG).show();
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    progressBar.setVisibility(View.GONE);
+                    if (!task.isSuccessful()) {
+                        Toasty.error(main.this, "wrong email or password", Toast.LENGTH_SHORT).show();
                     } else {
-                        progressBar.setVisibility(View.GONE);
                         Intent intent = new Intent(main.this, home.class);
-                        intent.putExtra("status", "old_user");
                         startActivity(intent);
-                        Toast.makeText(main.this, "welcome!", Toast.LENGTH_SHORT).show();
+                        finish();
                     }
                 }
             });
+
         }
     }
 }

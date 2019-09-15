@@ -1,39 +1,25 @@
 package com.ramadan.safari.model;
 
-import com.google.firebase.firestore.Exclude;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class User {
-    private long user_id = 0;
     private String first_name;
     private String last_name;
     private String email;
-    private int phone;
-    private int age;
+    private String phone;
+    private String city;
     private String password;
 
     public User() {
     }
 
-    public User(String first_name, String last_name, String email, int phone, int age, String password) {
-        user_id++;
+    public User(String first_name, String last_name, String email, String phone, String city, String password) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
         this.phone = phone;
-        this.age = age;
+        this.city = city;
         this.password = password;
     }
 
-    public long getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(long user_id) {
-        this.user_id = user_id;
-    }
 
     public String getFirst_name() {
         return first_name;
@@ -59,20 +45,20 @@ public class User {
         this.email = email;
     }
 
-    public int getPhone() {
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getPassword() {
@@ -83,15 +69,5 @@ public class User {
         this.password = password;
     }
 
-    @Exclude
-    public Map<String, Object> toMap() {
-        HashMap<String, Object> result = new HashMap<>();
-        result.put("firstName", first_name);
-        result.put("lastName", last_name);
-        result.put("email", email);
-        result.put("phone", phone);
-        result.put("age", age);
-        result.put("password", password);
-        return result;
-    }
+
 }

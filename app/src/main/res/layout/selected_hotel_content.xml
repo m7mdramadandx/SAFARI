@@ -23,7 +23,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="hotel_name"
                 android:textColor="@color/golden"
                 android:textSize="23sp"
                 android:textStyle="bold" />
@@ -33,11 +32,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription"
                 android:textSize="17sp" />
 
             <View
-                android:id="@+id/divider"
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
                 android:layout_marginStart="30dp"
@@ -63,6 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_star_black_24dp"
+                android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="0"
                 android:textColor="@color/green"
@@ -73,6 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_beach_access_black_24dp"
+                android:drawablePadding="5dp"
                 android:text="beach"
                 android:textColor="@color/green"
                 android:textSize="17sp" />
@@ -92,6 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="00 km from center"
                 android:textColor="@color/green"
@@ -113,6 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_local_bar_black_24dp"
+                android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="bar"
                 android:textColor="@color/green"
@@ -120,10 +121,10 @@
 
 
             <TextView
-                android:id="@+id/hotel_parking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_local_parking_black_24dp"
+                android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Parking"
                 android:textColor="@color/green"
@@ -145,6 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_fitness_center_black_24dp"
+                android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Fabulous fitness centre"
                 android:textColor="@color/green"
@@ -166,6 +168,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_spa_black_24dp"
+                android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Spa and wellness centre"
                 android:textColor="@color/green"
@@ -187,6 +190,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_pool_black_24dp"
+                android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Swimming pool Indoor and Outdoor"
                 android:textColor="@color/green"
@@ -198,13 +202,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_airport_shuttle_black_24dp"
+                android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Airport shuttle"
                 android:textColor="@color/green"
                 android:textSize="17sp" />
 
             <View
-                android:id="@+id/divider1"
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
                 android:layout_marginStart="30dp"
@@ -224,7 +228,6 @@
             android:background="@color/green">
 
             <TableRow
-                android:id="@+id/single"
                 android:layout_margin="1dp"
                 android:background="@color/white"
                 android:onClick="single_room"
@@ -239,6 +242,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
+                    android:drawablePadding="5dp"
                     android:text="Single Room" />
 
                 <TextView
@@ -246,7 +250,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:text="0000"
                     android:textColor="@color/green"
                     android:textSize="17sp" />
             </TableRow>
@@ -266,6 +269,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
+                    android:drawablePadding="5dp"
                     android:text="Double Room" />
 
                 <TextView
@@ -273,7 +277,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:text="0000"
                     android:textColor="@color/green"
                     android:textSize="17sp" />
             </TableRow>
@@ -287,12 +290,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_group_add_black_24dp" />
+                    android:src="@drawable/ic_three_person" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
+                    android:drawablePadding="5dp"
                     android:text="Triple Room" />
 
                 <TextView
@@ -300,7 +304,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:text="0000"
                     android:textColor="@color/green"
                     android:textSize="17sp" />
             </TableRow>
@@ -320,6 +323,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
+                    android:drawablePadding="5dp"
                     android:text="Quadruple Room" />
 
                 <TextView
@@ -327,7 +331,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:text="0000"
                     android:textColor="@color/green"
                     android:textSize="17sp" />
             </TableRow>
@@ -347,6 +350,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
+                    android:drawablePadding="5dp"
                     android:text="Double-Double Room" />
 
                 <TextView
@@ -354,7 +358,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:text="0000"
                     android:textColor="@color/green"
                     android:textSize="17sp" />
             </TableRow>
@@ -368,12 +371,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/queen" />
+                    android:src="@drawable/ic_queen" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
+                    android:drawablePadding="5dp"
                     android:text="Queen Room" />
 
                 <TextView
@@ -381,7 +385,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:text="0000"
                     android:textColor="@color/green"
                     android:textSize="17sp" />
             </TableRow>
@@ -395,12 +398,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/king_vector" />
+                    android:src="@drawable/ic_king" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
+                    android:drawablePadding="5dp"
                     android:text="King Room" />
 
                 <TextView
@@ -408,7 +412,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:text="0000"
                     android:textColor="@color/green"
                     android:textSize="17sp" />
             </TableRow>

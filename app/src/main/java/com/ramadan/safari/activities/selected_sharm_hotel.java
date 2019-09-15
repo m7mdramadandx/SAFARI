@@ -33,7 +33,7 @@ public class selected_sharm_hotel extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.selected_alex_hotel);
+        setContentView(R.layout.selected_hotel);
         hotel_name = findViewById(R.id.hotel_name);
         hotel_location = findViewById(R.id.hotel_location);
         hotel_desc = findViewById(R.id.hotel_desc);

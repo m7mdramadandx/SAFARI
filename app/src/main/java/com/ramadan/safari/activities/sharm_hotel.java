@@ -51,21 +51,10 @@ public class sharm_hotel extends AppCompatActivity  {
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, String s) {
-//                User User=dataSnapshot.getValue(User.class);
-//                Boolean isadmin = (Boolean) dataSnapshot.child("isAdmin").getValue();
-//                User.setAdmin(isadmin);
-//                SharedPrefManager.getInstance(context).userLogin(User);
             }
 
             @Override
             public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-/*
-                SharedPrefManager.getInstance(context).logout();
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                context.startActivity(intent);*/
             }
 
             @Override

@@ -23,7 +23,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="landmark_name"
                 android:textColor="@color/red"
                 android:textSize="23sp"
                 android:textStyle="bold" />
@@ -33,11 +32,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription"
                 android:textSize="17sp" />
 
             <View
-                android:id="@+id/divider"
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
                 android:layout_marginStart="30dp"
@@ -62,8 +59,9 @@
                 android:id="@+id/landmark_rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_star_red_24dp"
-                android:text="0.0"
+                android:drawableLeft="@drawable/ic_star_black_24dp"
+                android:drawablePadding="5dp"
+                android:drawableTint="#DD2C00"
                 android:textColor="@color/red"
                 android:textSize="17sp" />
 
@@ -71,9 +69,10 @@
                 android:id="@+id/landmark_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_location_on_red_24dp"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:drawablePadding="5dp"
+                android:drawableTint="#DD2C00"
                 android:padding="10dp"
-                android:text="00 km from center"
                 android:textColor="@color/red"
                 android:textSize="17sp" />
 
@@ -105,23 +104,24 @@
                 android:onClick="one_ticket"
                 android:padding="12dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_person_red_24dp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="12dp"
-                    android:text="One Ticket" />
+                    android:layout_marginEnd="12dp"
+                    android:layout_weight="2"
+                    android:drawableStart="@drawable/ic_person_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="#DD2C00"
+                    android:text="One Ticket"
+                    app:drawableTint="#DD2C00" />
 
                 <TextView
                     android:id="@+id/one_ticket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_attach_money_red_24dp"
-                    android:text="0000"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                    android:drawableTint="#DD2C00"
                     android:textColor="@color/red"
                     android:textSize="17sp" />
             </TableRow>
@@ -132,25 +132,25 @@
                 android:onClick="two_ticket"
                 android:padding="12dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_person_red_24dp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
-                    android:text="Two Ticket" />
+                    android:layout_weight="2"
+                    android:drawableLeft="@drawable/ic_group_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:text="Two Ticket"
+                    app:drawableTint="#DD2C00" />
 
                 <TextView
                     android:id="@+id/two_ticket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_attach_money_red_24dp"
-                    android:text="0000"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
                     android:textColor="@color/red"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    app:drawableTint="#DD2C00" />
             </TableRow>
 
             <TableRow
@@ -159,25 +159,26 @@
                 android:onClick="three_ticket"
                 android:padding="12dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_person_red_24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
-                    android:text="Three Ticket" />
+                    android:layout_weight="2"
+                    android:drawableLeft="@drawable/ic_three_person"
+                    android:drawablePadding="5dp"
+                    android:text="Three Ticket"
+                    app:drawableTint="#DD2C00" />
 
                 <TextView
                     android:id="@+id/three_ticket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_attach_money_red_24dp"
-                    android:text="0000"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
                     android:textColor="@color/red"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    app:drawableTint="#DD2C00" />
             </TableRow>
 
             <TableRow
@@ -186,23 +187,24 @@
                 android:onClick="four_ticket"
                 android:padding="12dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_person_red_24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="12dp"
-                    android:text="Four Ticket" />
+                    android:layout_weight="2"
+                    android:drawableLeft="@drawable/ic_group_add_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:text="Four Ticket"
+                    app:drawableTint="#DD2C00" />
 
                 <TextView
                     android:id="@+id/four_ticket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_attach_money_red_24dp"
-                    android:text="0000"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                    android:drawableTint="#DD2C00"
                     android:textColor="@color/red"
                     android:textSize="17sp" />
             </TableRow>

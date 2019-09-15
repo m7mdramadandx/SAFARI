@@ -9,7 +9,6 @@
 
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
@@ -17,7 +16,6 @@
 
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
@@ -28,9 +26,9 @@
             <ImageView
                 android:id="@+id/landmark_img"
                 android:layout_width="match_parent"
-                android:layout_height="320dp"
+                android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                android:src="@drawable/alex_hotels"
+                android:src="@color/white"
                 app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar

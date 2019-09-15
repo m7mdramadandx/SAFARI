@@ -23,7 +23,6 @@ import com.ramadan.safari.model.Hotel_Blog;
 public class selected_alex_hotel extends AppCompatActivity {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     String key;
-    //mDatabase.getReference("your_node").keepSynced(true);
     TextView hotel_desc, hotel_name, hotel_location, hotel_rate, hotel_beach, hotel_bar, hotel_airport, hotel_spa, hotel_swimming_pool,
             hotel_double, hotel_double_double, hotel_gym, hotel_king, hotel_quadruple, hotel_queen, hotel_single, hotel_triple;
     ImageView hotel_img_url;
@@ -33,7 +32,7 @@ public class selected_alex_hotel extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.selected_alex_hotel);
+        setContentView(R.layout.selected_hotel);
 
 
         hotel_name = findViewById(R.id.hotel_name);
@@ -93,21 +92,10 @@ public class selected_alex_hotel extends AppCompatActivity {
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, String s) {
-//                User User=dataSnapshot.getValue(User.class);
-//                Boolean isadmin = (Boolean) dataSnapshot.child("isAdmin").getValue();
-//                User.setAdmin(isadmin);
-//                SharedPrefManager.getInstance(context).userLogin(User);
             }
 
             @Override
             public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-/*
-                SharedPrefManager.getInstance(context).logout();
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                context.startActivity(intent);*/
             }
 
             @Override

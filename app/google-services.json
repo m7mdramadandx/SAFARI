@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "275621152739",
-    "firebase_url": "https://myapp-95fe1.firebaseio.com",
-    "project_id": "myapp-95fe1",
-    "storage_bucket": "myapp-95fe1.appspot.com"
+    "project_number": "92704125689",
+    "firebase_url": "https://safari-c1da5.firebaseio.com",
+    "project_id": "safari-c1da5",
+    "storage_bucket": "safari-c1da5.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:275621152739:android:040a27da3d9debd2",
+        "mobilesdk_app_id": "1:92704125689:android:721aa6f00c88ab117aa828",
         "android_client_info": {
           "package_name": "com.ramadan.safari"
         }
       },
       "oauth_client": [
         {
-          "client_id": "275621152739-r7qp0k8im0glnn5cpsk524r1rbhpl2cs.apps.googleusercontent.com",
+          "client_id": "92704125689-ugqmc4g7vr8f9e5824uau5f1te653opp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA3TbRgAydqETPpnLFiMGImVN5kghB-8Us"
+          "current_key": "AIzaSyCBhhHixCpssftTlt0I7HhCJWONbiJrl9I"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "275621152739-r7qp0k8im0glnn5cpsk524r1rbhpl2cs.apps.googleusercontent.com",
+              "client_id": "92704125689-ugqmc4g7vr8f9e5824uau5f1te653opp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,52 +1,15 @@
 <resources>
     <string name="app_name">safari</string>
-    <string name="title_activity_profile">profile</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
-    <string name="profile">profile</string>
-    <string name="Hotels">Hotels</string>
     <string name="abroad_trips">Abroad Trips</string>
     <string name="domestic_trips">Domestic Trips</string>
     <string name="Profile">Profile</string>
-    <string name="About">About</string>
-    <string name="setting">Setting</string>
-    <string name="Setting">Setting</string>
-    <string name="submit">Submit</string>
-    <string name="title_activity_test">test</string>
+    <string name="about_english">This application is just an individual diligence work for a student in the Faculty of Computers and Information System University of Menoufia, it has no specific goal but the application of what has been studied in the form of a full application simulates reality and used in practical life, this is the third version of it after the development using the latest tools, NOTE THAT ALL DATA ARE IDENTICAL TO REALITY.\n\nAfter the registration process the user can choose a trip inside the country or outside the country and then selects the appropriate city, the application provides hotel accommodation and trips within the city so the user can choose the hotel with the appropriate trip for him at the time that specified by, payment is done by means.\nwait for the next version!</string>
+    <string name="about_arabic">هذا التطبيق هو مجرد عمل اجتهاد فردي لطالب في كلية الحاسبات ونظم المعلومات بجامعة المنوفية ، وليس له هدف محدد سوى تطبيق ما تمت دراسته في شكل تطبيق كامل يحاكي الواقع ويستخدم في الحياة العملية ، هذه هي النسخة الثالثة منه بعد التطوير باستخدام أحدث الأدوات ، علما بأن جميع البيانات مطابقة للواقع.\n\nبعد عملية التسجيل ، يمكن للمستخدم اختيار رحلة داخل البلد أو خارجها ثم اختيارالمدينة المناسبة ، يوفر التطبيق الإقامة الفندقية مع رحلات داخل المدينة فعلى  المستخدم اختيار الفندق مع الرحلة المناسبة له في الوقت الذي يحدده ، يتم الدفع بكافة الوسائل.\nانتظر الإصدار التالي!</string>
 
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
-    <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
-    <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
-    <string name="empty" />
 
-    <array name="icons">
-        <item>@drawable/ic_account_circle_white_24dp</item>
-        <item>@drawable/ic_account_circle_white_24dp</item>
-        <item>@drawable/ic_account_circle_white_24dp</item>
-        <item>@drawable/ic_account_circle_white_24dp</item>
-        <item>@drawable/ic_account_circle_white_24dp</item>
-        <item>@drawable/ic_account_circle_white_24dp</item>
-        <item>@drawable/ic_account_circle_white_24dp</item>
-
-    </array>
-    <array name="colors">
-        <item>@android:color/holo_blue_light</item>
-        <item>@android:color/holo_green_dark</item>
-        <item>@android:color/holo_red_light</item>
-        <item>@android:color/holo_purple</item>
-        <item>@android:color/holo_orange_light</item>
-        <item>@android:color/holo_red_dark</item>
-        <item>@android:color/white</item>
-    </array>
 </resources>

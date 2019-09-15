@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/direction_card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="1dp"
@@ -18,7 +17,7 @@
         <ImageView
             android:id="@+id/landmark_img"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
+            android:layout_height="200dp"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
@@ -39,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_star_black_24dp"
+            android:drawablePadding="5dp"
             android:paddingRight="5dp"
             android:text="0"
             android:textColor="@color/green"
@@ -50,6 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            android:drawablePadding="5dp"
             android:paddingRight="5dp"
             android:text="00 km from center"
             android:textColor="@color/green"

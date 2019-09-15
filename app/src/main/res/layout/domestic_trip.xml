@@ -9,20 +9,19 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/lay1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="60dp">
 
 
         <Button
-            android:id="@+id/Sharm_Alsheikh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
             android:background="@drawable/roundedbutton"
             android:onClick="Sharm_Alsheikh"
             android:text="Sharm Alsheikh"
@@ -34,13 +33,9 @@
 
 
         <Button
-            android:id="@+id/Alexandria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Sharm_Alsheikh"
-            android:layout_marginStart="60dp"
             android:layout_marginTop="60dp"
-            android:layout_marginEnd="60dp"
             android:background="@drawable/roundedbutton"
             android:onClick="Alexandria"
             android:text="Alexandria"
@@ -51,8 +46,7 @@
             android:textStyle="bold"
             tools:ignore="NotSibling" />
 
-
-    </RelativeLayout>
+    </LinearLayout>
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -66,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title=" " />
+            app:title="Domestic Trips" />
     </com.google.android.material.appbar.AppBarLayout>
 
 
