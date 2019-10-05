@@ -10,15 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".activities.selected_alex_hotel" />
-        <activity android:name=".activities.submition" />
-        <activity android:name=".activities.test" />
         <activity android:name=".activities.home" />
-        <activity android:name=".activities.staff_home" />
         <activity android:name=".activities.sign_up" />
-        <activity android:name=".activities.offers_controller" />
-        <activity android:name=".activities.specific_offer" />
-        <activity android:name=".activities.make_an_order" />
-        <activity android:name=".activities.alex2" />
         <activity android:name=".activities.alex_hotel" />
         <activity android:name=".activities.main" />
         <activity android:name=".activities.splash_screen">

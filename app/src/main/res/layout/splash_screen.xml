@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="160dp"
             android:layout_height="140dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="200dp"
             android:scaleType="fitXY"
             android:src="@drawable/logo_transperant" />
 

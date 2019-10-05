@@ -1,8 +1,12 @@
 package com.ramadan.safari.activities;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,11 +27,12 @@ import com.ramadan.safari.model.Hotel_Blog;
 public class selected_sharm_hotel extends AppCompatActivity {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     String key;
-    //mDatabase.getReference("your_node").keepSynced(true);
     TextView hotel_desc, hotel_name, hotel_location, hotel_rate, hotel_beach, hotel_bar, hotel_airport, hotel_spa, hotel_swimming_pool,
             hotel_double, hotel_double_double, hotel_gym, hotel_king, hotel_quadruple, hotel_queen, hotel_single, hotel_triple;
     ImageView hotel_img_url;
     private FirebaseAuth mAuth;
+    AlertDialog.Builder dialogBuilder;
+    AlertDialog alertDialog;
 
 
     @Override
@@ -120,45 +125,201 @@ public class selected_sharm_hotel extends AppCompatActivity {
     }
 
     public void single_room(View view) {
-        Intent intent = new Intent(this, sharm_landmark.class);
-        intent.putExtra("hotel_cost", hotel_single.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_hotel.this, sharm_landmark.class);
+                intent.putExtra("hotel_cost", hotel_single.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_hotel.this, selected_sharm_hotel.class));
+            }
+        });
     }
 
     public void double_room(View view) {
-        Intent intent = new Intent(this, sharm_landmark.class);
-        intent.putExtra("hotel_cost", hotel_double.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_hotel.this, sharm_landmark.class);
+                intent.putExtra("hotel_cost", hotel_double.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_hotel.this, selected_sharm_hotel.class));
+            }
+        });
     }
 
     public void triple_room(View view) {
-        Intent intent = new Intent(this, sharm_landmark.class);
-        intent.putExtra("hotel_cost", hotel_triple.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_hotel.this, sharm_landmark.class);
+                intent.putExtra("hotel_cost", hotel_triple.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_hotel.this, selected_sharm_hotel.class));
+            }
+        });
     }
 
     public void quadruple_room(View view) {
-        Intent intent = new Intent(this, sharm_landmark.class);
-        intent.putExtra("hotel_cost", hotel_quadruple.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_hotel.this, sharm_landmark.class);
+                intent.putExtra("hotel_cost", hotel_quadruple.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_hotel.this, selected_sharm_hotel.class));
+            }
+        });
     }
 
     public void double_double_room(View view) {
-        Intent intent = new Intent(this, sharm_landmark.class);
-        intent.putExtra("hotel_cost", hotel_double_double.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_hotel.this, sharm_landmark.class);
+                intent.putExtra("hotel_cost", hotel_double_double.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_hotel.this, selected_sharm_hotel.class));
+            }
+        });
     }
 
     public void queen_room(View view) {
-        Intent intent = new Intent(this, sharm_landmark.class);
-        intent.putExtra("hotel_cost", hotel_queen.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_hotel.this, sharm_landmark.class);
+                intent.putExtra("hotel_cost", hotel_queen.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_hotel.this, selected_sharm_hotel.class));
+            }
+        });
     }
 
     public void king_room(View view) {
-        Intent intent = new Intent(this, sharm_landmark.class);
-        intent.putExtra("hotel_cost", hotel_king.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_hotel.this, sharm_landmark.class);
+                intent.putExtra("hotel_cost", hotel_king.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_hotel.this, selected_sharm_hotel.class));
+            }
+        });
+    }
+
+    private void showAlertDialog(int layout) {
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(layout, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_hotel.this, sharm_landmark.class));
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_hotel.this, selected_sharm_hotel.class));
+            }
+        });
     }
 
 }

@@ -1,8 +1,12 @@
 package com.ramadan.safari.activities;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,11 +26,10 @@ import com.ramadan.safari.model.Landmark_Blog;
 public class selected_sharm_landmark extends AppCompatActivity {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     String key;
-    //mDatabase.getReference("your_node").keepSynced(true);
     TextView landmark_desc, landmark_name, landmark_location, landmark_rate, one_ticket, two_ticket, three_ticket, four_ticket;
     ImageView landmark_img_url;
-    private FirebaseAuth mAuth;
-
+    AlertDialog.Builder dialogBuilder;
+    AlertDialog alertDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,27 +99,103 @@ public class selected_sharm_landmark extends AppCompatActivity {
 
 
     public void one_ticket(View view) {
-        Intent intent = new Intent(this, payment.class);
-        intent.putExtra("landmark_cost", one_ticket.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_landmark, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_landmark.this, payment.class);
+                intent.putExtra("landmark_cost", one_ticket.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_landmark.this, selected_sharm_landmark.class));
+            }
+        });
     }
 
     public void two_ticket(View view) {
-        Intent intent = new Intent(this, payment.class);
-        intent.putExtra("landmark_cost", two_ticket.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_landmark, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_landmark.this, payment.class);
+                intent.putExtra("landmark_cost", two_ticket.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_landmark.this, selected_sharm_landmark.class));
+            }
+        });
     }
 
     public void three_ticket(View view) {
-        Intent intent = new Intent(this, payment.class);
-        intent.putExtra("landmark_cost", three_ticket.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_landmark, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_landmark.this, payment.class);
+                intent.putExtra("landmark_cost", three_ticket.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_landmark.this, selected_sharm_landmark.class));
+            }
+        });
     }
 
     public void four_ticket(View view) {
-        Intent intent = new Intent(this, payment.class);
-        intent.putExtra("landmark_cost", four_ticket.getText().toString());
-        startActivity(intent);
+        dialogBuilder = new AlertDialog.Builder(this);
+        View layoutView = getLayoutInflater().inflate(R.layout.confirm_landmark, null);
+        Button confirm_act = layoutView.findViewById(R.id.confirm_action);
+        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
+        dialogBuilder.setView(layoutView);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+        confirm_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(selected_sharm_landmark.this, payment.class);
+                intent.putExtra("landmark_cost", four_ticket.getText().toString());
+                startActivity(intent);
+            }
+        });
+        cancel_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(selected_sharm_landmark.this, selected_sharm_landmark.class));
+            }
+        });
     }
 }
 

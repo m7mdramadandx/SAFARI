@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/one"
+        android:background="@drawable/dialog_positive_round"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/msg"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/confirm_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/msg"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/roundedbutton"
+                android:text="Confirm"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/cancel_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/msg"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/confirm_action"
+                android:background="@drawable/roundedbutton_white"
+                android:text="Cancel"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/awsome"
+            android:layout_marginTop="10dp"
+            android:text="Are you sure you want to hire this room?"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+        <TextView
+            android:id="@+id/awsome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Action"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_iconfinder_warning_outline_3017950" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

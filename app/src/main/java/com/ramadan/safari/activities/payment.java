@@ -92,7 +92,7 @@ public class payment extends AppCompatActivity {
     }
 
     public void confirm(View view) {
-        showAlertDialog(R.layout.my_dialog);
+        showAlertDialog(R.layout.confirm_payment);
     }
 
     private void showAlertDialog(int layout) {
