@@ -4,13 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="1dp"
+    android:clickable="true"
+    android:focusable="true"
     card_view:cardElevation="3dp"
-    card_view:cardUseCompatPadding="true">
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="9dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:gravity="center"
         android:orientation="vertical">
         <LinearLayout
@@ -26,7 +28,7 @@
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
-            android:src="@color/graylight" />
+            android:src="@drawable/load"/>
 
             <TextView
                 android:id="@+id/hotel_name"
@@ -35,8 +37,9 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="hotel_name"
+                android:textAllCaps="true"
                 android:textColor="@color/golden"
-                android:textSize="23sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

@@ -196,5 +196,6 @@
         app:headerLayout="@layout/nav_header_profile"
         app:menu="@menu/navigate_drawer" />
 
+
 </androidx.drawerlayout.widget.DrawerLayout>
 

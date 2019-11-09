@@ -22,16 +22,19 @@
             android:title="@string/abroad_trips" />
     </group>
 
-    <item android:title="About us">
+    <item android:title="@string/about_us">
         <menu>
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_about_icon"
-                android:title="About" />
+                android:title="@string/about" />
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_exit_to_app_black_24dp"
-                android:title="Log Out" />
+                android:title="@string/log_out" />
+
+            <item android:title="V.3.1" />
+
         </menu>
     </item>
 

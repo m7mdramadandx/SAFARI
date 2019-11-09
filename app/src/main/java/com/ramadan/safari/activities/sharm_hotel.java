@@ -35,7 +35,7 @@ public class sharm_hotel extends AppCompatActivity  {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sharn_hotel);
+        setContentView(R.layout.sharm_hotel);
         method();
     }
 

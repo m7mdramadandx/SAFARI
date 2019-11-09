@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/graylight"
+    android:background="#000000"
     android:fitsSystemWindows="true"
     tools:context="com.ramadan.safari.activities.sharm_hotel">
 

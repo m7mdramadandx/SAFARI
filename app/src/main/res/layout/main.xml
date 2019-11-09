@@ -25,7 +25,7 @@
             android:background="@drawable/roundedbutton"
             android:onClick="login"
             android:text="login"
-            android:textColor="@color/graylight"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
             android:background="@drawable/roundedbutton"
             android:onClick="sign_up"
             android:text="create an account"
-            android:textColor="@color/graylight"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>

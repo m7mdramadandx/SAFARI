@@ -9,6 +9,9 @@
     <string name="Profile">Profile</string>
     <string name="about_english">This application is just an individual diligence work for a student in the Faculty of Computers and Information System University of Menoufia, it has no specific goal but the application of what has been studied in the form of a full application simulates reality and used in practical life, this is the third version of it after the development using the latest tools, NOTE THAT ALL DATA ARE IDENTICAL TO REALITY.\n\nAfter the registration process the user can choose a trip inside the country or outside the country and then selects the appropriate city, the application provides hotel accommodation and trips within the city so the user can choose the hotel with the appropriate trip for him at the time that specified by, payment is done by means.\nwait for the next version!</string>
     <string name="about_arabic">هذا التطبيق هو مجرد عمل اجتهاد فردي لطالب في كلية الحاسبات ونظم المعلومات بجامعة المنوفية ، وليس له هدف محدد سوى تطبيق ما تمت دراسته في شكل تطبيق كامل يحاكي الواقع ويستخدم في الحياة العملية ، هذه هي النسخة الثالثة منه بعد التطوير باستخدام أحدث الأدوات ، علما بأن جميع البيانات مطابقة للواقع.\n\nبعد عملية التسجيل ، يمكن للمستخدم اختيار رحلة داخل البلد أو خارجها ثم اختيارالمدينة المناسبة ، يوفر التطبيق الإقامة الفندقية مع رحلات داخل المدينة فعلى  المستخدم اختيار الفندق مع الرحلة المناسبة له في الوقت الذي يحدده ، يتم الدفع بكافة الوسائل.\nانتظر الإصدار التالي!</string>
+    <string name="about_us">About us</string>
+    <string name="about">About</string>
+    <string name="log_out">Log Out</string>
 
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
 
