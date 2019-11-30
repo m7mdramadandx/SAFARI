@@ -4,14 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -35,10 +34,8 @@ public class home extends AppCompatActivity
                     FirebaseUser user = firebaseAuth.getCurrentUser();
                     if (user == null) {
                         Intent intent = new Intent(home.this, main.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         finish();
-//                    }
                     }
                 }
             };
@@ -53,7 +50,11 @@ public class home extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
     }
+
 
 
     public void domestic_trips(View view) {
@@ -68,16 +69,7 @@ public class home extends AppCompatActivity
         finish();
     }
 
-    //////////////////////------NAV BAR------//////////////////
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            finish();
-        }
-    }
+
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -89,12 +81,16 @@ public class home extends AppCompatActivity
             case R.id.nav_profile:
                 startActivity(new Intent(this, profile.class));
                 break;
-            case R.id.nav_domestic_trip:
+            case R.id.nav_domestic_trips:
                 startActivity(new Intent(this, domestic_trips.class));
                 break;
-            case R.id.nav_abroad_trip:
+            case R.id.nav_abroad_trips:
                 startActivity(new Intent(this, abroad_trips.class));
                 break;
+            case R.id.nav_booked_trips:
+                Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+            case R.id.nav_favourite:
+                Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
             case R.id.nav_about:
                 startActivity(new Intent(this, about.class));
                 break;

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "92704125689-65msn14prrpp6hq0isis3k6m1fibuo6n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ramadan.safari",
+            "certificate_hash": "0c1e4ad702108d6bcfd0ae34de7b6501ae68e6d2"
+          }
+        },
+        {
           "client_id": "92704125689-ugqmc4g7vr8f9e5824uau5f1te653opp.apps.googleusercontent.com",
           "client_type": 3
         }

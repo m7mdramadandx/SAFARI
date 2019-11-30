@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.ramadan.safari.R;
 
@@ -30,6 +32,19 @@ public class payment extends AppCompatActivity {
     private RadioGroup radioGroup;
     private RadioButton sound, vibration, silent;
 
+
+    public static final String CHANNEL_ID = "alert";
+    public static final String CHANNEL_NAME = "Successful!";
+    public static final String CHANNEL_DESC = "The trip has been successfully paid";
+
+
+    private void display_notification() {
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID).
+                setSmallIcon(R.drawable.logo_transperant).setContentTitle(CHANNEL_NAME).setContentText(CHANNEL_DESC).
+                setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationManagerCompat mNotificationManagerCompat = NotificationManagerCompat.from(this);
+        mNotificationManagerCompat.notify(1, mBuilder.build());
+    }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +63,6 @@ public class payment extends AppCompatActivity {
 
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // find which radio button is selected
                 if (checkedId == R.id.paypal) {
                 } else if (checkedId == R.id.mastercard) {
                 } else {
@@ -93,6 +107,7 @@ public class payment extends AppCompatActivity {
 
     public void confirm(View view) {
         showAlertDialog(R.layout.confirm_payment);
+        display_notification();
     }
 
     private void showAlertDialog(int layout) {

@@ -2,7 +2,6 @@ package com.ramadan.safari.activities;
 
 //import com.google.firebase.database.core.Context;
 
-//import com.google.api.Context;
 
 import android.os.Bundle;
 

@@ -47,34 +47,16 @@ public class alex_hotel extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
                 Hotel_Blog mhotel_blog = dataSnapshot.getValue(Hotel_Blog.class);
-//                String x = (String) dataSnapshot.child("hotel_name").getValue();
-                //              System.out.println(x + "ssssssssss");
-                /*mhotel_blog.setHotel_location((String) dataSnapshot.child("hotel_location").getValue());
-                mhotel_blog.setHotel_rate((String) dataSnapshot.child("hotel_rate").getValue());
-                mhotel_blog.setHotel_beachfront((String) dataSnapshot.child("hotel_beach").getValue());
-                String shotel_blog = (String) dataSnapshot.child("hotel_location").getValue();
-                mhotel_blog.setHotel_img_url((String) dataSnapshot.child("hotel_img_url").getValue());*/
                 mHotelBlog.add(mhotel_blog);
                 setRvadapter(mHotelBlog);
             }
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, String s) {
-//                User User=dataSnapshot.getValue(User.class);
-//                Boolean isadmin = (Boolean) dataSnapshot.child("isAdmin").getValue();
-//                User.setAdmin(isadmin);
-//                SharedPrefManager.getInstance(context).userLogin(User);
             }
 
             @Override
             public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-/*
-                SharedPrefManager.getInstance(context).logout();
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                context.startActivity(intent);*/
             }
 
             @Override
@@ -100,17 +82,13 @@ public class alex_hotel extends AppCompatActivity {
         myrv.setNestedScrollingEnabled(false);
         alex_hotel_rcv_adp myAdapter = new alex_hotel_rcv_adp(this, (ArrayList) mHotelBlog);
         myrv.setAdapter(myAdapter);
-
-        //myrv.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
     public void onBackPressed() {
-
-        Intent intent = new Intent(this, domestic_trips.class);
+        super.onBackPressed();
+        Intent intent = new Intent(this,domestic_trips.class);
         startActivity(intent);
-
+        finish();
     }
-
-
 }

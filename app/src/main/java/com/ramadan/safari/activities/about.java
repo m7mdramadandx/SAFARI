@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -37,17 +38,6 @@ public class about extends AppCompatActivity implements NavigationView.OnNavigat
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    //////////////////////------NAV BAR------//////////////////
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            startActivity(new Intent(this, home.class));
-        }
-    }
-
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -58,12 +48,16 @@ public class about extends AppCompatActivity implements NavigationView.OnNavigat
             case R.id.nav_profile:
                 startActivity(new Intent(this, profile.class));
                 break;
-            case R.id.nav_domestic_trip:
+            case R.id.nav_domestic_trips:
                 startActivity(new Intent(this, domestic_trips.class));
                 break;
-            case R.id.nav_abroad_trip:
+            case R.id.nav_abroad_trips:
                 startActivity(new Intent(this, abroad_trips.class));
                 break;
+            case R.id.nav_booked_trips:
+                Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+            case R.id.nav_favourite:
+                Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
             case R.id.nav_about:
                 startActivity(new Intent(this, about.class));
                 break;

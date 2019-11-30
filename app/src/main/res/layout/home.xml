@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@drawable/main_screen_logo">
-
         <Button
             android:id="@+id/domestic_trips"
             android:layout_width="match_parent"

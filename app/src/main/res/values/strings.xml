@@ -12,6 +12,8 @@
     <string name="about_us">About us</string>
     <string name="about">About</string>
     <string name="log_out">Log Out</string>
+    <string name="favourite">Favourite</string>
+    <string name="booked_trips">Booked Trips</string>
 
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
 

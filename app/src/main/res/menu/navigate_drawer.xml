@@ -13,13 +13,21 @@
             android:icon="@drawable/ic_account_circle_black_24dp"
             android:title="@string/Profile" />
         <item
-            android:id="@+id/nav_domestic_trip"
+            android:id="@+id/nav_domestic_trips"
             android:icon="@drawable/ic_domestic_black_24dp"
             android:title="@string/domestic_trips" />
         <item
-            android:id="@+id/nav_abroad_trip"
+            android:id="@+id/nav_abroad_trips"
             android:icon="@drawable/ic_flight_black_24dp"
             android:title="@string/abroad_trips" />
+        <item
+            android:id="@+id/nav_booked_trips"
+            android:icon="@drawable/ic_check_circle_black_24dp"
+            android:title="@string/booked_trips" />
+        <item
+            android:id="@+id/nav_favourite"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="@string/favourite" />
     </group>
 
     <item android:title="@string/about_us">

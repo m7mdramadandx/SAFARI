@@ -1,9 +1,6 @@
 package com.ramadan.safari.activities;
 
-//import com.google.firebase.database.core.Context;
-
-//import com.google.api.Context;
-
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -82,5 +79,11 @@ public class sharm_hotel extends AppCompatActivity  {
         myrv.setAdapter(myAdapter);
         myAdapter.notifyDataSetChanged();
     }
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this,domestic_trips.class);
+        startActivity(intent);
+        finish();
+    }
 }

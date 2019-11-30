@@ -75,17 +75,6 @@ public class profile extends AppCompatActivity implements NavigationView.OnNavig
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    //////////////////////------NAV BAR------//////////////////
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            finish();
-        }
-    }
-
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -96,12 +85,16 @@ public class profile extends AppCompatActivity implements NavigationView.OnNavig
             case R.id.nav_profile:
                 startActivity(new Intent(this, profile.class));
                 break;
-            case R.id.nav_domestic_trip:
+            case R.id.nav_domestic_trips:
                 startActivity(new Intent(this, domestic_trips.class));
                 break;
-            case R.id.nav_abroad_trip:
+            case R.id.nav_abroad_trips:
                 startActivity(new Intent(this, abroad_trips.class));
                 break;
+            case R.id.nav_booked_trips:
+                Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+            case R.id.nav_favourite:
+                Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
             case R.id.nav_about:
                 startActivity(new Intent(this, about.class));
                 break;
