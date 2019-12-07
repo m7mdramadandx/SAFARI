@@ -5,10 +5,11 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="1dp"
     android:clickable="true"
+    android:translationZ="5dp"
     android:focusable="true"
     card_view:cardElevation="3dp"
     card_view:cardUseCompatPadding="true"
-    card_view:cardCornerRadius="9dp">
+    card_view:cardCornerRadius="14dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +34,7 @@
             <TextView
                 android:id="@+id/hotel_name"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="hotel_name"
@@ -60,7 +61,8 @@
                 android:drawableLeft="@drawable/ic_star_black_24dp"
                 android:singleLine="true"
                 android:text="0"
-                android:textColor="@color/green" />
+                android:textColor="@color/three"
+                card_view:drawableTint="@color/three" />
 
 
             <TextView
@@ -71,7 +73,8 @@
                 android:drawableLeft="@drawable/ic_location_on_black_24dp"
                 android:singleLine="true"
                 android:text="0.0 km from center"
-                android:textColor="@color/green" />
+                android:textColor="@color/three"
+                card_view:drawableTint="@color/three" />
 
             <TextView
                 android:id="@+id/hotel_beach"
@@ -81,7 +84,8 @@
                 android:drawableLeft="@drawable/ic_beach_access_black_24dp"
                 android:singleLine="true"
                 android:text="500m from beach-private beach"
-                android:textColor="@color/green" />
+                android:textColor="@color/three"
+                card_view:drawableTint="@color/three" />
 
 
         </LinearLayout>

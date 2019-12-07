@@ -1,17 +1,18 @@
 package com.ramadan.safari.activities;
 
-//import com.google.firebase.database.core.Context;
-
-//import com.google.api.Context;
-
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -30,12 +31,23 @@ public class sharm_landmark extends AppCompatActivity {
     private ArrayList<Landmark_Blog> mLandmarkBlog = new ArrayList<>();
     private FirebaseAuth mAuth;
     public static int hotel_cost;
+    private CoordinatorLayout mCLayout;
+    private Toolbar mToolbar;
+    private CollapsingToolbarLayout mCToolbarLayout;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sharm_landmark);
+        mCLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mCToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
+        setSupportActionBar(mToolbar);
+        mCToolbarLayout.setTitle("Sharm EL-Sheikh Landmarks");
+        mCToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
+        mCToolbarLayout.setExpandedTitleColor(Color.WHITE);
         String x = getIntent().getExtras().getString("hotel_cost");
         hotel_cost = Integer.parseInt(x);
         method();
@@ -84,6 +96,7 @@ public class sharm_landmark extends AppCompatActivity {
         myrv.setLayoutManager(mGrid);
         myrv.setHasFixedSize(true);
         myrv.setNestedScrollingEnabled(false);
+        myrv.setItemAnimator(new DefaultItemAnimator());
         sharm_landmark_rcv_adp myAdapter = new sharm_landmark_rcv_adp(this, (ArrayList) mLandmarkBlog);
         myrv.setAdapter(myAdapter);
     }

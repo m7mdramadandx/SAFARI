@@ -2,26 +2,28 @@ package com.ramadan.safari.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import com.google.android.material.navigation.NavigationView;
+import androidx.cardview.widget.CardView;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.ramadan.safari.R;
 
 
-public class home extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class home extends AppCompatActivity implements View.OnClickListener {
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
-
+    private CardView domestic_trips;
+    private CardView abroad_trips;
+    private CardView booked_trips;
+    private CardView favorite;
+    private CardView about;
+    private CardView profile;
+    private CardView logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,67 +42,67 @@ public class home extends AppCompatActivity
                 }
             };
 
-        //////////////////////------NAV BAR------//////////////////
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
-
-
+        initObjects();
 
     }
 
+    private void initObjects() {
+
+        domestic_trips = findViewById(R.id.domestic_trips);
+        abroad_trips = findViewById(R.id.abroad_trips);
+        booked_trips = findViewById(R.id.booked_trips);
+        favorite = findViewById(R.id.favorite);
+        profile = findViewById(R.id.profile);
+        about = findViewById(R.id.about);
+        logout = findViewById(R.id.logout);
+        domestic_trips.setOnClickListener(this);
+        abroad_trips.setOnClickListener(this);
+        booked_trips.setOnClickListener(this);
+        favorite.setOnClickListener(this);
+        profile.setOnClickListener(this);
+        about.setOnClickListener(this);
+        logout.setOnClickListener(this);
 
 
-    public void domestic_trips(View view) {
-        Intent intent = new Intent(this, domestic_trips.class);
-        startActivity(intent);
-        finish();
     }
-
-    public void abroad_trips(View view) {
-        Intent intent1 = new Intent(this, abroad_trips.class);
-        startActivity(intent1);
-        finish();
-    }
-
 
 
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        switch (id) {
-            case R.id.nav_home:
-                startActivity(new Intent(this, home.class));
-                break;
-            case R.id.nav_profile:
-                startActivity(new Intent(this, profile.class));
-                break;
-            case R.id.nav_domestic_trips:
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+
+            case R.id.domestic_trips:
                 startActivity(new Intent(this, domestic_trips.class));
                 break;
-            case R.id.nav_abroad_trips:
+            case R.id.abroad_trips:
                 startActivity(new Intent(this, abroad_trips.class));
                 break;
-            case R.id.nav_booked_trips:
-                Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
-            case R.id.nav_favourite:
-                Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
-            case R.id.nav_about:
+            case R.id.booked_trips:
+                Toast.makeText(this, "Soon!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, MapsActivity.class));
+                break;
+            case R.id.favorite:
+                Toast.makeText(this, "Soon!", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.profile:
+                startActivity(new Intent(this, profile.class));
+                break;
+            case R.id.about:
                 startActivity(new Intent(this, about.class));
                 break;
-            case R.id.nav_logout:
+            case R.id.logout:
                 mAuth.signOut();
                 startActivity(new Intent(this, main.class));
                 break;
+
         }
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

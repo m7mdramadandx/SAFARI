@@ -4,8 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_screen_logo"
+    android:background="@color/background"
     tools:context=".activities.main">
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_transperant"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -58,9 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/two"
             android:layout_centerHorizontal="true"
-            android:progressDrawable="@color/green"
+            android:progressDrawable="@color/three"
             android:visibility="gone" />
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/one"
@@ -68,20 +74,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginEnd="60dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@color/three"
+            app:passwordToggleTint="@color/three">
 
             <EditText
                 android:id="@+id/email_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+                android:drawableStart="@drawable/ic_account_circle_black_24dp"
                 android:drawablePadding="10dp"
-                android:drawableTint="#CCCCCC"
+                android:drawableTint="@color/three"
                 android:hint="email"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/graylight" />
+                android:textColor="@android:color/darker_gray" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/two"
@@ -91,7 +98,9 @@
             android:layout_marginStart="60dp"
             android:layout_marginEnd="60dp"
             android:layout_marginBottom="10dp"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            android:textColorHint="@color/three"
+            app:passwordToggleTint="@color/three">
 
             <EditText
                 android:id="@+id/password_field"
@@ -99,11 +108,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/email_field"
                 android:layout_marginBottom="15dp"
+                app:drawableTint="@color/three"
                 android:drawableStart="@drawable/ic_vpn_key_black_24dp"
                 android:drawablePadding="10dp"
                 android:hint="password"
                 android:inputType="textPassword"
-                android:textColor="@color/graylight" />
+                android:textColor="@android:color/darker_gray" />
         </com.google.android.material.textfield.TextInputLayout>
     </RelativeLayout>
 

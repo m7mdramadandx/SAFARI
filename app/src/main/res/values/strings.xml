@@ -14,6 +14,7 @@
     <string name="log_out">Log Out</string>
     <string name="favourite">Favourite</string>
     <string name="booked_trips">Booked Trips</string>
+    <string name="title_activity_maps">Map</string>
 
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
 

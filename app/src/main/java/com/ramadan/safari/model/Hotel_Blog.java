@@ -25,7 +25,6 @@ public class Hotel_Blog implements Serializable {
     private String hotel_king;
     private String hotel_img_url;
 
-    //private String hotel_cost;
 
     public Hotel_Blog() {
     }
@@ -38,9 +37,6 @@ public class Hotel_Blog implements Serializable {
         }
 
         this.hotel_name = String.valueOf(mhotel_blog.get(1));
-        //  this.hotel_rate = ((String). mhotel_blog);
-        // System.out.println("weweweweweeeeeeeeeeeeeeeeee " + hotel_name);
-        // System.out.println("weweweweweeeeeeeeeeeeeeeeeeiii " + i);
     }
 
     public Hotel_Blog(String hotel_name, String hotel_rate, String hotel_location, String hotel_beach, String hotel_airport, String hotel_gym, String hotel_swimming_pool, String hotel_spa, String hotel_desc, String hotel_parking, String hotel_bar, String hotel_single, String hotel_double, String hotel_triple, String hotel_quadruple, String hotel_double_double, String hotel_queen, String hotel_king, String hotel_img_url) {
@@ -217,29 +213,5 @@ public class Hotel_Blog implements Serializable {
         this.hotel_img_url = hotel_img_url;
     }
 
-    ///////////////////////////////////////////////////////////////////////////////////
-/*
-    public class Demo extends Activity {
-
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            Bundle bundle = new Bundle();
-            Toast.makeText(this, "***************", Toast.LENGTH_SHORT).show();
-            Hotel_Blog hotel = (Hotel_Blog) getIntent().getExtras().getSerializable("Data");
-            String xx = bundle.getString("hotel_name");
-            System.out.println("wwwwwwwwwwwwwwwwwwwwwwwwwww  "+xx);
-        }
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            Toast.makeText(this, "***************", Toast.LENGTH_SHORT).show();
-            Hotel_Blog hotel = (Hotel_Blog) getIntent().getExtras()
-                    .getSerializable("Data");
-            Toast.makeText(this, hotel.hotel_name, Toast.LENGTH_SHORT).show();
-            System.out.println("================================================================================== " + hotel.hotel_name);
-        }
-*/
 
 }

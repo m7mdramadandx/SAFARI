@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,8 +33,8 @@ public class alex_landmark_rcv_adp extends RecyclerView.Adapter<alex_landmark_rc
         this.landmark = landmark;
         options = new RequestOptions()
                 .centerCrop()
-                .placeholder(R.drawable.loading_shape)
-                .error(R.drawable.loading_shape);
+                .placeholder(R.drawable.load)
+                .error(R.drawable.ic_error_outline_white_48dp);
     }
 
     @NonNull
@@ -56,6 +57,8 @@ public class alex_landmark_rcv_adp extends RecyclerView.Adapter<alex_landmark_rc
         holder.landmark_rate.setText(rate);
         holder.landmark_location.setText(location);
         Glide.with(mContext).asBitmap().load(imageUrl).into(holder.landmark_img);
+        holder.landmark_img.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.zoom_in));
+
     }
 
     @Override

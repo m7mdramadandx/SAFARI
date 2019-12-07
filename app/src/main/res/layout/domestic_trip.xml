@@ -1,77 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_screen_no_logo"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:background="#FCF9EC"
+    android:orientation="vertical"
+    tools:context=".activities.domestic_trips">
 
-    <LinearLayout
-        android:id="@+id/lay1"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="60dp">
+        android:layout_height="match_parent">
 
-
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/roundedbutton"
-            android:onClick="Sharm_Alsheikh"
-            android:text="Sharm Alsheikh"
-            android:textAllCaps="false"
-            android:textColor="#ffffff"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            tools:ignore="NotSibling" />
+            android:orientation="vertical">
 
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/roundedbutton"
-            android:onClick="Alexandria"
-            android:text="Alexandria"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="#ffffff"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            tools:ignore="NotSibling" />
-
-    </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/topArea"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="#12D3CF">
 
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/transparent"
-        android:theme="@style/AppTheme.AppBarOverlay">
+                <TextView
+                    android:id="@+id/myDashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Domestic Trips"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="Domestic Trips" />
-    </com.google.android.material.appbar.AppBarLayout>
+            </RelativeLayout>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-100dp"
+                android:columnCount="1"
+                android:padding="50dp">
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:layout_width="170dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="30dp"
+                    android:translationZ="5dp"
+                    android:focusable="true"
+ android:onClick="Sharm_Alsheikh"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="7dp"
+                    app:rippleColor="@color/three">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:src="@drawable/ic_surfer"
+                            android:tint="#67EACA" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Sharm ElSheikh"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@drawable/nav_screen"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_profile"
-        app:menu="@menu/navigate_drawer" />
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
-</androidx.drawerlayout.widget.DrawerLayout>
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:layout_width="170dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="30dp"
+                    android:translationZ="5dp"
+                    android:focusable="true"
+ android:onClick="Alexandria"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:src="@drawable/ic_red_seaa"
+
+                            android:tint="#67EACA" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="ALexandria"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+

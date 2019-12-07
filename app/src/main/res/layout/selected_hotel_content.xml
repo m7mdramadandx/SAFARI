@@ -43,7 +43,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
-                android:background="@color/golden" />
+                android:background="@color/one" />
 
 
         </LinearLayout>
@@ -64,8 +64,9 @@
                 android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="0"
-                android:textColor="@color/green"
-                android:textSize="17sp" />
+                android:textColor="@color/three"
+                android:textSize="17sp"
+                app:drawableTint="@color/three" />
 
             <TextView
                 android:id="@+id/hotel_beach"
@@ -74,8 +75,9 @@
                 android:drawableLeft="@drawable/ic_beach_access_black_24dp"
                 android:drawablePadding="5dp"
                 android:text="beach"
-                android:textColor="@color/green"
-                android:textSize="17sp" />
+                android:textColor="@color/three"
+                android:textSize="17sp"
+                app:drawableTint="@color/three" />
 
 
         </LinearLayout>
@@ -95,8 +97,9 @@
                 android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="00 km from center"
-                android:textColor="@color/green"
-                android:textSize="17sp" />
+                android:textColor="@color/three"
+                android:textSize="17sp"
+                app:drawableTint="@color/three" />
 
 
         </LinearLayout>
@@ -117,8 +120,9 @@
                 android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="bar"
-                android:textColor="@color/green"
-                android:textSize="17sp" />
+                android:textColor="@color/three"
+                android:textSize="17sp"
+                app:drawableTint="@color/three" />
 
 
             <TextView
@@ -128,8 +132,9 @@
                 android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Parking"
-                android:textColor="@color/green"
-                android:textSize="17sp" />
+                android:textColor="@color/three"
+                android:textSize="17sp"
+                app:drawableTint="@color/three" />
 
 
         </LinearLayout>
@@ -150,8 +155,9 @@
                 android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Fabulous fitness centre"
-                android:textColor="@color/green"
-                android:textSize="17sp" />
+                android:textColor="@color/three"
+                android:textSize="17sp"
+                app:drawableTint="@color/three" />
 
 
         </LinearLayout>
@@ -172,8 +178,9 @@
                 android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Spa and wellness centre"
-                android:textColor="@color/green"
-                android:textSize="17sp" />
+                android:textColor="@color/three"
+                android:textSize="17sp"
+                app:drawableTint="@color/three" />
 
 
         </LinearLayout>
@@ -194,8 +201,9 @@
                 android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Swimming pool Indoor and Outdoor"
-                android:textColor="@color/green"
-                android:textSize="17sp" />
+                android:textColor="@color/three"
+                android:textSize="17sp"
+                app:drawableTint="@color/three" />
 
 
             <TextView
@@ -206,8 +214,9 @@
                 android:drawablePadding="5dp"
                 android:paddingRight="5dp"
                 android:text="Airport shuttle"
-                android:textColor="@color/green"
-                android:textSize="17sp" />
+                android:textColor="@color/three"
+                android:textSize="17sp"
+                app:drawableTint="@color/three" />
 
             <View
                 android:layout_width="match_parent"
@@ -218,7 +227,7 @@
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="20dp"
-                android:background="@color/golden" />
+                android:background="@color/one" />
         </LinearLayout>
 
         <TableLayout
@@ -226,7 +235,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            android:background="@color/green">
+            android:background="@color/one">
 
             <TableRow
                 android:layout_margin="1dp"
@@ -237,7 +246,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:src="@drawable/ic_person_black_24dp"
+                    android:tint="@color/three" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -251,8 +261,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:textColor="@color/green"
-                    android:textSize="17sp" />
+                    android:textColor="@color/three"
+                    android:textSize="17sp"
+                    app:drawableTint="@color/three" />
             </TableRow>
 
             <TableRow
@@ -264,7 +275,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_group_black_24dp" />
+                    android:src="@drawable/ic_group_black_24dp"
+                    android:tint="@color/three" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -278,8 +290,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:textColor="@color/green"
-                    android:textSize="17sp" />
+                    android:textColor="@color/three"
+                    android:textSize="17sp"
+                    app:drawableTint="@color/three" />
             </TableRow>
 
             <TableRow
@@ -291,7 +304,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_three_person" />
+                    android:src="@drawable/ic_three_person"
+                    android:tint="@color/three" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -305,8 +319,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:textColor="@color/green"
-                    android:textSize="17sp" />
+                    android:textColor="@color/three"
+                    android:textSize="17sp"
+                    app:drawableTint="@color/three" />
             </TableRow>
 
             <TableRow
@@ -318,7 +333,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_group_add_black_24dp" />
+                    android:src="@drawable/ic_group_add_black_24dp"
+                    android:tint="@color/three" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -332,8 +348,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:textColor="@color/green"
-                    android:textSize="17sp" />
+                    android:textColor="@color/three"
+                    android:textSize="17sp"
+                    app:drawableTint="@color/three" />
             </TableRow>
 
             <TableRow
@@ -345,7 +362,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_group_add_black_24dp" />
+                    android:src="@drawable/ic_group_add_black_24dp"
+                    android:tint="@color/three" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -359,8 +377,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:textColor="@color/green"
-                    android:textSize="17sp" />
+                    android:textColor="@color/three"
+                    android:textSize="17sp"
+                    app:drawableTint="@color/three" />
             </TableRow>
 
             <TableRow
@@ -372,7 +391,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_queen" />
+                    android:src="@drawable/ic_queen"
+                    android:tint="@color/three" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -386,8 +406,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:textColor="@color/green"
-                    android:textSize="17sp" />
+                    android:drawableTint="@color/three"
+                    android:textColor="@color/three"
+                    android:textSize="17sp"
+                    app:drawableTint="@color/three" />
             </TableRow>
 
             <TableRow
@@ -399,7 +421,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_king" />
+                    android:src="@drawable/ic_king"
+                    android:tint="@color/three" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -413,8 +436,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:textColor="@color/green"
-                    android:textSize="17sp" />
+                    android:textColor="@color/three"
+                    android:textSize="17sp"
+                    app:drawableTint="@color/three" />
             </TableRow>
 
 

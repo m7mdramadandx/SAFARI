@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,7 +34,9 @@ public class alex_hotel_rcv_adp extends RecyclerView.Adapter<alex_hotel_rcv_adp.
     public alex_hotel_rcv_adp(Context mContext, ArrayList hotel) {
         this.mContext = mContext;
         this.hotel = hotel;
-        option = new RequestOptions().centerCrop().placeholder(R.drawable.loading_shape).error(R.drawable.loading_shape);
+        option = new RequestOptions().centerCrop()
+                .placeholder(R.drawable.load)
+                .error(R.drawable.ic_error_outline_white_48dp);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -56,15 +59,14 @@ public class alex_hotel_rcv_adp extends RecyclerView.Adapter<alex_hotel_rcv_adp.
         String location = Hotel_blog.getHotel_location();
         String rate = Hotel_blog.getHotel_rate();
         String hotel_name = Hotel_blog.getHotel_name();
-        //   String cost = Hotel_Blog.getCost();
 
         holder.hotel_name.setText(hotel_name);
         holder.rate.setText(rate);
         holder.location.setText(location);
         holder.beach.setText(beach);
-        //holder.cost.setText(cost);
-//        Picasso.with(mContext).load(imageUrl);
         Glide.with(mContext).asBitmap().load(imageUrl).into(holder.img);
+        holder.img.setAnimation(AnimationUtils.loadAnimation(mContext,R.anim.zoom_in));
+
     }
 
     @Override
@@ -88,7 +90,6 @@ public class alex_hotel_rcv_adp extends RecyclerView.Adapter<alex_hotel_rcv_adp.
             beach = itemView.findViewById(R.id.hotel_beach);
             rate = itemView.findViewById(R.id.hotel_rate);
             location = itemView.findViewById(R.id.hotel_location);
-//          cost = itemView.findViewById(R.id.cost);
             img = itemView.findViewById(R.id.hotel_img);
 
 

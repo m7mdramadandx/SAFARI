@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradientbackground"
+    android:background="@color/background"
     android:padding="40dp">
 
     <RelativeLayout
@@ -21,9 +22,9 @@
             android:hint="check-in date"
             android:inputType="date"
             android:onClick="check_in"
-            android:scrollbarThumbHorizontal="@color/white"
-            android:scrollbarThumbVertical="@color/white"
-            android:textColor="@color/white"
+            android:scrollbarThumbHorizontal="@android:color/darker_gray"
+            android:scrollbarThumbVertical="@android:color/darker_gray"
+            android:textColor="@android:color/darker_gray"
             android:textSize="16dp" />
 
         <EditText
@@ -36,9 +37,9 @@
             android:hint="check-out date"
             android:inputType="date"
             android:onClick="check_out"
-            android:scrollbarThumbHorizontal="@color/white"
-            android:scrollbarThumbVertical="@color/white"
-            android:textColor="@color/white"
+            android:scrollbarThumbHorizontal="@android:color/darker_gray"
+            android:scrollbarThumbVertical="@android:color/darker_gray"
+            android:textColor="@android:color/darker_gray"
             android:textSize="16dp" />
 
 
@@ -72,9 +73,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:checked="true"
-                        android:drawableTop="@drawable/ic_paypal"
-                        android:textColor="@color/graylight"
-                        android:textColorHint="@color/graylight" />
+                        android:drawableTop="@drawable/ic_paypal" />
 
                     <RadioButton
                         android:id="@+id/mastercard"
@@ -83,17 +82,14 @@
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:drawableTop="@drawable/ic_mastercard"
-                        android:textColor="@color/graylight"
-                        android:textColorHint="@color/graylight" />
+                        />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
-                        android:drawableTop="@drawable/ic_visaa"
-                        android:textColor="@color/graylight"
-                        android:textColorHint="@color/graylight" />
+                        android:drawableTop="@drawable/ic_visaa" />
 
                 </RadioGroup>
 
@@ -131,13 +127,14 @@
                     android:drawableRight="@drawable/ic_attach_money_black_24dp"
                     android:paddingStart="20dp"
                     android:paddingLeft="20dp"
-                    android:scrollbarThumbHorizontal="@color/white"
-                    android:scrollbarThumbVertical="@color/white"
+                    android:scrollbarThumbHorizontal="@android:color/darker_gray"
+                    android:scrollbarThumbVertical="@android:color/darker_gray"
                     android:text="0000"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
+                    android:textColor="@android:color/darker_gray"
+                    android:textColorHint="@android:color/darker_gray"
                     android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:drawableTint="@color/two" />
 
                 <TextView
                     android:id="@+id/total_label"
@@ -145,12 +142,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/four"
                     android:layout_marginTop="10dp"
-                    android:scrollbarThumbHorizontal="@color/white"
-                    android:scrollbarThumbVertical="@color/white"
                     android:text=" Subtotal"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="19sp" />
+                    android:textColor="@color/three"
+                    android:textSize="22sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/three"
@@ -170,8 +164,11 @@
                         android:inputType="number"
                         android:scrollbarThumbHorizontal="@color/white"
                         android:scrollbarThumbVertical="@color/white"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white" />
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHighlight="@color/two"
+                        android:textColorHint="@color/two"
+                        android:textColorLink="@color/two"
+                        android:textCursorDrawable="@color/two" />
 
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -193,8 +190,11 @@
                         android:inputType="number"
                         android:scrollbarThumbHorizontal="@color/white"
                         android:scrollbarThumbVertical="@color/white"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white" />
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHighlight="@color/two"
+                        android:textColorHint="@color/two"
+                        android:textColorLink="@color/two"
+                        android:textCursorDrawable="@color/two" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -216,8 +216,11 @@
                         android:onClick="expiry_date"
                         android:scrollbarThumbHorizontal="@color/white"
                         android:scrollbarThumbVertical="@color/white"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white" />
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHighlight="@color/two"
+                        android:textColorHint="@color/two"
+                        android:textColorLink="@color/two"
+                        android:textCursorDrawable="@color/two" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -236,8 +239,11 @@
                         android:inputType="text"
                         android:scrollbarThumbHorizontal="@color/white"
                         android:scrollbarThumbVertical="@color/white"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white" />
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHighlight="@color/two"
+                        android:textColorHint="@color/two"
+                        android:textColorLink="@color/two"
+                        android:textCursorDrawable="@color/two" />
                 </com.google.android.material.textfield.TextInputLayout>
 
             </RelativeLayout>
@@ -252,7 +258,7 @@
         android:layout_below="@id/date_layout"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/green" />
+        android:background="@color/three" />
 
 
 </RelativeLayout>

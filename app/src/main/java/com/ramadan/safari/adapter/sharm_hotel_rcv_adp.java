@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -34,8 +35,8 @@ public class sharm_hotel_rcv_adp extends RecyclerView.Adapter<sharm_hotel_rcv_ad
         this.hotel = hotel;
         options = new RequestOptions()
                 .centerCrop()
-                .placeholder(R.drawable.loading_shape)
-                .error(R.drawable.loading_shape);
+                .placeholder(R.drawable.load)
+                .error(R.drawable.ic_error_outline_white_48dp);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -64,6 +65,8 @@ public class sharm_hotel_rcv_adp extends RecyclerView.Adapter<sharm_hotel_rcv_ad
         holder.location.setText(location);
         holder.beach.setText(beach);
         Glide.with(mContext).asBitmap().load(imageUrl).into(holder.img);
+        holder.img.setAnimation(AnimationUtils.loadAnimation(mContext,R.anim.zoom_in));
+
     }
 
     @Override

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/graylight"
+    android:background="@color/three"
     android:orientation="vertical">
 
     <LinearLayout
@@ -30,6 +30,6 @@
             android:layout_width="140dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:src="@drawable/safari_text_gray" />
+            android:src="@drawable/safari_text" />
     </LinearLayout>
 </LinearLayout>

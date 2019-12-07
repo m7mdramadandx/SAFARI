@@ -5,10 +5,11 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="1dp"
     android:clickable="true"
+    android:translationZ="5dp"
     android:focusable="true"
     card_view:cardElevation="3dp"
     card_view:cardUseCompatPadding="true"
-    card_view:cardCornerRadius="9dp">
+    card_view:cardCornerRadius="14dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,8 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="landmark_name"
-            android:textColor="#0091EA"
             android:textAllCaps="true"
+            android:textColor="@color/two"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -44,8 +45,9 @@
             android:drawablePadding="5dp"
             android:paddingRight="5dp"
             android:text="0"
-            android:textColor="@color/green"
-            android:textSize="17sp" />
+            android:textColor="@color/three"
+            android:textSize="17sp"
+            card_view:drawableTint="@color/three" />
 
 
         <TextView
@@ -56,8 +58,9 @@
             android:drawablePadding="5dp"
             android:paddingRight="5dp"
             android:text="00 km from center"
-            android:textColor="@color/green"
-            android:textSize="14sp" />
+            android:textColor="@color/three"
+            android:textSize="14sp"
+            card_view:drawableTint="@color/three" />
 
     </LinearLayout>
 
