@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.ramadan.safari.activities.selected_alex_hotel">
+    android:fitsSystemWindows="true">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -73,6 +72,17 @@
                 <TextView
                     android:id="@+id/hotel_desc"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/hotel_map"
+                    android:drawableStart="@drawable/ic_google_maps"
+                    android:drawableTint="@color/three"
+                    android:text="show on map"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:textSize="17sp" />
@@ -145,7 +155,6 @@
 
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -227,7 +236,6 @@
 
             </LinearLayout>
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -276,7 +284,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="70dp"
                 android:background="@color/one">
 
                 <TableRow

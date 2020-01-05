@@ -8,12 +8,15 @@ public class Landmark_Blog {
     private String landmark_desc;
     private String landmark_img_url;
     private String selected_hotel_cost;
+    private String landmark_latitude;
+    private String landmark_longitude;
 
 
     public Landmark_Blog() {
     }
 
-    public Landmark_Blog(String selected_hotel_cost, String landmark_name, String landmark_rate, String landmark_location, String landmark_cost, String landmark_desc, String landmark_img_url) {
+    public Landmark_Blog(String selected_hotel_cost, String landmark_name, String landmark_rate, String landmark_location, String landmark_cost,
+                         String landmark_desc, String landmark_img_url, String landmark_latitude,String landmark_longitude) {
         this.landmark_name = landmark_name;
         this.landmark_rate = landmark_rate;
         this.landmark_location = landmark_location;
@@ -21,6 +24,8 @@ public class Landmark_Blog {
         this.landmark_desc = landmark_desc;
         this.landmark_img_url = landmark_img_url;
         this.selected_hotel_cost = selected_hotel_cost;
+        this.landmark_latitude = landmark_latitude;
+        this.landmark_longitude = landmark_longitude;
     }
 
     public String getSelected_hotel_cost() {
@@ -79,5 +84,19 @@ public class Landmark_Blog {
         this.landmark_img_url = landmark_img_url;
     }
 
+    public String getLandmark_latitude() {
+        return landmark_latitude;
+    }
 
+    public void setLandmark_latitude(String landmark_latitude) {
+        this.landmark_latitude = landmark_latitude;
+    }
+
+    public String getLandmark_longitude() {
+        return landmark_longitude;
+    }
+
+    public void setLandmark_longitude(String landmark_longitude) {
+        this.landmark_longitude = landmark_longitude;
+    }
 }

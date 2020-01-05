@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.ramadan.safari.R;
 
 
-public class home extends AppCompatActivity implements View.OnClickListener {
+public class dashboard extends AppCompatActivity implements View.OnClickListener {
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
     private CardView domestic_trips;
@@ -24,10 +24,12 @@ public class home extends AppCompatActivity implements View.OnClickListener {
     private CardView about;
     private CardView profile;
     private CardView logout;
+    private int bottomBar ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+        bottomBar =(R.layout.bottom_bar);
         mAuth = FirebaseAuth.getInstance();
         mAuth.removeAuthStateListener(mAuthListener);
             mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -35,12 +37,14 @@ public class home extends AppCompatActivity implements View.OnClickListener {
                 public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                     FirebaseUser user = firebaseAuth.getCurrentUser();
                     if (user == null) {
-                        Intent intent = new Intent(home.this, main.class);
+                        Intent intent = new Intent(dashboard.this, main.class);
                         startActivity(intent);
                         finish();
                     }
                 }
             };
+
+
 
         initObjects();
 

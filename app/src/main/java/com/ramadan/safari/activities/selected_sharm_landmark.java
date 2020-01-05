@@ -33,7 +33,7 @@ public class selected_sharm_landmark extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.selected_sharm_landmark);
+        setContentView(R.layout.selected_landmark);
         landmark_name = findViewById(R.id.landmark_name);
         landmark_location = findViewById(R.id.landmark_location);
         landmark_desc = findViewById(R.id.landmark_desc);

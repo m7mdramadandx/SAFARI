@@ -31,7 +31,7 @@ public class main extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         if (mUser != null) {
-            Intent intent = new Intent(this, home.class);
+            Intent intent = new Intent(this, dashboard.class);
             startActivity(intent);
             finish();
             Toasty.normal(this, "welcome back buddy", getResources().getDrawable(R.drawable.ic_smile)).show();
@@ -65,7 +65,7 @@ public class main extends AppCompatActivity {
                     if (!task.isSuccessful()) {
                         Toasty.error(main.this, "wrong email or password", Toast.LENGTH_SHORT).show();
                     } else {
-                        Intent intent = new Intent(main.this, home.class);
+                        Intent intent = new Intent(main.this, dashboard.class);
                         startActivity(intent);
                         finish();
                     }

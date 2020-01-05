@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,8 +14,7 @@
     android:layout_height="match_parent"
     android:background="#FCF9EC"
     android:orientation="vertical"
-    tools:context=".activities.home">
-
+    tools:context=".activities.dashboard">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -40,22 +47,22 @@
             <GridLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="-80dp"
-                android:columnCount="2"
                 android:layout_gravity="center"
+                android:layout_marginTop="-80dp"
+                android:layout_marginBottom="50dp"
+                android:columnCount="2"
                 android:padding="5dp">
 
                 <com.google.android.material.circularreveal.cardview.CircularRevealCardView
                     android:id="@+id/domestic_trips"
-                    android:layout_width="170dp"
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
-                    android:translationZ="5dp"
                     android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    app:rippleColor="@color/three"
+                    android:translationZ="5dp"
                     app:cardCornerRadius="14dp"
-                    app:cardElevation="14dp">
+                    app:cardElevation="14dp"
+                    app:rippleColor="@color/three">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -85,12 +92,12 @@
 
                 <com.google.android.material.circularreveal.cardview.CircularRevealCardView
                     android:id="@+id/abroad_trips"
-                    android:layout_width="170dp"
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:translationZ="5dp"
+                    android:layout_margin="10dp"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:layout_margin="10dp"
+                    android:translationZ="5dp"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="7dp">
 
@@ -123,13 +130,11 @@
 
                 <com.google.android.material.circularreveal.cardview.CircularRevealCardView
                     android:id="@+id/booked_trips"
-                    android:layout_width="170dp"
-                    android:translationZ="5dp"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
+                    android:focusable="true"
+                    android:translationZ="5dp"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="7dp">
 
@@ -161,12 +166,12 @@
 
                 <com.google.android.material.circularreveal.cardview.CircularRevealCardView
                     android:id="@+id/favorite"
-                    android:layout_width="170dp"
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
-                    android:translationZ="5dp"
                     android:focusable="true"
-                    android:focusableInTouchMode="true"
+ 
+                    android:translationZ="5dp"
 
                     app:cardCornerRadius="10dp"
                     app:cardElevation="7dp">
@@ -199,13 +204,11 @@
 
                 <com.google.android.material.circularreveal.cardview.CircularRevealCardView
                     android:id="@+id/about"
-                    android:layout_width="170dp"
-                    android:translationZ="5dp"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
+                    android:focusable="true"
+                    android:translationZ="5dp"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="7dp">
 
@@ -233,15 +236,14 @@
                             android:textStyle="bold" />
                     </LinearLayout>
                 </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
                 <com.google.android.material.circularreveal.cardview.CircularRevealCardView
                     android:id="@+id/profile"
-                    android:layout_width="170dp"
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:translationZ="5dp"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-
                     android:layout_margin="10dp"
+                    android:focusable="true"
+                    android:translationZ="5dp"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="7dp">
 
@@ -272,12 +274,11 @@
 
                 <com.google.android.material.circularreveal.cardview.CircularRevealCardView
                     android:id="@+id/logout"
-                    android:layout_width="170dp"
-                    android:translationZ="5dp"
-                    android:focusable="true"
-                      
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
+                    android:focusable="true"
+                    android:translationZ="5dp"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="7dp">
 
@@ -312,7 +313,5 @@
     </ScrollView>
 
 </LinearLayout>
-
-
-
-
+<include layout="@layout/bottom_bar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

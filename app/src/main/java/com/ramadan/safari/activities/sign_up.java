@@ -75,7 +75,7 @@ public class sign_up extends AppCompatActivity {
                             current_user_db.child("city").setValue(city_);
                             current_user_db.child("password").setValue(password_);
                             progressBar.setVisibility(View.GONE);
-                            Intent intent = new Intent(sign_up.this, home.class);
+                            Intent intent = new Intent(sign_up.this, dashboard.class);
                             startActivities(new Intent[]{intent});
                             Toasty.success(sign_up.this, "Registration completed successfully", Toast.LENGTH_SHORT, true).show();
                             finish();

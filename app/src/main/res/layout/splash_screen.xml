@@ -14,10 +14,9 @@
         <ImageView
             android:layout_width="160dp"
             android:layout_height="140dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="180dp"
             android:scaleType="fitXY"
             android:src="@drawable/logo_transperant" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -31,5 +30,6 @@
             android:layout_height="60dp"
             android:layout_gravity="center"
             android:src="@drawable/safari_text" />
+
     </LinearLayout>
 </LinearLayout>

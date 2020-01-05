@@ -43,7 +43,7 @@ public class alex_hotel extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.alex_hotel);
+        setContentView(R.layout.hotel);
         mCLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mCToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);

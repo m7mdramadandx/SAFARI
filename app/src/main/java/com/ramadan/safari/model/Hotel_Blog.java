@@ -1,7 +1,6 @@
 package com.ramadan.safari.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class Hotel_Blog implements Serializable {
@@ -24,22 +23,28 @@ public class Hotel_Blog implements Serializable {
     private String hotel_queen;
     private String hotel_king;
     private String hotel_img_url;
+    private String hotel_latitude;
+    private String hotel_longitude;
+
 
 
     public Hotel_Blog() {
     }
 
-    public Hotel_Blog(ArrayList<Hotel_Blog> mhotel_blog) {
-        int i = mhotel_blog.size();
-        for (int l = 0; l < i; l++) {
-            String ss = mhotel_blog.get(l).toString();
-            System.out.println(ss + "  323232323");
-        }
+//    public Hotel_Blog(ArrayList<Hotel_Blog> mhotel_blog) {
+//        int i = mhotel_blog.size();
+//        for (int l = 0; l < i; l++) {
+//            String ss = mhotel_blog.get(l).toString();
+//            System.out.println(ss + "  323232323");
+//        }
+//
+//        this.hotel_name = String.valueOf(mhotel_blog.get(1));
+//    }
 
-        this.hotel_name = String.valueOf(mhotel_blog.get(1));
-    }
-
-    public Hotel_Blog(String hotel_name, String hotel_rate, String hotel_location, String hotel_beach, String hotel_airport, String hotel_gym, String hotel_swimming_pool, String hotel_spa, String hotel_desc, String hotel_parking, String hotel_bar, String hotel_single, String hotel_double, String hotel_triple, String hotel_quadruple, String hotel_double_double, String hotel_queen, String hotel_king, String hotel_img_url) {
+    public Hotel_Blog(String hotel_name, String hotel_rate, String hotel_location, String hotel_beach, String hotel_airport, String hotel_gym,
+                      String hotel_swimming_pool, String hotel_spa, String hotel_desc, String hotel_parking, String hotel_bar, String hotel_single,
+                      String hotel_double, String hotel_triple, String hotel_quadruple, String hotel_double_double, String hotel_queen,
+                      String hotel_king, String hotel_img_url, String hotel_latitude, String hotel_longitude) {
         this.hotel_name = hotel_name;
         this.hotel_rate = hotel_rate;
         this.hotel_location = hotel_location;
@@ -59,6 +64,8 @@ public class Hotel_Blog implements Serializable {
         this.hotel_queen = hotel_queen;
         this.hotel_king = hotel_king;
         this.hotel_img_url = hotel_img_url;
+        this.hotel_latitude = hotel_latitude;
+        this.hotel_longitude = hotel_longitude;
     }
 
     public String getHotel_single() {
@@ -213,5 +220,19 @@ public class Hotel_Blog implements Serializable {
         this.hotel_img_url = hotel_img_url;
     }
 
+    public String getHotel_latitude() {
+        return hotel_latitude;
+    }
 
+    public void setHotel_latitude(String hotel_latitude) {
+        this.hotel_latitude = hotel_latitude;
+    }
+
+    public String getHotel_longitude() {
+        return hotel_longitude;
+    }
+
+    public void setHotel_longitude(String hotel_longitude) {
+        this.hotel_longitude = hotel_longitude;
+    }
 }

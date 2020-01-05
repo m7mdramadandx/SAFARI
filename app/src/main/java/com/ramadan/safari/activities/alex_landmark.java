@@ -43,7 +43,7 @@ public class alex_landmark extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.alex_landmark);
+        setContentView(R.layout.landmark);
 
         mCLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -1,132 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FCF9EC"
-    android:orientation="vertical"
-    tools:context=".activities.abroad_trips">
+    android:layout_height="match_parent">
 
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FCF9EC"
+        android:orientation="vertical"
+        tools:context=".activities.abroad_trips">
 
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-
-            <RelativeLayout
-                android:id="@+id/topArea"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:background="#12D3CF">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
-                <TextView
-                    android:id="@+id/myDashboard"
+                <RelativeLayout
+                    android:id="@+id/topArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="#12D3CF">
+
+
+                    <TextView
+                        android:id="@+id/myDashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Abroad Trips"
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <GridLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="Abroad Trips"
-                    android:textColor="@android:color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-100dp"
+                    android:columnCount="1"
+                    android:padding="50dp">
 
-            </RelativeLayout>
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="30dp"
+                        android:focusable="true"
+                        android:onClick="Paris"
+                        android:translationZ="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="7dp"
+                        app:rippleColor="@color/three">
 
-            <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="-100dp"
-                android:layout_gravity="center"
-                android:columnCount="1"
-                android:padding="50dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
 
-                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-                    android:layout_width="170dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="30dp"
-                    android:translationZ="5dp"
-                    android:focusable="true"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="7dp"
-                    android:onClick="Paris"
-                    app:rippleColor="@color/three">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_iconfinder_eiffel"
+                                android:tint="#67EACA" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2dp"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="center_horizontal|center_vertical"
-                            android:src="@drawable/ic_iconfinder_eiffel"
-                            android:tint="#67EACA" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="Paris"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Paris"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
 
 
-                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
-                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-                    android:layout_width="170dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="30dp"
-                    app:cardCornerRadius="10dp"
-                    android:translationZ="5dp"
-                    android:focusable="true"
-                    android:onClick="Venice"
-                    app:cardElevation="7dp">
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="30dp"
+                        android:focusable="true"
+                        android:onClick="Venice"
+                        android:translationZ="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="7dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2dp"
-                        android:orientation="vertical"
-                        android:padding="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="center_horizontal|center_vertical"
-                            android:src="@drawable/ic_gondola"
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_gondola"
 
-                            android:tint="#67EACA" />
+                                android:tint="#67EACA" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="Venice"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Venice"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
 
-                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
 
-            </GridLayout>
+                </GridLayout>
 
-        </LinearLayout>
-    </ScrollView>
+            </LinearLayout>
+        </ScrollView>
 
-</LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/bottom_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

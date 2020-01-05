@@ -36,7 +36,7 @@ public class selected_alex_landmark extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.selected_alex_landmark);
+        setContentView(R.layout.selected_landmark);
 
         landmark_name = findViewById(R.id.landmark_name);
         landmark_location = findViewById(R.id.landmark_location);

@@ -121,7 +121,7 @@ public class payment extends AppCompatActivity {
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(payment.this, home.class));
+                startActivity(new Intent(payment.this, dashboard.class));
             }
         });
     }
