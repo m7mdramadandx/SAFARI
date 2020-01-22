@@ -3,12 +3,10 @@
     <color name="background">#fcf9ec</color>
     <color name="one">#b0f4e6</color>
     <color name="two">#67eaca</color>
-    <color name="three">#12d3cf</color>
+    <color name="three">#12D3CF</color>
 
     <color name="golden">#F5B430</color>
-    <color name="green">#00C889</color>
     <color name="red">#DD2C00</color>
     <color name="white">#ffffff</color>
     <color name="transparent">#00000000</color>
-    <color name="graylight">#CCCCCC</color>
 </resources>

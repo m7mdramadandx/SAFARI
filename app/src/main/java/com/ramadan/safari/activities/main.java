@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -48,6 +49,7 @@ public class main extends AppCompatActivity {
 
     public void sign_up(View view) {
         startActivity(new Intent(this, sign_up.class));
+        Animatoo.animateZoom(this);
     }
 
     public void login(View view) {
@@ -67,6 +69,7 @@ public class main extends AppCompatActivity {
                     } else {
                         Intent intent = new Intent(main.this, dashboard.class);
                         startActivity(intent);
+                        Animatoo.animateZoom(main.this);
                         finish();
                     }
                 }

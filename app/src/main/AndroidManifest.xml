@@ -17,7 +17,13 @@
         android:roundIcon="@drawable/logo_transperant"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".activities.favorite"></activity>
+        <activity android:name=".activities.rate"></activity>
+        <activity
+            android:name=".activities.welcome"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity android:name=".activities.favorite" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,6 +41,7 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".activities.selected_alex_hotel" />
         <activity android:name=".activities.dashboard" />
+        <activity android:name=".activities.booked_trips" />
         <activity android:name=".activities.sign_up" />
         <activity android:name=".activities.alex_hotel" />
         <activity android:name=".activities.main" />

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCF9EC"
+        android:orientation="vertical"
+        tools:context=".activities.dashboard">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/topArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="#12D3CF">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="My Dashboard"
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-80dp"
+                    android:layout_marginBottom="50dp"
+                    android:columnCount="2"
+                    android:padding="5dp">
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:id="@+id/domestic_trips"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:focusable="true"
+                        android:translationZ="5dp"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="14dp"
+                        app:rippleColor="@color/three">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_road_trip"
+                                android:tint="#67EACA" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Domestic Trips"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:id="@+id/abroad_trips"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:translationZ="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="7dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_worldwide"
+
+                                android:tint="#67EACA" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Abroad Trips"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:id="@+id/booked_trips"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:focusable="true"
+                        android:translationZ="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="7dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_booking"
+                                android:tint="#67EACA" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Booked Trips"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:id="@+id/favorite"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:focusable="true"
+
+                        android:translationZ="5dp"
+
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="7dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_heart"
+
+                                android:tint="#67EACA" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Favorite"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:id="@+id/about"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:focusable="true"
+                        android:translationZ="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="7dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_thinking"
+                                android:tint="#67EACA" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="About"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:id="@+id/profile"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:focusable="true"
+                        android:translationZ="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="7dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_user"
+                                android:tint="#67EACA" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Profile"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:id="@+id/rate"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:focusable="true"
+                        android:translationZ="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="7dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_iconfinder_survey_rating_rate_48_3786091"
+                                android:tint="#67EACA" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Rate SAFARI"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:id="@+id/logout"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:focusable="true"
+                        android:translationZ="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="7dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_exit"
+                                android:tint="#67EACA" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Logout"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+                </GridLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <include layout="@layout/bottom_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

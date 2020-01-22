@@ -1,264 +1,329 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:padding="40dp">
+    tools:context=".activities.payment">
 
     <RelativeLayout
-        android:id="@+id/date_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true">
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/three">
 
-        <EditText
-            android:id="@+id/check_in"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:drawableLeft="@drawable/ic_date_range_black_24dp"
-            android:drawablePadding="5dp"
-            android:hint="check-in date"
-            android:inputType="date"
-            android:onClick="check_in"
-            android:scrollbarThumbHorizontal="@android:color/darker_gray"
-            android:scrollbarThumbVertical="@android:color/darker_gray"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="16dp" />
-
-        <EditText
-            android:id="@+id/check_out"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/check_in"
-            android:drawableLeft="@drawable/ic_date_range_black_24dp"
-            android:drawablePadding="5dp"
-            android:hint="check-out date"
-            android:inputType="date"
-            android:onClick="check_out"
-            android:scrollbarThumbHorizontal="@android:color/darker_gray"
-            android:scrollbarThumbVertical="@android:color/darker_gray"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="16dp" />
-
+            android:layout_margin="20dp"
+            android:text="Payment"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
+    <GridLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/divider">
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/three"
+        android:columnCount="1"
+        android:isScrollContainer="true"
+        android:padding="1dp">
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:id="@+id/radio_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <RadioGroup
-                    android:id="@+id/radio_group"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/paypal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:drawableTop="@drawable/ic_paypal" />
-
-                    <RadioButton
-                        android:id="@+id/mastercard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:drawableTop="@drawable/ic_mastercard"
-                        />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:drawableTop="@drawable/ic_visaa" />
-
-                </RadioGroup>
-
-
-            </LinearLayout>
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/radio_layout">
+                android:background="@color/white"
+                android:padding="10dp">
 
-                <Button
+                <LinearLayout
+                    android:id="@+id/date_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="check-in date"
+                        android:textColorHint="@color/three"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/three"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextAppearance="@style/InputLayout">
+
+                        <EditText
+                            android:id="@+id/check_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:drawableStart="@drawable/ic_date_range_black_24dp"
+                            android:drawablePadding="5dp"
+                            android:inputType="date"
+                            android:onClick="check_in"
+                            android:textColor="#3c3c3c"
+                            android:textSize="16dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="check-out date"
+                        android:textColorHint="@color/three"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/three"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextAppearance="@style/InputLayout">
+
+                        <EditText
+                            android:id="@+id/check_out"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                            android:drawablePadding="5dp"
+                            android:inputType="date"
+                            android:onClick="check_out"
+                            android:textColor="#3c3c3c"
+                            android:textSize="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider">
+
+                    <LinearLayout
+                        android:id="@+id/radio_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/radio_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/paypal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:drawableTop="@drawable/ic_paypal" />
+
+                            <RadioButton
+                                android:id="@+id/mastercard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/ic_mastercard" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:drawableTop="@drawable/ic_visaa" />
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/radio_layout"
+                        android:layout_marginBottom="10dp">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/total_cost"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/roundedbutton"
+                            android:onClick="confirm"
+                            android:scrollbarThumbHorizontal="@color/white"
+                            android:scrollbarThumbVertical="@color/white"
+                            android:text="  Confirm payment  "
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/total_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/total_label"
+                            android:drawableRight="@drawable/ic_attach_money_black_24dp"
+                            android:paddingStart="20dp"
+                            android:paddingLeft="20dp"
+                            android:scrollbarThumbHorizontal="@android:color/darker_gray"
+                            android:scrollbarThumbVertical="@android:color/darker_gray"
+                            android:text="0000"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:drawableTint="@color/two" />
+
+                        <TextView
+                            android:id="@+id/total_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/four"
+                            android:layout_marginTop="10dp"
+                            android:text=" Subtotal"
+                            android:textColor="@color/three"
+                            android:textSize="22sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/three"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/two"
+                            android:layout_marginBottom="10dp"
+                            android:hint="CVC code"
+                            android:textColorHint="@color/three"
+                            app:boxBackgroundMode="outline"
+                            app:boxStrokeColor="@color/three"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextAppearance="@style/InputLayout">
+
+
+                            <EditText
+                                android:id="@+id/cvc_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/expiry_date"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:drawableStart="@drawable/ic_iconfinder_card"
+                                android:drawablePadding="10dp"
+                                android:inputType="number" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/four"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/three"
+                            android:layout_marginBottom="10dp"
+                            android:hint="Card number"
+                            android:textColorHint="@color/three"
+                            app:boxBackgroundMode="outline"
+                            app:boxStrokeColor="@color/three"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextAppearance="@style/InputLayout">
+
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cvc_code"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:drawableStart="@drawable/ic_iconfinder_card"
+                                android:drawablePadding="10dp"
+                                android:inputType="number" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/two"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/one"
+                            android:layout_marginBottom="10dp"
+                            android:hint="Expiry date"
+                            android:textColorHint="@color/three"
+                            app:boxBackgroundMode="outline"
+                            app:boxStrokeColor="@color/three"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextAppearance="@style/InputLayout">
+
+                            <EditText
+                                android:id="@+id/expiry_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/card_holder"
+                                android:layout_marginTop="10dp"
+                                android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                                android:drawablePadding="10dp"
+                                android:inputType="date"
+                                android:onClick="expiry_date" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:hint="Card holhder"
+                            android:textColorHint="@color/three"
+                            app:boxBackgroundMode="outline"
+                            app:boxStrokeColor="@color/three"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextAppearance="@style/InputLayout">
+
+
+                            <EditText
+                                android:id="@+id/card_holder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:drawableLeft="@drawable/ic_iconfinder_card"
+                                android:drawablePadding="10dp"
+                                android:inputType="text"
+                                android:textColor="#3c3c3c" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/total_cost"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/roundedbutton"
-                    android:onClick="confirm"
-                    android:scrollbarThumbHorizontal="@color/white"
-                    android:scrollbarThumbVertical="@color/white"
-                    android:text="  Confirm payment  "
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="19sp"
-                    android:textStyle="bold" />
+                    android:layout_height="4dp"
+                    android:layout_below="@id/date_layout"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/three" />
 
-
-                <TextView
-                    android:id="@+id/total_cost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/total_label"
-                    android:drawableRight="@drawable/ic_attach_money_black_24dp"
-                    android:paddingStart="20dp"
-                    android:paddingLeft="20dp"
-                    android:scrollbarThumbHorizontal="@android:color/darker_gray"
-                    android:scrollbarThumbVertical="@android:color/darker_gray"
-                    android:text="0000"
-                    android:textColor="@android:color/darker_gray"
-                    android:textColorHint="@android:color/darker_gray"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    app:drawableTint="@color/two" />
-
-                <TextView
-                    android:id="@+id/total_label"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/four"
-                    android:layout_marginTop="10dp"
-                    android:text=" Subtotal"
-                    android:textColor="@color/three"
-                    android:textSize="22sp" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/three"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/two">
-
-                    <EditText
-                        android:id="@+id/cvc_code"
-                        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expiry_date"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:hint="CVC code"
-                        android:inputType="number"
-                        android:scrollbarThumbHorizontal="@color/white"
-                        android:scrollbarThumbVertical="@color/white"
-                        android:textColor="@android:color/darker_gray"
-                        android:textColorHighlight="@color/two"
-                        android:textColorHint="@color/two"
-                        android:textColorLink="@color/two"
-                        android:textCursorDrawable="@color/two" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/four"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/three">
-
-                    <EditText
-                        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cvc_code"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:hint="Card number"
-                        android:inputType="number"
-                        android:scrollbarThumbHorizontal="@color/white"
-                        android:scrollbarThumbVertical="@color/white"
-                        android:textColor="@android:color/darker_gray"
-                        android:textColorHighlight="@color/two"
-                        android:textColorHint="@color/two"
-                        android:textColorLink="@color/two"
-                        android:textCursorDrawable="@color/two" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/two"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/one">
-
-                    <EditText
-                        android:id="@+id/expiry_date"
-                        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/card_holder"
-                        android:layout_marginTop="10dp"
-                        android:hint="Expiry date"
-                        android:inputType="date"
-                        android:onClick="expiry_date"
-                        android:scrollbarThumbHorizontal="@color/white"
-                        android:scrollbarThumbVertical="@color/white"
-                        android:textColor="@android:color/darker_gray"
-                        android:textColorHighlight="@color/two"
-                        android:textColorHint="@color/two"
-                        android:textColorLink="@color/two"
-                        android:textCursorDrawable="@color/two" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/one"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@+id/card_holder"
-                        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:hint="Card holhder"
-                        android:inputType="text"
-                        android:scrollbarThumbHorizontal="@color/white"
-                        android:scrollbarThumbVertical="@color/white"
-                        android:textColor="@android:color/darker_gray"
-                        android:textColorHighlight="@color/two"
-                        android:textColorHint="@color/two"
-                        android:textColorLink="@color/two"
-                        android:textCursorDrawable="@color/two" />
-                </com.google.android.material.textfield.TextInputLayout>
 
             </RelativeLayout>
 
-        </RelativeLayout>
-    </ScrollView>
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="wrap_content"
-        android:layout_height="4dp"
-        android:layout_below="@id/date_layout"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/three" />
-
+        </ScrollView>
+    </GridLayout>
 
 </RelativeLayout>

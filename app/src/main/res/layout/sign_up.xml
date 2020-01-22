@@ -1,21 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:padding="40dp"
     tools:context=".activities.sign_up">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="220dp"
+        android:background="@color/three">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Sign Up"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/three"
+        android:columnCount="1"
+        android:isScrollContainer="true"
+        android:padding="2dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            tools:ignore="UselessParent">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp">
 
             <RelativeLayout
                 android:id="@+id/a"
@@ -27,25 +58,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/two"
-                    android:textColorHint="@color/three">
+                    android:hint="Email"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/three"
+                    app:errorTextAppearance="@style/ErrorText"
+                    app:hintAnimationEnabled="true"
+                    app:hintTextAppearance="@style/InputLayout">
 
                     <EditText
                         android:id="@+id/email"
+                        style="@android:style/Widget.EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/last_name"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
-                        android:drawableLeft="@drawable/ic_email_black_24dp"
+                        android:drawableStart="@drawable/ic_email_black_24dp"
                         android:drawablePadding="10dp"
-                        android:ems="12"
-                        android:hint="Email"
                         android:inputType="textEmailAddress"
                         android:singleLine="true"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textColor="#3c3c3c"
+                        android:textSize="19sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -53,52 +86,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/one"
-                    android:textColorHint="@color/three">
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/three"
+                    app:hintTextAppearance="@style/InputLayout">
 
                     <EditText
                         android:id="@+id/last_name"
+                        style="@android:style/Widget.EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/first_name"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:drawableLeft="@drawable/ic_account_circle_black_24dp"
                         android:drawablePadding="10dp"
                         android:drawableTint="@color/three"
-                        android:ems="12"
                         android:hint="Last Name"
                         android:inputType="textPersonName|text"
                         android:singleLine="true"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textColor="#3c3c3c"
+                        android:textSize="19sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/one"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/three">
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/three"
+                    app:hintTextAppearance="@style/InputLayout">
 
                     <EditText
                         android:id="@+id/first_name"
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:drawableLeft="@drawable/ic_account_circle_black_24dp"
                         android:drawablePadding="10dp"
                         android:drawableTint="@color/three"
-                        android:ems="12"
                         android:hint="First Name"
-                        android:inputType="textPersonName|text"
-                        android:singleLine="true"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textColor="#3c3c3c"
+                        android:textSize="19sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -106,16 +135,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/three"
-                    android:textColorHint="@color/three">
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/three"
+                    app:hintTextAppearance="@style/InputLayout">
 
                     <EditText
                         android:id="@+id/city"
+                        style="@android:style/Widget.EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/phone_layout"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:drawableLeft="@drawable/ic_location_city_black_24dp"
                         android:drawablePadding="10dp"
@@ -123,40 +153,41 @@
                         android:hint="City"
                         android:inputType="text"
                         android:singleLine="true"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textColor="#3c3c3c"
+                        android:textSize="19sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/phone_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@+id/a"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/phone_label"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_centerVertical="true"
-                    android:drawableLeft="@drawable/ic_smartphone_black_24dp"
-                    android:gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_smartphone_black_24dp"
                     android:text="+02 "
-                    android:textColor="@color/three"
-                    android:textColorHighlight="@color/three"
-                    android:textColorLink="@color/three"
-                    android:textSize="17sp"
+                    android:textColor="#3c3c3c"
+                    android:textSize="19sp"
                     app:drawableTint="@color/three" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/phone_label"
-                    android:textColorHint="@color/three">
+                    android:layout_gravity="center"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/three"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="11"
+                    app:counterOverflowTextAppearance="@style/TextAppearance.Design.Counter.Overflow"
+                    app:hintTextAppearance="@style/InputLayout">
 
 
                     <EditText
@@ -164,15 +195,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawablePadding="10dp"
-                        android:ems="11"
                         android:hint="Phone"
                         android:inputType="phone"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textColor="#3c3c3c"
+                        android:textSize="19sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-            </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -202,12 +232,14 @@
 
                 <ProgressBar
                     android:id="@+id/progressBar"
-                    style="?android:attr/progressBarStyle"
+                    style="@android:style/Widget.ProgressBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/password_2"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="13dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/three"
                     android:progressDrawable="@color/three"
                     android:visibility="gone" />
 
@@ -216,7 +248,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/password_1"
-                    android:textColorHint="@color/three"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/three"
+                    app:errorEnabled="true"
+                    app:hintTextAppearance="@style/InputLayout"
                     app:passwordToggleEnabled="true"
                     app:passwordToggleTint="@color/three">
 
@@ -225,47 +260,46 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:drawableStart="@drawable/ic_vpn_key_black_24dp"
                         android:drawablePadding="10dp"
-                        android:ems="12"
                         android:hint="Confirm Password"
                         android:inputType="text|textPassword"
                         android:singleLine="true"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textColor="#3c3c3c"
+                        android:textSize="19sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/password_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/three"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/three"
+                    app:hintTextAppearance="@style/InputLayout"
                     app:passwordToggleEnabled="true"
                     app:passwordToggleTint="@color/three">
 
                     <EditText
                         android:id="@+id/password"
+                        style="@android:style/Widget.EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:drawableStart="@drawable/ic_vpn_key_black_24dp"
                         android:drawablePadding="10dp"
-                        android:ems="12"
                         android:hint="Password"
                         android:inputType="text|textPassword"
                         android:singleLine="true"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textColor="#3c3c3c"
+                        android:textSize="19sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
             </RelativeLayout>
         </RelativeLayout>
-    </RelativeLayout>
-</ScrollView>
+        </ScrollView>
+    </GridLayout>
+
+</RelativeLayout>

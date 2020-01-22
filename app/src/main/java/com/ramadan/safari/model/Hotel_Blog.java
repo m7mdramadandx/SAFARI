@@ -31,16 +31,6 @@ public class Hotel_Blog implements Serializable {
     public Hotel_Blog() {
     }
 
-//    public Hotel_Blog(ArrayList<Hotel_Blog> mhotel_blog) {
-//        int i = mhotel_blog.size();
-//        for (int l = 0; l < i; l++) {
-//            String ss = mhotel_blog.get(l).toString();
-//            System.out.println(ss + "  323232323");
-//        }
-//
-//        this.hotel_name = String.valueOf(mhotel_blog.get(1));
-//    }
-
     public Hotel_Blog(String hotel_name, String hotel_rate, String hotel_location, String hotel_beach, String hotel_airport, String hotel_gym,
                       String hotel_swimming_pool, String hotel_spa, String hotel_desc, String hotel_parking, String hotel_bar, String hotel_single,
                       String hotel_double, String hotel_triple, String hotel_quadruple, String hotel_double_double, String hotel_queen,

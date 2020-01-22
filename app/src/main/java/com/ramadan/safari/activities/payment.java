@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -29,13 +28,11 @@ public class payment extends AppCompatActivity {
     int day, month, year;
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
-    private RadioGroup radioGroup;
-    private RadioButton sound, vibration, silent;
 
 
-    public static final String CHANNEL_ID = "alert";
-    public static final String CHANNEL_NAME = "Successful!";
-    public static final String CHANNEL_DESC = "The trip has been successfully paid";
+    String CHANNEL_ID = "alert";
+    String CHANNEL_NAME = "Successful!";
+    String CHANNEL_DESC = "The trip has been successfully paid";
 
 
     private void display_notification() {
@@ -57,7 +54,7 @@ public class payment extends AppCompatActivity {
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        radioGroup = findViewById(R.id.radio_group);
+        RadioGroup radioGroup = findViewById(R.id.radio_group);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 

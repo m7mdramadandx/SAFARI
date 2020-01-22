@@ -15,6 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.ramadan.safari.R;
@@ -24,7 +25,6 @@ import com.ramadan.safari.model.Hotel_Blog;
 import java.util.ArrayList;
 
 public class sharm_hotel_rcv_adp extends RecyclerView.Adapter<sharm_hotel_rcv_adp.HotelViewHolder> {
-    RequestOptions options;
     private Context mContext;
     private ArrayList<Hotel_Blog> hotel;
     private AdapterView.OnItemClickListener mListener;
@@ -33,7 +33,7 @@ public class sharm_hotel_rcv_adp extends RecyclerView.Adapter<sharm_hotel_rcv_ad
     public sharm_hotel_rcv_adp(Context mContext, ArrayList hotel) {
         this.mContext = mContext;
         this.hotel = hotel;
-        options = new RequestOptions()
+        RequestOptions options = new RequestOptions()
                 .centerCrop()
                 .placeholder(R.drawable.load)
                 .error(R.drawable.ic_error_outline_white_48dp);
@@ -79,12 +79,12 @@ public class sharm_hotel_rcv_adp extends RecyclerView.Adapter<sharm_hotel_rcv_ad
         void onItemClick(int position);
     }
 
-    public class HotelViewHolder extends RecyclerView.ViewHolder {
+    class HotelViewHolder extends RecyclerView.ViewHolder {
         TextView hotel_name, beach, rate, location;
         ImageView img;
 
 
-        public HotelViewHolder(View itemView) {
+        HotelViewHolder(View itemView) {
             super(itemView);
             hotel_name = itemView.findViewById(R.id.hotel_name);
             beach = itemView.findViewById(R.id.hotel_beach);
@@ -98,10 +98,10 @@ public class sharm_hotel_rcv_adp extends RecyclerView.Adapter<sharm_hotel_rcv_ad
                 public void onClick(View v) {
                     Intent intent = new Intent(mContext, selected_sharm_hotel.class);
                     Bundle bundle = new Bundle();
-                    //bundle.putSerializable("Data", mhotel);
                     bundle.putString("hotel_name", hotel_name.getText().toString());
                     intent.putExtras(bundle);
                     mContext.startActivity(intent);
+                    Animatoo.animateFade(mContext);
                 }
             });
         }

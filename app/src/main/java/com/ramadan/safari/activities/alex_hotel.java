@@ -4,19 +4,15 @@ package com.ramadan.safari.activities;
 
 //import com.google.api.Context;
 
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -31,28 +27,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class alex_hotel extends AppCompatActivity {
+    TextView title;
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     private ArrayList<Hotel_Blog> mHotelBlog = new ArrayList<>();
-    private FirebaseAuth mAuth;
-    private CoordinatorLayout mCLayout;
-    private Toolbar mToolbar;
-    private CollapsingToolbarLayout mCToolbarLayout;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hotel);
-        mCLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mCToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
-        setSupportActionBar(mToolbar);
-        mCToolbarLayout.setTitle("Alexandria Hotels");
-        mCToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
-        mCToolbarLayout.setExpandedTitleColor(Color.WHITE);
-        mCToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
-        mCToolbarLayout.setExpandedTitleColor(Color.WHITE);
+        title = findViewById(R.id.hotel_title);
+        title.setText("Alexandria Hotels");
         method();
 
 
@@ -101,10 +87,10 @@ public class alex_hotel extends AppCompatActivity {
         myrv.setAdapter(myAdapter);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(this,domestic_trips.class);
-        startActivity(intent);
-    }
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        Intent intent = new Intent(this,domestic_trips.class);
+//        startActivity(intent);
+//    }
 }

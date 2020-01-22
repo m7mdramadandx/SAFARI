@@ -10,8 +10,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -22,6 +24,7 @@ import es.dmoral.toasty.Toasty;
 
 public class sign_up extends AppCompatActivity {
     ProgressBar progressBar;
+    TextInputLayout email_layout, phone_layout;
     EditText first_name, last_name, city, email, phone, password, password2;
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
@@ -30,7 +33,7 @@ public class sign_up extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
-        mDatabase = FirebaseDatabase.getInstance().getReference("users");
+        mDatabase = FirebaseDatabase.getInstance().getReference("user");
         mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
         first_name = findViewById(R.id.first_name);
@@ -75,8 +78,8 @@ public class sign_up extends AppCompatActivity {
                             current_user_db.child("city").setValue(city_);
                             current_user_db.child("password").setValue(password_);
                             progressBar.setVisibility(View.GONE);
-                            Intent intent = new Intent(sign_up.this, dashboard.class);
-                            startActivities(new Intent[]{intent});
+                            startActivity(new Intent(sign_up.this, welcome.class));
+                            Animatoo.animateZoom(sign_up.this);
                             Toasty.success(sign_up.this, "Registration completed successfully", Toast.LENGTH_SHORT, true).show();
                             finish();
                         }

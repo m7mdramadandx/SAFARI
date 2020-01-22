@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:text="landmark_name"
             android:textAllCaps="true"
-            android:textColor="@color/two"
+            android:textColor="@color/golden"
             android:textSize="20sp"
             android:textStyle="bold" />
 

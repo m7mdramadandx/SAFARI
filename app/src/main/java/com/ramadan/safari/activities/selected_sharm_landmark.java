@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -25,11 +26,12 @@ import com.ramadan.safari.model.Landmark_Blog;
 
 public class selected_sharm_landmark extends AppCompatActivity {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
-    String key;
-    TextView landmark_desc, landmark_name, landmark_location, landmark_rate, one_ticket, two_ticket, three_ticket, four_ticket;
+    TextView landmark_desc, landmark_name, landmark_location, landmark_rate, one_ticket, two_ticket, three_ticket, four_ticket, landmark_map;
     ImageView landmark_img_url;
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
+    String latitude, longitude, key;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,19 @@ public class selected_sharm_landmark extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         key = bundle.getString("landmark_name");
         method();
+        ///////
+        landmark_map = findViewById(R.id.landmark_map);
+        landmark_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(selected_sharm_landmark.this, MapsActivity.class);
+                intent.putExtra("latitude", latitude);
+                intent.putExtra("longitude", longitude);
+                intent.putExtra("label", key);
+                startActivity(intent);
+                Animatoo.animateFade(selected_sharm_landmark.this);
+            }
+        });
 
     }
 
@@ -74,6 +89,8 @@ public class selected_sharm_landmark extends AppCompatActivity {
                 two_ticket.setText(String.valueOf(x1));
                 three_ticket.setText(String.valueOf(x2));
                 four_ticket.setText(String.valueOf(x3));
+                latitude = mlandmark_blog.getLandmark_latitude();
+                longitude = mlandmark_blog.getLandmark_longitude();
             }
 
             @Override
@@ -115,12 +132,6 @@ public class selected_sharm_landmark extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_sharm_landmark.this, selected_sharm_landmark.class));
-            }
-        });
     }
 
     public void two_ticket(View view) {
@@ -138,12 +149,6 @@ public class selected_sharm_landmark extends AppCompatActivity {
                 Intent intent = new Intent(selected_sharm_landmark.this, payment.class);
                 intent.putExtra("landmark_cost", two_ticket.getText().toString());
                 startActivity(intent);
-            }
-        });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_sharm_landmark.this, selected_sharm_landmark.class));
             }
         });
     }
@@ -165,12 +170,6 @@ public class selected_sharm_landmark extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_sharm_landmark.this, selected_sharm_landmark.class));
-            }
-        });
     }
 
     public void four_ticket(View view) {
@@ -188,12 +187,6 @@ public class selected_sharm_landmark extends AppCompatActivity {
                 Intent intent = new Intent(selected_sharm_landmark.this, payment.class);
                 intent.putExtra("landmark_cost", four_ticket.getText().toString());
                 startActivity(intent);
-            }
-        });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_sharm_landmark.this, selected_sharm_landmark.class));
             }
         });
     }

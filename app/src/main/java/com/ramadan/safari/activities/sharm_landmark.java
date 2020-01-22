@@ -1,18 +1,15 @@
 package com.ramadan.safari.activities;
 
-import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -27,27 +24,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class sharm_landmark extends AppCompatActivity {
+    TextView title;
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     private ArrayList<Landmark_Blog> mLandmarkBlog = new ArrayList<>();
-    private FirebaseAuth mAuth;
     public static int hotel_cost;
-    private CoordinatorLayout mCLayout;
-    private Toolbar mToolbar;
-    private CollapsingToolbarLayout mCToolbarLayout;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landmark);
-        mCLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mCToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
-        setSupportActionBar(mToolbar);
-        mCToolbarLayout.setTitle("Sharm EL-Sheikh Landmarks");
-        mCToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
-        mCToolbarLayout.setExpandedTitleColor(Color.WHITE);
+        title = findViewById(R.id.landmark_title);
+        title.setText("Sharm EL-Sheikh Landmarks");
         String x = getIntent().getExtras().getString("hotel_cost");
         hotel_cost = Integer.parseInt(x);
         method();

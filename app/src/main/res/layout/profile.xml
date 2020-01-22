@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -21,7 +21,6 @@
 
 
                 <RelativeLayout
-                    android:id="@+id/lay1"
                     android:layout_width="match_parent"
                     android:layout_height="220dp"
                     android:background="@color/three">
@@ -40,7 +39,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="80dp"
                         android:drawableTop="@drawable/ic_user"
                         android:drawableTint="#ffffff"
                         android:text=""
@@ -54,17 +53,19 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="-50dp"
+                    android:layout_marginTop="-30dp"
                     android:layout_marginRight="20dp"
+                    android:background="@color/three"
                     android:columnCount="1"
                     android:isScrollContainer="true"
-                    android:padding="5dp">
+                    android:padding="2dp">
 
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#fff">
+                        android:background="@color/white"
+                        tools:ignore="UselessParent">
 
                         <LinearLayout
                             android:id="@+id/phone_layout"
@@ -79,9 +80,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_smartphone_black_24dp"
-                                android:drawablePadding="10dp"
                                 android:drawableTint="@color/three"
-                                android:text="+20 "
+                                android:text="+02 "
                                 android:textColor="@color/three"
                                 android:textSize="19sp"
                                 android:textStyle="bold" />

@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,18 +42,23 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/two"
             android:layout_centerHorizontal="true"
-            android:progressDrawable="@color/three"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/three"
             android:visibility="gone" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Email"
             android:textColorHint="@color/three"
-            app:passwordToggleTint="@color/three">
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/three"
+            app:hintAnimationEnabled="true"
+            app:hintTextAppearance="@style/InputLayout">
 
             <EditText
                 android:id="@+id/email_field"
@@ -62,7 +67,6 @@
                 android:drawableStart="@drawable/ic_account_circle_black_24dp"
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/three"
-                android:hint="email"
                 android:inputType="textEmailAddress"
                 android:textColor="#3b3b3b" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -72,10 +76,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/one"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="password"
             android:textColorHint="@color/three"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/three"
+            app:hintAnimationEnabled="true"
+            app:hintTextAppearance="@style/InputLayout"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/three">
 
@@ -87,7 +96,6 @@
                 android:layout_marginBottom="15dp"
                 android:drawableStart="@drawable/ic_vpn_key_black_24dp"
                 android:drawablePadding="10dp"
-                android:hint="password"
                 android:inputType="textPassword"
                 android:textColor="#3b3b3b"
                 app:drawableTint="@color/three" />

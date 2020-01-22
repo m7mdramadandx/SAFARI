@@ -7,9 +7,23 @@ public class User {
     private String phone;
     private String city;
     private String password;
+//    private String rate;
+//    private String feedback;
 
     public User() {
     }
+
+//    public User(String first_name, String last_name, String email, String phone, String city, String password, String rate, String feedback) {
+//        this.first_name = first_name;
+//        this.last_name = last_name;
+//        this.email = email;
+//        this.phone = phone;
+//        this.city = city;
+//        this.password = password;
+//        this.rate = rate;
+//        this.feedback = feedback;
+//
+//    }
 
     public User(String first_name, String last_name, String email, String phone, String city, String password) {
         this.first_name = first_name;
@@ -19,7 +33,22 @@ public class User {
         this.city = city;
         this.password = password;
     }
-
+//
+//    public String getRate() {
+//        return rate;
+//    }
+//
+//    public void setRate(String rate) {
+//        this.rate = rate;
+//    }
+//
+//    public String getFeedback() {
+//        return feedback;
+//    }
+//
+//    public void setFeedback(String feedback) {
+//        this.feedback = feedback;
+//    }
 
     public String getFirst_name() {
         return first_name;

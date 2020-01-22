@@ -32,20 +32,6 @@
                 android:text="Confirm"
                 android:textAllCaps="false" />
 
-            <Button
-                android:id="@+id/cancel_action"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/msg"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_toRightOf="@id/confirm_action"
-                android:background="@drawable/roundedbutton_white"
-                android:text="Cancel"
-                android:textAllCaps="false" />
-
-
         </LinearLayout>
 
         <TextView

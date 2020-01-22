@@ -3,19 +3,19 @@
 
 
     <item
+        android:id="@+id/navigation_booked_trips"
+        android:icon="@drawable/ic_booking"
+        android:iconTint="@color/white"
+        android:title="@string/booked_trips" />
+    <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:iconTint="@color/one"
+        android:checked="true"
+        android:iconTint="@color/white"
         android:title="@string/title_dashboard" />
-
     <item
-        android:id="@+id/booked_trips"
-        android:iconTint="@color/one"
-        android:icon="@drawable/ic_booking"
-        android:title="@string/booked_trips"/>
-    <item
-        android:id="@+id/favorite"
-        android:iconTint="@color/one"
+        android:id="@+id/navigation_favorite"
+        android:iconTint="@color/white"
         android:icon="@drawable/ic_favorite_black_24dp"
         android:title="@string/Favorite"/>
 

@@ -1,50 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.ramadan.safari.activities.selected_alex_landmark">
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
 
 
-    <com.google.android.material.appbar.AppBarLayout
+    <RelativeLayout
+        android:id="@+id/topArea"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="wrap_content">
 
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <ImageView
+            android:id="@+id/landmark_img"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleTextAppearance="@color/transparent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-            <ImageView
-                android:id="@+id/landmark_img"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:src="@drawable/load"
-                app:layout_collapseMode="parallax" />
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
+            android:scaleType="fitXY"
+            android:src="@drawable/load" />
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/topArea"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
@@ -65,8 +45,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textColor="@color/red"
                     android:textAllCaps="true"
+                    android:textColor="@color/red"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -79,13 +59,13 @@
 
                 <TextView
                     android:id="@+id/landmark_map"
-                    android:drawableStart="@drawable/ic_google_maps"
-                    android:drawableTint="@color/three"
-                    android:text="show on map"
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_google_maps"
+                    android:drawableTint="@color/three"
                     android:padding="10dp"
+                    android:text="show on map"
                     android:textSize="17sp" />
 
                 <View
@@ -151,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="70dp"
+                android:layout_marginBottom="10dp"
                 android:background="@color/one">
 
                 <TableRow
@@ -273,4 +253,4 @@
 
 
     </ScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

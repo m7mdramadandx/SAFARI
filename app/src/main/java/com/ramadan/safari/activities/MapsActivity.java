@@ -9,6 +9,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -19,26 +20,32 @@ public class MapsActivity extends FragmentActivity
     private GoogleMap mMap;
     // to visual the map
     private LatLngBounds.Builder mBounds = new LatLngBounds.Builder();
-
+    float latitude, longitude;
+    String latit, longi, label;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        latit = getIntent().getExtras().getString("latitude");
+        longi = getIntent().getExtras().getString("longitude");
+        label = getIntent().getExtras().getString("label");
+        latitude = Float.parseFloat(latit);
+        longitude = Float.parseFloat(longi);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
     }
 
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        // Add a marker in Sydney and move the camera
-        LatLng toilp = new LatLng(31.232663, 29.946237);
-        mMap.addMarker(new MarkerOptions().position(toilp).title("TOLIP Hotel Alexandria"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(toilp));
+        LatLng target = new LatLng(latitude, longitude);
+        mMap.addMarker(new MarkerOptions().position(target).title(label).icon(BitmapDescriptorFactory.fromResource(R.drawable.map_logo)));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(target, 15), 5000, null);
 
 
     }

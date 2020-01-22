@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.google.firebase.auth.FirebaseAuth;
 import com.ramadan.safari.R;
 
@@ -26,7 +27,8 @@ public class splash_screen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(splash_screen.this, dashboard.class);
+                Intent intent = new Intent(splash_screen.this, main.class);
+                Animatoo.animateFade(splash_screen.this);
                 startActivity(intent);
                 finish();
             }

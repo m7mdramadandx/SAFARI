@@ -13,8 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,14 +26,12 @@ import com.ramadan.safari.model.Hotel_Blog;
 
 public class selected_alex_hotel extends AppCompatActivity {
     static FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
-    String key;
     TextView hotel_desc, hotel_name, hotel_location, hotel_rate, hotel_beach, hotel_bar, hotel_airport, hotel_spa, hotel_swimming_pool,
-            hotel_double, hotel_double_double, hotel_gym, hotel_king, hotel_quadruple, hotel_queen, hotel_single, hotel_triple;
+            hotel_double, hotel_double_double, hotel_gym, hotel_king, hotel_quadruple, hotel_queen, hotel_single, hotel_triple, hotel_map;
     ImageView hotel_img_url;
-    private FirebaseAuth mAuth;
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
-
+    String latitude, longitude, key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +59,20 @@ public class selected_alex_hotel extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         key = bundle.getString("hotel_name");
         method();
+        ///////
+        hotel_map = findViewById(R.id.hotel_map);
+        hotel_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(selected_alex_hotel.this, MapsActivity.class);
+                intent.putExtra("latitude", latitude);
+                intent.putExtra("longitude", longitude);
+                intent.putExtra("label", key);
+                startActivity(intent);
+                Animatoo.animateFade(selected_alex_hotel.this);
+
+            }
+        });
 
 
     }
@@ -90,7 +102,8 @@ public class selected_alex_hotel extends AppCompatActivity {
                 hotel_double_double.setText(mhotel_blog.getHotel_double_double());
                 hotel_queen.setText(mhotel_blog.getHotel_queen());
                 hotel_king.setText(mhotel_blog.getHotel_king());
-
+                latitude = mhotel_blog.getHotel_latitude();
+                longitude = mhotel_blog.getHotel_longitude();
             }
 
             @Override
@@ -120,7 +133,6 @@ public class selected_alex_hotel extends AppCompatActivity {
         dialogBuilder = new AlertDialog.Builder(this);
         View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
         Button confirm_act = layoutView.findViewById(R.id.confirm_action);
-        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -133,19 +145,12 @@ public class selected_alex_hotel extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_alex_hotel.this, selected_alex_hotel.class));
-            }
-        });
     }
 
     public void double_room(View view) {
         dialogBuilder = new AlertDialog.Builder(this);
         View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
         Button confirm_act = layoutView.findViewById(R.id.confirm_action);
-        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -158,19 +163,12 @@ public class selected_alex_hotel extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_alex_hotel.this, selected_alex_hotel.class));
-            }
-        });
     }
 
     public void triple_room(View view) {
         dialogBuilder = new AlertDialog.Builder(this);
         View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
         Button confirm_act = layoutView.findViewById(R.id.confirm_action);
-        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -183,19 +181,12 @@ public class selected_alex_hotel extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_alex_hotel.this, selected_alex_hotel.class));
-            }
-        });
     }
 
     public void quadruple_room(View view) {
         dialogBuilder = new AlertDialog.Builder(this);
         View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
         Button confirm_act = layoutView.findViewById(R.id.confirm_action);
-        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -208,19 +199,12 @@ public class selected_alex_hotel extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_alex_hotel.this, selected_alex_hotel.class));
-            }
-        });
     }
 
     public void double_double_room(View view) {
         dialogBuilder = new AlertDialog.Builder(this);
         View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
         Button confirm_act = layoutView.findViewById(R.id.confirm_action);
-        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -233,19 +217,12 @@ public class selected_alex_hotel extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_alex_hotel.this, selected_alex_hotel.class));
-            }
-        });
     }
 
     public void queen_room(View view) {
         dialogBuilder = new AlertDialog.Builder(this);
         View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
         Button confirm_act = layoutView.findViewById(R.id.confirm_action);
-        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -258,19 +235,12 @@ public class selected_alex_hotel extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_alex_hotel.this, selected_alex_hotel.class));
-            }
-        });
     }
 
     public void king_room(View view) {
         dialogBuilder = new AlertDialog.Builder(this);
         View layoutView = getLayoutInflater().inflate(R.layout.confirm_hotel, null);
         Button confirm_act = layoutView.findViewById(R.id.confirm_action);
-        Button cancel_act = layoutView.findViewById(R.id.cancel_action);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -281,12 +251,6 @@ public class selected_alex_hotel extends AppCompatActivity {
                 Intent intent = new Intent(selected_alex_hotel.this, alex_landmark.class);
                 intent.putExtra("hotel_cost", hotel_king.getText().toString());
                 startActivity(intent);
-            }
-        });
-        cancel_act.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(selected_alex_hotel.this, selected_alex_hotel.class));
             }
         });
     }

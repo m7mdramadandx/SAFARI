@@ -15,6 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.ramadan.safari.R;
@@ -24,23 +25,21 @@ import com.ramadan.safari.model.Landmark_Blog;
 import java.util.ArrayList;
 
 public class sharm_landmark_rcv_adp extends RecyclerView.Adapter<sharm_landmark_rcv_adp.LandmarkViewHolder> {
-    RequestOptions options;
     private Context mContext;
     private ArrayList<Landmark_Blog> landmark;
-    private AdapterView.OnItemClickListener mListener;
 
 
     public sharm_landmark_rcv_adp(Context mContext, ArrayList landmark) {
         this.mContext = mContext;
         this.landmark = landmark;
-        options = new RequestOptions()
+        RequestOptions options = new RequestOptions()
                 .centerCrop()
                 .placeholder(R.drawable.load)
                 .error(R.drawable.ic_error_outline_white_48dp);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
-        mListener = (AdapterView.OnItemClickListener) listener;
+        AdapterView.OnItemClickListener mListener = (AdapterView.OnItemClickListener) listener;
     }
 
     @NonNull
@@ -77,12 +76,12 @@ public class sharm_landmark_rcv_adp extends RecyclerView.Adapter<sharm_landmark_
         void onItemClick(int position);
     }
 
-    public class LandmarkViewHolder extends RecyclerView.ViewHolder {
+    class LandmarkViewHolder extends RecyclerView.ViewHolder {
         TextView landmark_name, landmark_rate, landmark_location, landmark_cost;
         ImageView landmark_img;
 
 
-        public LandmarkViewHolder(View itemView) {
+        LandmarkViewHolder(View itemView) {
             super(itemView);
             landmark_name = itemView.findViewById(R.id.landmark_name);
             landmark_rate = itemView.findViewById(R.id.landmark_rate);
@@ -100,8 +99,7 @@ public class sharm_landmark_rcv_adp extends RecyclerView.Adapter<sharm_landmark_
                     bundle.putString("landmark_name", landmark_name.getText().toString());
                     intent.putExtras(bundle);
                     mContext.startActivity(intent);
-
-
+                    Animatoo.animateFade(mContext);
                 }
             });
         }

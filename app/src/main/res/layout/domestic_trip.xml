@@ -13,123 +13,114 @@
         android:orientation="vertical"
         tools:context=".activities.domestic_trips">
 
-
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <LinearLayout
+
+            <RelativeLayout
+                android:id="@+id/topArea"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="180dp"
+                android:background="#12D3CF">
 
 
-                <RelativeLayout
-                    android:id="@+id/topArea"
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    android:background="#12D3CF">
-
-
-                    <TextView
-                        android:id="@+id/myDashboard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
-                        android:text="Domestic Trips"
-                        android:textColor="@android:color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-
-                <GridLayout
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="-100dp"
-                    android:columnCount="1"
-                    android:padding="50dp">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Domestic Trips"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
-                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_margin="30dp"
-                        android:focusable="true"
-                        android:onClick="Sharm_Alsheikh"
-                        android:translationZ="5dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="7dp"
-                        app:rippleColor="@color/three">
+            </RelativeLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="2dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="-100dp"
+                android:columnCount="1"
+                android:padding="50dp">
 
-                            <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center_horizontal|center_vertical"
-                                android:src="@drawable/ic_surfer"
-                                android:tint="#67EACA" />
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="30dp"
+                    android:focusable="true"
+                    android:onClick="Sharm_Alsheikh"
+                    android:translationZ="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="7dp"
+                    app:rippleColor="@color/three">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="Sharm ElSheikh"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:src="@drawable/ic_surfer"
+                            android:tint="#67EACA" />
 
-                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_margin="30dp"
-                        android:focusable="true"
-                        android:onClick="Alexandria"
-                        android:translationZ="5dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="7dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="2dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center_horizontal|center_vertical"
-                                android:src="@drawable/ic_red_seaa"
-
-                                android:tint="#67EACA" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="ALexandria"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Sharm ElSheikh"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
 
-                </GridLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
-            </LinearLayout>
-        </ScrollView>
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="30dp"
+                    android:focusable="true"
+                    android:onClick="Alexandria"
+                    android:translationZ="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:src="@drawable/ic_red_seaa"
+
+                            android:tint="#67EACA" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="ALexandria"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+            </GridLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <me.ibrahimsn.lib.SmoothBottomBar
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:backgroundColor="@color/three"
-        app:iconSize="24dp"
-        app:iconTintActive="@color/one"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"
-        app:textColor="@color/one"
-        app:textSize="12dp"
-        tools:ignore="MissingConstraints" />
-
+        android:background="@color/three"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
